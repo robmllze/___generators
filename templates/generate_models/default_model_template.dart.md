@@ -72,8 +72,12 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
     String source,
   ) {
     try {
-      final decoded = jsonDecode(source);
-      return ___CLASS___.fromJson(decoded);
+      if (source.isNotEmpty) {
+        final decoded = jsonDecode(source);
+        return ___CLASS___.fromJson(decoded);
+      } else {
+        return ___CLASS___.unsafe();
+      }
     } catch (e) {
       assert(false, e);
       rethrow;

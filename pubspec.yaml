@@ -7,7 +7,7 @@
 ##.title~
 
 name: ___generators
-description: This project contains a set of generators to help speed up your development journey.
+description: This project contains a set of generators to help speed up development.
 publish_to: none
 
 ## -----------------------------------------------------------------------------

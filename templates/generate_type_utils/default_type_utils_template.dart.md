@@ -28,7 +28,7 @@ extension ___ENUM___Utils on ___ENUM___ {
   }
 
   String get friendlyName {
-    return this.name.toSnakeCase().split("_").map((e) => e.capitalize()).skip(1).join(" ");
+    return this.name.toSnakeCase().split("_").map((e) => e.capitalize()).join(" ");
   }
 }
 ````

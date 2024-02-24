@@ -26,7 +26,7 @@ extension NextPrevious___ENUM___ on ___ENUM___ {
 
 extension Translate___ENUM___ on ___ENUM___ {
   String translate() {
-    return "${this.name}||types.___ENUM___.$this".tr();
+    return "${this.name}||types.$this".tr();
   }
 }
 ````

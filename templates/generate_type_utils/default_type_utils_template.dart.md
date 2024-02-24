@@ -25,14 +25,8 @@ extension NextPrevious___ENUM___ on ___ENUM___ {
 }
 
 extension Translate___ENUM___ on ___ENUM___ {
-  String tr() {
+  String translate() {
     return "${this.name}||types.___ENUM___.$this".tr();
-  }
-}
-
-extension _DeleteMe on String {
-  String tr() {
-    throw UnimplementedError();
   }
 }
 ````

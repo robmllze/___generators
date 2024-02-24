@@ -12,7 +12,7 @@ part of '___ENUM_FILE_NAME___';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-extension NextPrevious___ENUM___ on ___ENUM___ {
+extension ___ENUM___Utils on ___ENUM___ {
   ___ENUM___ get next {
     final index = (this.index + 1) % ___ENUM___.values.length;
     return ___ENUM___.values[index];
@@ -22,11 +22,13 @@ extension NextPrevious___ENUM___ on ___ENUM___ {
     final index = (this.index - 1 + ___ENUM___.values.length) % ___ENUM___.values.length;
     return ___ENUM___.values[index];
   }
-}
 
-extension Translate___ENUM___ on ___ENUM___ {
-  String translate() {
+  String get translated {
     return "${this.name}||types.$this".tr();
+  }
+
+  String get friendlyName {
+    return this.name.toSnakeCase().split("_").map((e) => e.capitalize()).skip(1).join(" ");
   }
 }
 ````

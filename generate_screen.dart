@@ -15,10 +15,10 @@ const TARGET_APP = "_view";
 
 // To-Do: Give the screen class a name. NB: It must start it with "Screen",
 // e.g. "ScreenTest".
-const CLASS_NAME = "ErrorScreen";
+const CLASS_NAME = "EmptyScreen";
 
 // To-Do: Provide a title for the Screen.
-const DEFAULT_TITLE = "Error";
+const DEFAULT_TITLE = "Empty";
 
 // To-Do: Specify the Screen's access settings:
 const bool? IS_ONLY_ACCESSIBLE_IF_LOGGED_IN_AND_VERIFIED = false;
@@ -34,19 +34,43 @@ const String? NAVIGATION_CONTROL_WIDGET = "";
 
 // To-Do: Specify parameters for the Screen, or leave empty:
 const INTERNAL_PARAMETERS = <String, String>{
-  "chatId": "String",
+  //"chatId": "String", // (example)
 };
 
 // To-Do: Specify query parameters for the Screen, or leave empty:
 const QUERY_PARAMETERS = <String>{
-  // e.g. "chatId",
+  // e.g. "chatId", // (example)
 };
 
 // To-Do: Specify part files to generate for the Screen, or leave empty:
 const PART_FILE_DIRS = <String>{
-  // "components/_header_widget.dart",
-  // "components/_card_widget.dart",
+  // "components/_header_widget.dart", // (example)
 };
+
+final bindingsTemplate = {
+  0: "default_screen_bindings_template",
+}
+// To-Do: Choose a number from the map above, or leave empty:
+    [0];
+
+final controllerTemplate = {
+  0: "default_screen_controller_template",
+  1: "empty_screen_controller_template",
+}
+// To-Do: Choose a number from the map above, or leave empty:
+    [1];
+
+final viewTemplate = {
+  0: "default_screen_view_template",
+  1: "empty_screen_view_template",
+}
+// To-Do: Choose a number from the map above, or leave empty:
+    [1];
+
+final screenTemplate = {
+  0: "default_screen_template",
+} // To-Do: Choose a number from the map above, or leave empty:
+    [0];
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 //
@@ -70,13 +94,11 @@ Future<void> _generateScreens(String screensDir) {
   return generateScreensApp(
     {
       "--bindings-template":
-          "$currentScriptDir/templates/generate_screen_bindings/default_screen_bindings_template.dart.md",
+          "$currentScriptDir/templates/generate_screen_bindings/$bindingsTemplate.dart.md",
       "--controller-template":
-          "$currentScriptDir/templates/generate_screen/default_screen_controller_template.dart.md",
-      "--view-template":
-          "$currentScriptDir/templates/generate_screen/default_screen_view_template.dart.md",
-      "--screen-template":
-          "$currentScriptDir/templates/generate_screen/default_screen_template.dart.md",
+          "$currentScriptDir/templates/generate_screen/$controllerTemplate.dart.md",
+      "--view-template": "$currentScriptDir/templates/generate_screen/$viewTemplate.dart.md",
+      "--screen-template": "$currentScriptDir/templates/generate_screen/$screenTemplate.dart.md",
       "--output": screensDir,
       "--class-name": CLASS_NAME,
       "--default-title": DEFAULT_TITLE,

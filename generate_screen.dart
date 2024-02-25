@@ -15,10 +15,10 @@ const TARGET_APP = "genie_app";
 
 // To-Do: Give the screen class a name. NB: It must start it with "Screen",
 // e.g. "ScreenTest".
-const CLASS_NAME = "ExampleScreen";
+const CLASS_NAME = "GenerateScreenScreen";
 
 // To-Do: Provide a title for the Screen.
-const DEFAULT_TITLE = "Example";
+const DEFAULT_TITLE = "Generate Screen";
 
 // To-Do: Specify the Screen's access settings:
 const bool? IS_ONLY_ACCESSIBLE_IF_LOGGED_IN_AND_VERIFIED = false;

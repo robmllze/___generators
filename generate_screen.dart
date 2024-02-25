@@ -11,14 +11,14 @@ import 'package:xyz_gen/xyz_gen.dart';
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 // To-Do: Specify your app/root folder to generate for.
-const TARGET_APP = "genie_app";
+const TARGET_APP = "_view";
 
 // To-Do: Give the screen class a name. NB: It must start it with "Screen",
 // e.g. "ScreenTest".
-const CLASS_NAME = "ExampleScreen";
+const CLASS_NAME = "ErrorScreen";
 
 // To-Do: Provide a title for the Screen.
-const DEFAULT_TITLE = "Example";
+const DEFAULT_TITLE = "Error";
 
 // To-Do: Specify the Screen's access settings:
 const bool? IS_ONLY_ACCESSIBLE_IF_LOGGED_IN_AND_VERIFIED = false;
@@ -44,8 +44,8 @@ const QUERY_PARAMETERS = <String>{
 
 // To-Do: Specify part files to generate for the Screen, or leave empty:
 const PART_FILE_DIRS = <String>{
-  "components/_components1.dart",
-  "components/_components2.dart",
+  // "components/_header_widget.dart",
+  // "components/_card_widget.dart",
 };
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░

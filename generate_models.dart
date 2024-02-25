@@ -12,7 +12,9 @@ import 'package:xyz_gen/xyz_gen.dart';
 
 // To-Do: Specify your apps/root folders to generate for.
 const targetApps = <String>[
-  "example_app",
+  "genie_app",
+  "_ui",
+  "_data",
 ];
 
 // To-Do: Specify the directories in your apps/root folders to generate for.
@@ -36,11 +38,9 @@ void main() async {
 Future<void> _generateModels() {
   return generateModelsApp([
     "-t",
-    "$currentScriptDir/templates/generate_models/basic_model_template.dart.md",
+    "$currentScriptDir/templates/generate_models/default_model_template.dart.md",
     "-r",
-    targetApps
-        .map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib")
-        .join("&"),
+    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
     "-s",
     subDirectories.join("&"),
   ]);
@@ -53,9 +53,7 @@ Future<void> _generateExports() {
     "-t",
     "$currentScriptDir/templates/generate_exports/default_exports_template.dart.md",
     "-r",
-    targetApps
-        .map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib")
-        .join("&"),
+    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
     "-s",
     subDirectories.join("&"),
   ]);

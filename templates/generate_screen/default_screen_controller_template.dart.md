@@ -13,12 +13,12 @@ part of '___SCREEN_FILE___';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-class _Logic extends _LogicBroker<___SCREEN_CLASS___, _State> {
+class _Controller extends T___SCREEN_CLASS___Controller {
   //
   //
   //
 
-  _Logic(super.screen, super.state);
+  _Controller(super.screen, super.state);
 
   //
   //
@@ -39,9 +39,9 @@ class _Logic extends _LogicBroker<___SCREEN_CLASS___, _State> {
   //
 
   @override
-  void initLogic() {
+  void initController() {
     this.pCounter.set(0);
-    super.initLogic();
+    super.initController();
   }
 
   //

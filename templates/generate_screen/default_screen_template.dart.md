@@ -10,20 +10,42 @@
 
 import '/_common.dart';
 
-part '___LOGIC_FILE___';
-part '___STATE_FILE___';
-part '___CONFIGURATION_FILE___';
+part '_bindings.g.dart';
+part '_controller.dart';
+part '_view.dart';
+
+___PARTS___
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-@GenerateScreenConfiguration(___CONFIGURATION_ARGS___)
+@GenerateScreenBindings(___GENERATE_SCREEN_BINDINGS_ARGS___)
 class ___SCREEN_CLASS___ extends Screen {
-  const ___SCREEN_CLASS___({super.key, super.configuration});
+  //
+  //
+  //
+
+  const ___SCREEN_CLASS___({
+    super.key,
+    super.configuration,
+  });
+
+  //
+  //
+  //
 
   @override
-  _State createState() => _State();
+  _View createState() => _View();
+
+  //
+  //
+  //
 
   @override
-  _Logic createLogic(final screen, final state) => _Logic(screen, state);
+  _Controller createController(
+    Screen screen,
+    ScreenView state,
+  ) {
+    return _Controller(screen, state);
+  }
 }
 ````

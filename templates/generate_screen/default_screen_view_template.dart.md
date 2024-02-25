@@ -12,7 +12,7 @@ part of '___SCREEN_FILE___';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-class _State extends ScreenState<___SCREEN_CLASS___, ___SCREEN_CLASS___Configuration, _Logic> {
+class _View extends T___SCREEN_CLASS___View {
   //
   //
   //
@@ -23,7 +23,6 @@ class _State extends ScreenState<___SCREEN_CLASS___, ___SCREEN_CLASS___Configura
       Column(
         children: [
           MyHeader(
-            breadCrumbBar: const MyActiveBreadCrumbBar(),
             title: this.widget.configuration?.title,
             onBackButtonPressed: app.routeManager.goBack,
           ),
@@ -53,13 +52,13 @@ class _State extends ScreenState<___SCREEN_CLASS___, ___SCREEN_CLASS___Configura
       divider: SizedBox(height: 20.sc),
       children: [
         PodBuilder(
-          pod: this.logic.pCounter,
+          pod: this.controller.pCounter,
           builder: (context, child, counter) {
             return Text("Count: $counter");
           },
         ),
         TextButton(
-          onPressed: this.logic.incrementCounter,
+          onPressed: this.controller.incrementCounter,
           child: const Text("INCREMENT COUNTER"),
         ),
       ],

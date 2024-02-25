@@ -11,11 +11,11 @@ import 'package:xyz_gen/xyz_gen.dart';
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 // To-Do: Specify your app/root folder to generate for.
-const TARGET_APP = "example_app";
+const TARGET_APP = "genie_app";
 
 // To-Do: Give the screen class a name. NB: It must start it with "Screen",
 // e.g. "ScreenTest".
-const CLASS_NAME = "ScreenExample";
+const CLASS_NAME = "ExampleScreen";
 
 // To-Do: Provide a title for the Screen.
 const DEFAULT_TITLE = "Example";
@@ -42,6 +42,12 @@ const QUERY_PARAMETERS = <String>{
   // e.g. "chatId",
 };
 
+// To-Do: Specify part files to generate for the Screen, or leave empty:
+const PART_FILE_DIRS = <String>{
+  "components/_components1.dart",
+  "components/_components2.dart",
+};
+
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 //
 // DO NOT MODIFY BELOW
@@ -52,6 +58,9 @@ void main() async {
   final screensDir = "$currentScriptDir/../$TARGET_APP/lib/screens";
   await _generateScreens(screensDir);
   await _generateScreenAccess(screensDir);
+  if (PART_FILE_DIRS.isNotEmpty) {
+    await _generateDirectives(screensDir);
+  }
   await _generateExports(screensDir);
 }
 
@@ -60,12 +69,12 @@ void main() async {
 Future<void> _generateScreens(String screensDir) {
   return generateScreensApp(
     {
-      "--configuration-template":
-          "$currentScriptDir/templates/generate_screen_configurations/default_screen_configuration_template.dart.md",
-      "--logic-template":
-          "$currentScriptDir/templates/generate_screen/default_screen_logic_template.dart.md",
-      "--state-template":
-          "$currentScriptDir/templates/generate_screen/default_screen_state_template.dart.md",
+      "--bindings-template":
+          "$currentScriptDir/templates/generate_screen_bindings/default_screen_bindings_template.dart.md",
+      "--controller-template":
+          "$currentScriptDir/templates/generate_screen/default_screen_controller_template.dart.md",
+      "--view-template":
+          "$currentScriptDir/templates/generate_screen/default_screen_view_template.dart.md",
       "--screen-template":
           "$currentScriptDir/templates/generate_screen/default_screen_template.dart.md",
       "--output": screensDir,
@@ -73,17 +82,15 @@ Future<void> _generateScreens(String screensDir) {
       "--default-title": DEFAULT_TITLE,
       "--is-only-accessible-if-logged-in-and-verified":
           IS_ONLY_ACCESSIBLE_IF_LOGGED_IN_AND_VERIFIED?.toString(),
-      "--is-only-accessible-if-logged-in":
-          IS_ONLY_ACCESSIBLE_IF_LOGGED_IN?.toString(),
-      "--is-only-accessible-if-logged-out":
-          IS_ONLY_ACCESSIBLE_IF_LOGGED_OUT?.toString(),
+      "--is-only-accessible-if-logged-in": IS_ONLY_ACCESSIBLE_IF_LOGGED_IN?.toString(),
+      "--is-only-accessible-if-logged-out": IS_ONLY_ACCESSIBLE_IF_LOGGED_OUT?.toString(),
       "--is-redirectable": IS_REDIRECTABLE?.toString(),
       "--makeup": MAKEUP,
       "--navigation-control-widget": NAVIGATION_CONTROL_WIDGET,
-      "--internal-parameters": INTERNAL_PARAMETERS.entries
-          .map((e) => "${e.key}:${e.value}")
-          .join("::"),
+      "--internal-parameters":
+          INTERNAL_PARAMETERS.entries.map((e) => "${e.key}:${e.value}").join("&&"),
       "--query-parameters": QUERY_PARAMETERS.join("&"),
+      "--part-file-dirs": PART_FILE_DIRS.join("&"),
     }
         .map((k, v) => MapEntry(k, v?.nullIfEmpty))
         .nonNulls
@@ -104,6 +111,12 @@ Future<void> _generateScreenAccess(String screensDir) {
     "--output",
     "$screensDir/screen_access.g.dart",
   ]);
+}
+
+// -----------------------------------------------------------------------------
+
+Future<void> _generateDirectives(String screensDir) {
+  return generateDirectivesApp(["-r", screensDir]);
 }
 
 // -----------------------------------------------------------------------------

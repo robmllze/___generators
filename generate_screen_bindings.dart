@@ -28,12 +28,14 @@ const subDirectories = <String>[
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 void main() async {
-  await generateScreenBindingsApp([
-    "-t",
-    "$currentScriptDir/templates/generate_screen_bindings/default_screen_bindings_template.dart.md",
-    "-r",
-    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
-    "-s",
-    subDirectories.join("&"),
-  ]);
+  for (final targetApp in targetApps) {
+    await generateScreenBindingsApp([
+      "-t",
+      "$currentScriptDir/templates/generate_screen_bindings/default_screen_bindings_template.dart.md",
+      "-r",
+      "$currentScriptDir/../${targetApp.isNotEmpty ? "$targetApp/" : ""}lib",
+      "-s",
+      subDirectories.join("&"),
+    ]);
+  }
 }

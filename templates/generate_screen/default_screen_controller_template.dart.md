@@ -55,11 +55,6 @@ class ___SCREEN_CLASS___Controller extends T___SCREEN_CLASS___Controller {
     super.dispose();
   }
 }
-````
-
-# Additional Information
-
-```dart
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 

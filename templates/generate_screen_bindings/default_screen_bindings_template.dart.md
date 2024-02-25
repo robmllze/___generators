@@ -159,9 +159,9 @@ final generated___CLASS___Route = GoRoute(
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-typedef ___CLASS___Controller =  _ControllerBroker<___CLASS___, _View>;
+typedef T___CLASS___Controller =  _ControllerBroker<___CLASS___, _View>;
 
-typedef ___CLASS___View = ScreenView<___CLASS___, ___CONFIGURATION_CLASS___, _Controller>;
+typedef T___CLASS___View = ScreenView<___CLASS___, ___CONFIGURATION_CLASS___, ___CLASS___Controller>;
 
-typedef ___CLASS___PageView<T extends ScreenPage> = ScreenPageView<T, ___CONFIGURATION_CLASS___, _Controller>;
+typedef T___CLASS___PageView<T extends ScreenPage> = ScreenPageView<T, ___CONFIGURATION_CLASS___, ___CLASS___Controller>;
 ````

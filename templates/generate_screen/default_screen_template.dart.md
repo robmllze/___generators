@@ -41,11 +41,11 @@ class ___SCREEN_CLASS___ extends Screen {
   //
 
   @override
-  _Controller createController(
+  ___SCREEN_CLASS___Controller createController(
     Screen screen,
     ScreenView state,
   ) {
-    return _Controller(screen, state);
+    return ___SCREEN_CLASS___Controller(screen, state);
   }
 }
 ````

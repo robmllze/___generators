@@ -11,14 +11,14 @@ import 'package:xyz_gen/xyz_gen.dart';
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 // To-Do: Specify your app/root folder to generate for.
-const TARGET_APP = "_view";
+const TARGET_APP = "genie_app";
 
 // To-Do: Give the screen class a name. NB: It must start it with "Screen",
 // e.g. "ScreenTest".
-const CLASS_NAME = "EmptyScreen";
+const CLASS_NAME = "ExampleScreen";
 
 // To-Do: Provide a title for the Screen.
-const DEFAULT_TITLE = "Empty";
+const DEFAULT_TITLE = "Example";
 
 // To-Do: Specify the Screen's access settings:
 const bool? IS_ONLY_ACCESSIBLE_IF_LOGGED_IN_AND_VERIFIED = false;
@@ -58,14 +58,14 @@ final controllerTemplate = {
   1: "empty_screen_controller_template",
 }
 // To-Do: Choose a number from the map above, or leave empty:
-    [1];
+    [0];
 
 final viewTemplate = {
   0: "default_screen_view_template",
   1: "empty_screen_view_template",
 }
 // To-Do: Choose a number from the map above, or leave empty:
-    [1];
+    [0];
 
 final screenTemplate = {
   0: "default_screen_template",

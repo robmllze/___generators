@@ -65,4 +65,10 @@ class _View extends T___SCREEN_CLASS___View {
     );
   }
 }
+
+// ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
+extension _ControllerExtension on ___SCREEN_CLASS___Controller {
+  // Tip: Add functions to your controller here.
+}
 ````

@@ -13,12 +13,12 @@ part of '___SCREEN_FILE___';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-class _Controller extends T___SCREEN_CLASS___Controller {
+class ___SCREEN_CLASS___Controller extends T___SCREEN_CLASS___Controller {
   //
   //
   //
 
-  _Controller(super.screen, super.state);
+  ___SCREEN_CLASS___Controller(super.screen, super.state);
 
   //
   //
@@ -56,3 +56,14 @@ class _Controller extends T___SCREEN_CLASS___Controller {
   }
 }
 ````
+
+# Additional Information
+
+```dart
+
+// ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
+extension ___SCREEN_CLASS___ControllerExtension on ___SCREEN_CLASS___Controller {
+  // Tip: You can break up your controller into multiple files using extensions.
+}
+```

@@ -78,7 +78,6 @@ class ___CONFIGURATION_CLASS___ extends ModelScreenConfiguration {
   ___PS0___
 
   ___CONFIGURATION_CLASS___({
-    String? key,
     ___IP1___
     ___QP1___
     ___PS1___

@@ -12,7 +12,10 @@ import 'package:xyz_gen/xyz_gen.dart';
 
 // To-Do: Specify your apps/root folders to generate for.
 const targetApps = <String>[
-  "example_app",
+  "_data",
+  "_services",
+  "_view",
+  "genie_app",
 ];
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -26,8 +29,6 @@ void main() async {
     "-t",
     "$currentScriptDir/templates/generate_license_headers/default_license_header_template.dart.md",
     "-r",
-    targetApps
-        .map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib")
-        .join("&"),
+    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
   ]);
 }

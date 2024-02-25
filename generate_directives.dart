@@ -12,6 +12,9 @@ import 'package:xyz_gen/xyz_gen.dart';
 
 // To-Do: Specify your apps/root folders to generate for.
 const targetApps = <String>[
+  "_data",
+  "_services",
+  "_view",
   "genie_app",
 ];
 

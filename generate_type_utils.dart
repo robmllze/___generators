@@ -11,14 +11,14 @@ import 'package:xyz_gen/xyz_gen.dart';
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 // To-Do: Specify your apps/root folders to generate for.
-const targetApps = <String>[
+const targetApps = <String>{
   "example_app",
-];
+};
 
 // To-Do: Specify the directories in your apps/root folders to generate for.
-const subDirectories = <String>[
+const subDirectories = <String>{
   "types",
-];
+};
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 //
@@ -38,9 +38,7 @@ Future<void> _generateTypeUtils() {
     "-t",
     "$currentScriptDir/templates/generate_type_utils/default_type_utils_template.dart.md",
     "-r",
-    targetApps
-        .map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib")
-        .join("&"),
+    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
     "-s",
     subDirectories.join("&"),
   ]);
@@ -53,9 +51,7 @@ Future<void> _generateExports() {
     "-t",
     "$currentScriptDir/templates/generate_exports/default_exports_template.dart.md",
     "-r",
-    targetApps
-        .map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib")
-        .join("&"),
+    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
     "-s",
     subDirectories.join("&"),
   ]);

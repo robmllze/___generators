@@ -13,8 +13,7 @@ import 'package:xyz_gen/xyz_gen.dart';
 // To-Do: Specify your app/root folder to generate for.
 const TARGET_APP = "genie_app";
 
-// To-Do: Give the screen class a name. NB: It must start it with "Screen",
-// e.g. "ScreenTest".
+// To-Do: Give the screen class a name.
 const CLASS_NAME = "HomeScreen";
 
 // To-Do: Provide a title for the Screen.

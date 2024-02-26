@@ -16,10 +16,8 @@ import '/_common.dart';
   variants: {
     "default",
   },
-  parameters: {
-    // TODO: Add parameters here
-  },
+  properties: k___CLASS___MakeupProperties,
 )
 // ignore: unused_element
-abstract final class ___CLASS___ {}
+abstract final class ____CLASS___ {}
 ````

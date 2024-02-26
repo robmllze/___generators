@@ -16,7 +16,9 @@ import '/_common.dart';
   variants: {
     "default",
   },
-  parameters: ___PARAMETERS___,
+  parameters: {
+    // TODO: Add parameters here
+  },
 )
 // ignore: unused_element
 abstract final class ___CLASS___ {}

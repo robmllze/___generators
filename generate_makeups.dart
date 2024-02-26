@@ -12,7 +12,7 @@ import 'package:xyz_gen/xyz_gen.dart';
 
 // To-Do: Specify your apps/root folders to generate for.
 const targetApps = <String>[
-  "_view",
+  //"_view",
   "genie_app",
 ];
 
@@ -20,6 +20,7 @@ const targetApps = <String>[
 const subDirectories = <String>[
   "widgets",
   "components",
+  "makeups",
 ];
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -29,14 +30,19 @@ const subDirectories = <String>[
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 void main() async {
+  await _generateModels();
+  await _generateExports();
+}
+
+// -----------------------------------------------------------------------------
+
+Future<void> _generateModels() async {
   for (final targetApp in targetApps) {
     await generateMakeupsApp([
       "--builder-template",
       "$currentScriptDir/templates/generate_makeups/default_makeup_builder_template.dart.md",
       "--class-template",
       "$currentScriptDir/templates/generate_makeups/default_makeup_class_template.dart.md",
-      "--exports-template",
-      "$currentScriptDir/templates/generate_makeups/default_makeup_exports_template.dart.md",
       "--theme-template",
       "$currentScriptDir/templates/generate_makeups/default_generated_theme_template.dart.md",
       "--generate-template",
@@ -49,4 +55,17 @@ void main() async {
       "$currentScriptDir/../$targetApp/lib/makeups",
     ]);
   }
+}
+
+// -----------------------------------------------------------------------------
+
+Future<void> _generateExports() async {
+  await generateExportsApp([
+    "-t",
+    "$currentScriptDir/templates/generate_exports/default_exports_template.dart.md",
+    "-r",
+    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
+    "-s",
+    subDirectories.join("&"),
+  ]);
 }

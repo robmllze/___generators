@@ -8,7 +8,8 @@
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //.title~
 
-part of '___CLASS_FILE___'; // part '___MAKEUP_CLASS_FILE___';
+import '/_common.dart';
+// part of '___CLASS_FILE___'; // part '___MAKEUP_CLASS_FILE___';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
@@ -23,17 +24,13 @@ class ___MAKEUP_CLASS___  {
   //
   //
   
-  ___MAKEUP_CLASS___({
-    ___P1___
-  });
+  ___MAKEUP_CLASS___(___P1___);
 
   //
   //
   //
 
-  ___MAKEUP_CLASS___ copyWith({
-    ___P2___
-  }) {
+  ___MAKEUP_CLASS___ copyWith(___P2___) {
     return ___MAKEUP_CLASS___(
       ___P3___
     );

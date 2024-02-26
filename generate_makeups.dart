@@ -18,6 +18,7 @@ const targetApps = <String>{
 
 // To-Do: Specify the directories in your apps/root folders to generate for.
 const subDirectories = <String>{
+  "",
   "widgets",
   "components",
   "makeups",
@@ -66,6 +67,6 @@ Future<void> _generateExports() async {
     "-r",
     targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
     "-s",
-    {...subDirectories, ""}.join("&"),
+    subDirectories.join("&"),
   ]);
 }

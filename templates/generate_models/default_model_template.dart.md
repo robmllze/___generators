@@ -182,7 +182,10 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   void updateWith<T extends Model>(
     T other,
   ) {
-    ___P8___
+    final data = other.toJson();
+    if (data.isNotEmpty) {
+      ___P8___
+    }
   }
 
   //

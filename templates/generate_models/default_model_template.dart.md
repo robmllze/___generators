@@ -59,7 +59,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
 
   factory ___CLASS___.from(
-    Model other,
+    Model? other,
   ) {
     return ___CLASS___.unsafe()..updateWith(other);
   }
@@ -69,7 +69,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
 
   factory ___CLASS___.of(
-    ___CLASS___ other,
+    ___CLASS___? other,
   ) {
     return ___CLASS___.unsafe()..updateWith(other);
   }
@@ -79,10 +79,10 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
 
   factory ___CLASS___.fromJsonString(
-    String source,
+    String? source,
   ) {
     try {
-      if (source.isNotEmpty) {
+      if (source != null && source.isNotEmpty) {
         final decoded = jsonDecode(source);
         return ___CLASS___.fromJson(decoded);
       } else {
@@ -99,7 +99,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
   
   factory ___CLASS___.fromJson(
-    Map<String, dynamic> data,
+    Map<String, dynamic>? data,
   ) {
     try {
       return ___CLASS___.unsafe(
@@ -155,9 +155,9 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
 
   @override
   void updateWithJson(
-    Map<String, dynamic> data,
+    Map<String, dynamic>? data,
   ) {
-    if (data.isNotEmpty) {
+    if (data != null && data.isNotEmpty) {
       ___P8___
     }
   }

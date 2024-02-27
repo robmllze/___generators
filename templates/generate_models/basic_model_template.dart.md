@@ -36,7 +36,7 @@ class ___CLASS___ {
   //
   
   factory ___CLASS___.fromJson(
-    Map<String, dynamic> input,
+    Map<String, dynamic>? data,
   ) {
       return ___CLASS___(
         ___P6___

@@ -15,6 +15,7 @@ const targetApps = <String>{
   "_data",
   "_view",
   "genie_app",
+  "example_app",
 };
 
 // To-Do: Specify the directories in your apps/root folders to generate for.

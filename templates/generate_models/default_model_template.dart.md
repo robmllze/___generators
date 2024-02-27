@@ -158,6 +158,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
     Map<String, dynamic>? otherData,
   ) {
     if (otherData != null && otherData.isNotEmpty) {
+      final other = ___CLASS___.fromJson(otherData);
       ___P8___
     }
   }

@@ -59,7 +59,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
 
   factory ___CLASS___.from(
-    T other,
+    Model other,
   ) {
     return ___CLASS___.unsafe()..updateWith(other);
   }
@@ -99,7 +99,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
   
   factory ___CLASS___.fromJson(
-    Map<String, dynamic> input,
+    Map<String, dynamic> data,
   ) {
     try {
       return ___CLASS___.unsafe(

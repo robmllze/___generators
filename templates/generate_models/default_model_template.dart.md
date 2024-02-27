@@ -99,7 +99,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
   
   factory ___CLASS___.fromJson(
-    Map<String, dynamic>? data,
+    Map<String, dynamic>? otherData,
   ) {
     try {
       return ___CLASS___.unsafe(
@@ -155,9 +155,9 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
 
   @override
   void updateWithJson(
-    Map<String, dynamic>? data,
+    Map<String, dynamic>? otherData,
   ) {
-    if (data != null && data.isNotEmpty) {
+    if (otherData != null && otherData.isNotEmpty) {
       ___P8___
     }
   }

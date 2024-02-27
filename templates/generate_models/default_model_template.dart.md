@@ -59,6 +59,16 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
 
   factory ___CLASS___.from(
+    T other,
+  ) {
+    return ___CLASS___.unsafe()..updateWith(other);
+  }
+
+  //
+  //
+  //
+
+  factory ___CLASS___.of(
     ___CLASS___ other,
   ) {
     return ___CLASS___.unsafe()..updateWith(other);
@@ -147,11 +157,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   T copyWith<T extends Model>(
     T other,
   ) {
-    if (other is ___CLASS___) {
-       return this.copy<T>()..updateWith(other);
-    }
-    assert(false);
-    return this.copy<T>();
+    return this.copy<T>()..updateWith(other);
   }
 
   //
@@ -176,11 +182,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   void updateWith<T extends Model>(
     T other,
   ) {
-    if (other is ___CLASS___) {
     ___P8___
-    } else {
-      assert(false);
-    }
   }
 
   //

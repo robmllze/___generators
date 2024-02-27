@@ -166,10 +166,10 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
 
   @override
   T copyWithJson<T extends Model>(
-    Map<String, dynamic> other,
+    Map<String, dynamic> data,
   ) {
-    if (other.isNotEmpty) {
-       return this.copy<T>()..updateWithJson(other);
+    if (data.isNotEmpty) {
+       return this.copy<T>()..updateWithJson(data);
     }
     return this.copy<T>();
   }
@@ -179,13 +179,10 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
 
   @override
-  void updateWith<T extends Model>(
+  void updateWith<(
     T other,
   ) {
-    final data = other.toJson();
-    if (data.isNotEmpty) {
-      ___P8___
-    }
+    this.updateWithJson(other.toJson());
   }
 
   //
@@ -193,10 +190,12 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
 
   @override
-  void updateWithJson<T extends Model>(
-    Map<String, dynamic> other,
+  void updateWithJson(
+    Map<String, dynamic> data,
   ) {
-   this.updateWith(___CLASS___.fromJson(other));
+    if (data.isNotEmpty) {
+      ___P8___
+    }
   }
 }
 ````

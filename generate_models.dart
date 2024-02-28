@@ -42,7 +42,9 @@ Future<void> _generateModels() async {
     "-t",
     "$currentScriptDir/templates/generate_models/your_model_template.dart.md",
     "-r",
-    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
+    targetApps
+        .map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib")
+        .join("&"),
     "-s",
     subDirectories.join("&"),
   ]);
@@ -55,7 +57,9 @@ Future<void> _generateExports() async {
     "-t",
     "$currentScriptDir/templates/generate_exports/your_exports_template.dart.md",
     "-r",
-    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
+    targetApps
+        .map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib")
+        .join("&"),
     "-s",
     subDirectories.join("&"),
   ]);

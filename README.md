@@ -28,7 +28,7 @@ Once cloned, you can modify the generator scripts or templates according to your
 Execute any of the generator scripts by navigating to the cloned directory and running:
 
 ```bash
-dart ___generators/generate_modelst
+dart ___generators/generate_models.dart
 ```
 
 Replace `generate_models.dart` with the specific generator you wish to run, for example, `dart generate_exports.dart`.

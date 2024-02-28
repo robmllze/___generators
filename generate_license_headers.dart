@@ -16,7 +16,7 @@ import 'package:xyz_gen/xyz_gen.dart';
 
 // To-Do: Specify your apps/root folders to generate for.
 const targetApps = <String>{
-  "example_app",
+  "",
 };
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -35,9 +35,11 @@ void main() async {
 Future<void> _generateLicenseHeadersDart() async {
   await generateLicenseHeadersApp([
     "-t",
-    "$currentScriptDir/templates/generate_license_headers/your_license_header_template.dart.md",
+    "$currentScriptDir/templates/generate_license_headers/xyz_license_header_template.dart.md",
     "-r",
-    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}").join("&"),
+    targetApps
+        .map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}")
+        .join("&"),
   ]);
 }
 
@@ -46,8 +48,10 @@ Future<void> _generateLicenseHeadersDart() async {
 Future<void> _generateLicenseHeadersYaml() async {
   await generateLicenseHeadersApp([
     "-t",
-    "$currentScriptDir/templates/generate_license_headers/your_license_header_template.yaml.md",
+    "$currentScriptDir/templates/generate_license_headers/xyz_license_header_template.yaml.md",
     "-r",
-    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}").join("&"),
+    targetApps
+        .map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}")
+        .join("&"),
   ]);
 }

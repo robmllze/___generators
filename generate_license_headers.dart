@@ -16,6 +16,7 @@ const targetApps = <String>{
   "_service_interfaces",
   "_services",
   "_view",
+  "example_app",
   "genie_app",
 };
 
@@ -26,10 +27,18 @@ const targetApps = <String>{
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 void main() async {
+  // Generate license headers for Dart files.
   await generateLicenseHeadersApp([
     "-t",
     "$currentScriptDir/templates/generate_license_headers/default_license_header_template.dart.md",
     "-r",
     targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
+  ]);
+  // Generate license headers for YAML files.
+  await generateLicenseHeadersApp([
+    "-t",
+    "$currentScriptDir/templates/generate_license_headers/default_license_header_template.yaml.md",
+    "-r",
+    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}").join("&"),
   ]);
 }

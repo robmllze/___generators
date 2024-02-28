@@ -16,6 +16,7 @@ const targetApps = <String>{
   "_service_interfaces",
   "_services",
   "_view",
+  "example_app",
   "genie_app",
 };
 

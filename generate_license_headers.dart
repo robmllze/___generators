@@ -16,7 +16,7 @@ import 'package:xyz_gen/xyz_gen.dart';
 
 // To-Do: Specify your apps/root folders to generate for.
 const targetApps = <String>{
-  "",
+  "example_app",
 };
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -26,32 +26,21 @@ const targetApps = <String>{
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 void main() async {
-  await _generateLicenseHeadersDart();
-  await _generateLicenseHeadersYaml();
+  await _generateLicenseHeaders(
+    "default_license_header_template.dart.md",
+  );
+  await _generateLicenseHeaders(
+    "default_license_header_template.yaml.md",
+  );
 }
 
 // -----------------------------------------------------------------------------
 
-Future<void> _generateLicenseHeadersDart() async {
+Future<void> _generateLicenseHeaders(String template) async {
   await generateLicenseHeadersApp([
     "-t",
-    "$currentScriptDir/templates/generate_license_headers/xyz_license_header_template.dart.md",
+    "$currentScriptDir/templates/generate_license_headers/$template",
     "-r",
-    targetApps
-        .map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}")
-        .join("&"),
-  ]);
-}
-
-// -----------------------------------------------------------------------------
-
-Future<void> _generateLicenseHeadersYaml() async {
-  await generateLicenseHeadersApp([
-    "-t",
-    "$currentScriptDir/templates/generate_license_headers/xyz_license_header_template.yaml.md",
-    "-r",
-    targetApps
-        .map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}")
-        .join("&"),
+    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}").join("&"),
   ]);
 }

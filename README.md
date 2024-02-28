@@ -1,8 +1,45 @@
 # Generators
 
-## Getting Started
+## Steps to Get Started
 
-1. Navigate to your project directory by running `cd your/project/path` then clone the generator scripts via `git clone https://github.com/robmllze/___generators.git`.
-1. Modify the generators as needed. You may also wish to change the generator templates to suit your needs.
-1. Run any of the generator scripts via `dart ___generators/<GENERATOR>.dart` where `<GENERATOR>` can be any of the included generators, like `dart generate_models.dart`.
-1. Consider setting up keyboard shortcuts or single-click actions to quickly run the generators and enhance your workflow efficiency. For instance, in VS Code, you can configure a task to execute the generators. Learn more: https://code.visualstudio.com/docs/editor/tasks.
+### 1. Clone the Generator Scripts:
+
+Navigate to your project directory by running `cd your/project/path` in your terminal. Then clone the generator scripts repository:
+
+#### On macOS and Linux:
+
+```bash
+git clone https://github.com/robmllze/___generators.git && rm -rf ___generators/.git/
+```
+
+#### On Windows (Command Prompt):
+
+```cmd
+git clone https://github.com/robmllze/___generators.git && rmdir /s /q ___generators/.git/
+```
+
+#### On Windows (PowerShell):
+
+```powershell
+git clone https://github.com/robmllze/___generators.git; Remove-Item -Recurse -Force ___generators/.git/
+```
+
+This will clone the generator scripts into your project directory and remove the `.git` directory, effectively detaching it from version control so that you can modify it as needed.
+
+### 2. Modify the Generators as Needed:
+
+Once cloned, you can modify the generator scripts or templates according to your project requirements.
+
+### 3. Run the Generator Scripts:
+
+Execute any of the generator scripts by navigating to the cloned directory and running:
+
+```bash
+dart ___generators/generate_modelst
+```
+
+Replace `generate_models.dart` with the specific generator you wish to run, for example, `dart generate_exports.dart`.
+
+### 4. Enhance Workflow Efficiency:
+
+Consider setting up keyboard shortcuts or single-click actions to quickly run the generators. For instance, in Visual Studio Code, you can configure tasks to execute the generators with ease. Learn more: https://code.visualstudio.com/docs/editor/tasks.

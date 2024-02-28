@@ -15,7 +15,7 @@ import 'package:xyz_gen/xyz_gen.dart';
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 // To-Do: Specify your app/root folder to generate for.
-const TARGET_APP = "genie_app";
+const TARGET_APP = "example_app";
 
 // To-Do: Give the screen class a name.
 const CLASS_NAME = "HomeScreen";

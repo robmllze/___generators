@@ -11,17 +11,10 @@ Navigate to your project directory by running `cd your/project/path` in your ter
 ```bash
 git clone https://github.com/robmllze/___generators.git && rm -rf ___generators/.git/
 ```
-
-#### On Windows (Command Prompt):
+#### On Windows:
 
 ```cmd
 git clone https://github.com/robmllze/___generators.git && rmdir /s /q ___generators/.git/
-```
-
-#### On Windows (PowerShell):
-
-```powershell
-git clone https://github.com/robmllze/___generators.git; Remove-Item -Recurse -Force ___generators/.git/
 ```
 
 This will clone the generator scripts into your project directory and remove the `.git` directory, effectively detaching it from version control so that you can modify it as needed.

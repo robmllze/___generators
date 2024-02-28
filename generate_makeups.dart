@@ -1,9 +1,9 @@
 //.title
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //
-// X|Y|Z & Dev - https://xyzand.dev
+// X|Y|Z & Dev
 //
-// Copyright Ⓒ Robert Mollentze
+// Copyright Ⓒ Robert Mollentze, xyzand.dev
 //
 // Licensing details can be found in the LICENSE file in the root directory.
 //
@@ -44,13 +44,13 @@ Future<void> _generateModels() async {
   for (final targetApp in targetApps) {
     await generateMakeupsApp([
       "--builder-template",
-      "$currentScriptDir/templates/generate_makeups/default_makeup_builder_template.dart.md",
+      "$currentScriptDir/templates/generate_makeups/your_makeup_builder_template.dart.md",
       "--class-template",
-      "$currentScriptDir/templates/generate_makeups/default_makeup_class_template.dart.md",
+      "$currentScriptDir/templates/generate_makeups/your_makeup_class_template.dart.md",
       "--theme-template",
-      "$currentScriptDir/templates/generate_makeups/default_generated_theme_template.dart.md",
+      "$currentScriptDir/templates/generate_makeups/your_generated_theme_template.dart.md",
       "--generate-template",
-      "$currentScriptDir/templates/generate_makeups/default_makeup_generate_template.dart.md",
+      "$currentScriptDir/templates/generate_makeups/your_makeup_generate_template.dart.md",
       "-r",
       "$currentScriptDir/../${targetApp.isNotEmpty ? "$targetApp/" : ""}lib",
       "-s",
@@ -66,7 +66,7 @@ Future<void> _generateModels() async {
 Future<void> _generateExports() async {
   await generateExportsApp([
     "-t",
-    "$currentScriptDir/templates/generate_exports/default_exports_template.dart.md",
+    "$currentScriptDir/templates/generate_exports/your_exports_template.dart.md",
     "-r",
     targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
     "-s",

@@ -1,9 +1,9 @@
 //.title
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //
-// X|Y|Z & Dev - https://xyzand.dev
+// X|Y|Z & Dev
 //
-// Copyright Ⓒ Robert Mollentze
+// Copyright Ⓒ Robert Mollentze, xyzand.dev
 //
 // Licensing details can be found in the LICENSE file in the root directory.
 //
@@ -29,7 +29,7 @@ void main() async {
   for (final targetApp in targetApps) {
     await generateScreenAccessApp([
       "-t",
-      "$currentScriptDir/templates/generate_screen_access/default_screen_access_template.dart.md",
+      "$currentScriptDir/templates/generate_screen_access/your_screen_access_template.dart.md",
       "-r",
       targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
       "-s",

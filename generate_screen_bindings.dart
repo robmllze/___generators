@@ -1,9 +1,9 @@
 //.title
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //
-// X|Y|Z & Dev - https://xyzand.dev
+// X|Y|Z & Dev
 //
-// Copyright Ⓒ Robert Mollentze
+// Copyright Ⓒ Robert Mollentze, xyzand.dev
 //
 // Licensing details can be found in the LICENSE file in the root directory.
 //
@@ -34,7 +34,7 @@ void main() async {
   for (final targetApp in targetApps) {
     await generateScreenBindingsApp([
       "-t",
-      "$currentScriptDir/templates/generate_screen_bindings/default_screen_bindings_template.dart.md",
+      "$currentScriptDir/templates/generate_screen_bindings/your_screen_bindings_template.dart.md",
       "-r",
       "$currentScriptDir/../${targetApp.isNotEmpty ? "$targetApp/" : ""}lib",
       "-s",

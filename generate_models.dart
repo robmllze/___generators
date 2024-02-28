@@ -1,9 +1,9 @@
 //.title
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //
-// X|Y|Z & Dev - https://xyzand.dev
+// X|Y|Z & Dev
 //
-// Copyright Ⓒ Robert Mollentze
+// Copyright Ⓒ Robert Mollentze, xyzand.dev
 //
 // Licensing details can be found in the LICENSE file in the root directory.
 //
@@ -40,7 +40,7 @@ void main() async {
 Future<void> _generateModels() {
   return generateModelsApp([
     "-t",
-    "$currentScriptDir/templates/generate_models/default_model_template.dart.md",
+    "$currentScriptDir/templates/generate_models/your_model_template.dart.md",
     "-r",
     targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
     "-s",
@@ -53,7 +53,7 @@ Future<void> _generateModels() {
 Future<void> _generateExports() {
   return generateExportsApp([
     "-t",
-    "$currentScriptDir/templates/generate_exports/default_exports_template.dart.md",
+    "$currentScriptDir/templates/generate_exports/your_exports_template.dart.md",
     "-r",
     targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
     "-s",

@@ -1,12 +1,12 @@
 //.title
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //
-// X|Y|Z & Dev - https://xyzand.dev
+// X|Y|Z & Dev
 //
-// Copyright Ⓒ Robert Mollentze
-// 
+// Copyright Ⓒ Robert Mollentze, xyzand.dev
+//
 // Licensing details can be found in the LICENSE file in the root directory.
-// 
+//
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //.title~
 
@@ -51,27 +51,27 @@ const PART_FILE_DIRS = <String>{
 };
 
 final bindingsTemplate = {
-  0: "default_screen_bindings_template",
+  0: "your_screen_bindings_template",
 }
 // To-Do: Choose a number from the map above, or leave empty:
     [0];
 
 final controllerTemplate = {
-  0: "default_screen_controller_template",
+  0: "your_screen_controller_template",
   1: "empty_screen_controller_template",
 }
 // To-Do: Choose a number from the map above, or leave empty:
     [0];
 
 final viewTemplate = {
-  0: "default_screen_view_template",
+  0: "your_screen_view_template",
   1: "empty_screen_view_template",
 }
 // To-Do: Choose a number from the map above, or leave empty:
     [0];
 
 final screenTemplate = {
-  0: "default_screen_template",
+  0: "your_screen_template",
 } // To-Do: Choose a number from the map above, or leave empty:
     [0];
 
@@ -130,7 +130,7 @@ Future<void> _generateScreens(String screensDir) {
 Future<void> _generateScreenAccess(String screensDir) {
   return generateScreenAccessApp([
     "-t",
-    "$currentScriptDir/templates/generate_screen_access/default_screen_access_template.dart.md",
+    "$currentScriptDir/templates/generate_screen_access/your_screen_access_template.dart.md",
     "-r",
     screensDir,
     "--output",
@@ -149,7 +149,7 @@ Future<void> _generateDirectives(String screensDir) {
 Future<void> _generateExports(String screensDir) {
   return generateExportsApp([
     "-t",
-    "$currentScriptDir/templates/generate_exports/default_exports_template.dart.md",
+    "$currentScriptDir/templates/generate_exports/your_exports_template.dart.md",
     "-r",
     screensDir,
   ]);

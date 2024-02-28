@@ -1,9 +1,9 @@
 //.title
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //
-// X|Y|Z & Dev - https://xyzand.dev
+// X|Y|Z & Dev
 //
-// Copyright Ⓒ Robert Mollentze
+// Copyright Ⓒ Robert Mollentze, xyzand.dev
 //
 // Licensing details can be found in the LICENSE file in the root directory.
 //
@@ -57,7 +57,7 @@ const subDirectories = <String>{
 void main() async {
   await generateExportsApp([
     "-t",
-    "$currentScriptDir/templates/generate_exports/default_exports_template.dart.md",
+    "$currentScriptDir/templates/generate_exports/your_exports_template.dart.md",
     "-r",
     targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
     "-s",

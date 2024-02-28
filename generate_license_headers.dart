@@ -26,14 +26,24 @@ const targetApps = <String>{
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 void main() async {
-  // Generate license headers for Dart files.
+  await _generateLicenseHeadersDart();
+  await _generateLicenseHeadersYaml();
+}
+
+// -----------------------------------------------------------------------------
+
+Future<void> _generateLicenseHeadersDart() async {
   await generateLicenseHeadersApp([
     "-t",
     "$currentScriptDir/templates/generate_license_headers/your_license_header_template.dart.md",
     "-r",
     targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}").join("&"),
   ]);
-  // Generate license headers for YAML files.
+}
+
+// -----------------------------------------------------------------------------
+
+Future<void> _generateLicenseHeadersYaml() async {
   await generateLicenseHeadersApp([
     "-t",
     "$currentScriptDir/templates/generate_license_headers/your_license_header_template.yaml.md",

@@ -93,8 +93,8 @@ void main() async {
 
 // -----------------------------------------------------------------------------
 
-Future<void> _generateScreens(String screensDir) {
-  return generateScreensApp(
+Future<void> _generateScreens(String screensDir) async {
+  await generateScreensApp(
     {
       "--bindings-template":
           "$currentScriptDir/templates/generate_screen_bindings/$bindingsTemplate.dart.md",
@@ -127,8 +127,8 @@ Future<void> _generateScreens(String screensDir) {
 
 // -----------------------------------------------------------------------------
 
-Future<void> _generateScreenAccess(String screensDir) {
-  return generateScreenAccessApp([
+Future<void> _generateScreenAccess(String screensDir) async {
+  await generateScreenAccessApp([
     "-t",
     "$currentScriptDir/templates/generate_screen_access/your_screen_access_template.dart.md",
     "-r",
@@ -140,14 +140,14 @@ Future<void> _generateScreenAccess(String screensDir) {
 
 // -----------------------------------------------------------------------------
 
-Future<void> _generateDirectives(String screensDir) {
-  return generateDirectivesApp(["-r", screensDir]);
+Future<void> _generateDirectives(String screensDir) async {
+  await generateDirectivesApp(["-r", screensDir]);
 }
 
 // -----------------------------------------------------------------------------
 
-Future<void> _generateExports(String screensDir) {
-  return generateExportsApp([
+Future<void> _generateExports(String screensDir) async {
+  await generateExportsApp([
     "-t",
     "$currentScriptDir/templates/generate_exports/your_exports_template.dart.md",
     "-r",

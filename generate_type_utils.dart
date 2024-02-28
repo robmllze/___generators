@@ -37,8 +37,8 @@ void main() async {
 
 // -----------------------------------------------------------------------------
 
-Future<void> _generateTypeUtils() {
-  return generateTypeUtilsApp([
+Future<void> _generateTypeUtils() async {
+  await generateTypeUtilsApp([
     "-t",
     "$currentScriptDir/templates/generate_type_utils/your_type_utils_template.dart.md",
     "-r",
@@ -50,8 +50,8 @@ Future<void> _generateTypeUtils() {
 
 // -----------------------------------------------------------------------------
 
-Future<void> _generateExports() {
-  return generateExportsApp([
+Future<void> _generateExports() async {
+  await generateExportsApp([
     "-t",
     "$currentScriptDir/templates/generate_exports/your_exports_template.dart.md",
     "-r",

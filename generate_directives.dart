@@ -37,8 +37,8 @@ void main() async {
 
 // -----------------------------------------------------------------------------
 
-Future<void> _generateDirectives() {
-  return generateDirectivesApp([
+Future<void> _generateDirectives() async {
+  generateDirectivesApp([
     "-r",
     targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
     "-s",
@@ -48,8 +48,8 @@ Future<void> _generateDirectives() {
 
 // -----------------------------------------------------------------------------
 
-Future<void> _generateExports() {
-  return generateExportsApp([
+Future<void> _generateExports() async {
+  generateExportsApp([
     "-t",
     "$currentScriptDir/templates/generate_exports/your_exports_template.dart.md",
     "-r",

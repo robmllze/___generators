@@ -37,8 +37,8 @@ void main() async {
 
 // -----------------------------------------------------------------------------
 
-Future<void> _generateModels() {
-  return generateModelsApp([
+Future<void> _generateModels() async {
+  await generateModelsApp([
     "-t",
     "$currentScriptDir/templates/generate_models/your_model_template.dart.md",
     "-r",
@@ -50,8 +50,8 @@ Future<void> _generateModels() {
 
 // -----------------------------------------------------------------------------
 
-Future<void> _generateExports() {
-  return generateExportsApp([
+Future<void> _generateExports() async {
+  await generateExportsApp([
     "-t",
     "$currentScriptDir/templates/generate_exports/your_exports_template.dart.md",
     "-r",

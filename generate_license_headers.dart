@@ -27,10 +27,10 @@ const targetApps = <String>{
 
 void main() async {
   await _generateLicenseHeaders(
-    "default_license_header_template.dart.md",
+    "your_license_header_template.dart.md",
   );
   await _generateLicenseHeaders(
-    "default_license_header_template.yaml.md",
+    "your_license_header_template.yaml.md",
   );
 }
 

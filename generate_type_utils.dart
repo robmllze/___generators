@@ -14,8 +14,11 @@ import 'package:xyz_gen/xyz_gen.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-// To-Do: Specify your apps/root folders to generate for.
-const targetApps = <String>{
+// To-Do: List the folders and their subfolders that may hold your enums
+// that you annotated with @GenerateTypeUtils, in order to generate their
+// respective type utils.
+const folders = <String>{
+  "",
   "_data",
   "_service_interfaces",
   "_services",
@@ -26,9 +29,9 @@ const targetApps = <String>{
   "public_app",
 };
 
-// To-Do: Specify the directories in your apps/root folders to generate for.
-const subDirectories = <String>{
-  "types",
+const subfolders = <String>{
+  "src/lib/types",
+  "lib/types",
 };
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -49,9 +52,11 @@ Future<void> _generateTypeUtils() async {
     "-t",
     "$currentScriptDir/templates/generate_type_utils/your_type_utils_template.dart.md",
     "-r",
-    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
+    folders
+        .map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}")
+        .join("&"),
     "-s",
-    subDirectories.join("&"),
+    subfolders.join("&"),
   ]);
 }
 
@@ -62,8 +67,10 @@ Future<void> _generateExports() async {
     "-t",
     "$currentScriptDir/templates/generate_exports/your_exports_template.dart.md",
     "-r",
-    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
+    folders
+        .map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}")
+        .join("&"),
     "-s",
-    subDirectories.join("&"),
+    subfolders.join("&"),
   ]);
 }

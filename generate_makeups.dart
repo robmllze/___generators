@@ -18,17 +18,20 @@ import 'package:xyz_gen/xyz_gen.dart';
 // that you annotated with @GenerateMakeup, in order to generate their
 // respective makeup classes.
 const folders = <String>{
-  "_view/lib/src",
-  "example_app/lib",
-  "admin_app/lib",
-  "operations_app/lib",
-  "public_app/lib",
+  "_view",
+  "example_app",
+  "admin_app",
+  "operations_app",
+  "public_app",
 };
 
 const subfolders = <String>{
-  "widgets",
-  "components",
-  "makeups",
+  "lib/src/widgets",
+  "lib/src/components",
+  "lib/src/makeups",
+  "lib/widgets",
+  "lib/components",
+  "lib/makeups",
 };
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -72,7 +75,9 @@ Future<void> _generateExports() async {
     "-t",
     "$currentScriptDir/templates/generate_exports/your_exports_template.dart.md",
     "-r",
-    folders.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}").join("&"),
+    folders
+        .map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}")
+        .join("&"),
     "-s",
     subfolders.join("&"),
   ]);

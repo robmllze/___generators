@@ -16,6 +16,7 @@ import 'package:xyz_gen/xyz_gen.dart';
 
 // To-Do: List the folders to generate license headers for.
 const folders = <String>{
+  "",
   "_data",
   "_service_interfaces",
   "_services",
@@ -34,10 +35,10 @@ const folders = <String>{
 
 void main() async {
   await _generateLicenseHeaders(
-    "your_license_header_template.dart.md",
+    "xyz_license_header_template.dart.md",
   );
   await _generateLicenseHeaders(
-    "your_license_header_template.yaml.md",
+    "xyz_license_header_template.yaml.md",
   );
 }
 

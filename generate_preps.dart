@@ -16,7 +16,14 @@ import 'package:xyz_gen/xyz_gen.dart';
 
 // To-Do: Specify your apps/root folders to generate exports for.
 const targetApps = <String>{
+  "_data",
+  "_service_interfaces",
+  "_services",
+  "_view",
   "example_app",
+  "admin_app",
+  "public_app",
+  "operations_app",
 };
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░

@@ -16,7 +16,14 @@ import 'package:xyz_gen/xyz_gen.dart';
 
 // To-Do: Specify your apps/root folders to generate for.
 const targetApps = <String>{
+  "_data",
+  "_service_interfaces",
+  "_services",
+  "_view",
   "example_app",
+  "admin_app",
+  "public_app",
+  "operations_app",
 };
 
 // To-Do: Specify the directories in your apps/root folders to generate for.
@@ -40,9 +47,7 @@ void main() async {
 Future<void> _generateDirectives() async {
   generateDirectivesApp([
     "-r",
-    targetApps
-        .map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib")
-        .join("&"),
+    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
     "-s",
     subDirectories.join("&"),
   ]);
@@ -55,9 +60,7 @@ Future<void> _generateExports() async {
     "-t",
     "$currentScriptDir/templates/generate_exports/your_exports_template.dart.md",
     "-r",
-    targetApps
-        .map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib")
-        .join("&"),
+    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
     "-s",
     subDirectories.join("&"),
   ]);

@@ -14,18 +14,18 @@ import 'package:xyz_gen/xyz_gen.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-// To-Do: Specify your apps/root folders to generate for.
-const targetApps = <String>{
-  "_view",
-  "example_app",
-  "admin_app",
-  "operations_app",
-  "public_app",
+// To-Do: List the folders their subfolders that may hold your widget classes
+// that you annotated with @GenerateMakeup, in order to generate their
+// respective makeup classes.
+const folders = <String>{
+  "_view/lib/src",
+  "example_app/lib",
+  "admin_app/lib",
+  "operations_app/lib",
+  "public_app/lib",
 };
 
-// To-Do: Specify the directories in your apps/root folders to generate for.
-const subDirectories = <String>{
-  "",
+const subfolders = <String>{
   "widgets",
   "components",
   "makeups",
@@ -45,7 +45,7 @@ void main() async {
 // -----------------------------------------------------------------------------
 
 Future<void> _generateModels() async {
-  for (final targetApp in targetApps) {
+  for (final folder in folders) {
     await generateMakeupsApp([
       "--builder-template",
       "$currentScriptDir/templates/generate_makeups/your_makeup_builder_template.dart.md",
@@ -56,11 +56,11 @@ Future<void> _generateModels() async {
       "--generate-template",
       "$currentScriptDir/templates/generate_makeups/your_makeup_generate_template.dart.md",
       "-r",
-      "$currentScriptDir/../${targetApp.isNotEmpty ? "$targetApp/" : ""}lib",
+      "$currentScriptDir/../$folder",
       "-s",
-      subDirectories.join("&"),
+      subfolders.join("&"),
       "--output",
-      "$currentScriptDir/../$targetApp/lib/makeups",
+      "$currentScriptDir/../$folder/makeups",
     ]);
   }
 }
@@ -72,10 +72,8 @@ Future<void> _generateExports() async {
     "-t",
     "$currentScriptDir/templates/generate_exports/your_exports_template.dart.md",
     "-r",
-    targetApps
-        .map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib")
-        .join("&"),
+    folders.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}").join("&"),
     "-s",
-    subDirectories.join("&"),
+    subfolders.join("&"),
   ]);
 }

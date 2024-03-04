@@ -14,21 +14,15 @@ import 'package:xyz_gen/xyz_gen.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-// To-Do: Specify your apps/root folders to generate for.
-const targetApps = <String>{
-  "_data",
-  "_service_interfaces",
-  "_services",
-  "_view",
-  "example_app",
-  "admin_app",
-  "operations_app",
-  "public_app",
-};
-
-// To-Do: Specify the directories in your apps/root folders to generate for.
-const subDirectories = <String>{
-  "models",
+// To-Do: List the folders that may hold your model template classes that you
+// annotated with @GenerateModel, in order to generate their respective model
+// classes.
+const folders = <String>{
+  "_data/lib/src/models",
+  "example_app/lib/models",
+  "admin_app/lib/models",
+  "operations_app/lib/models",
+  "public_app/lib/models",
 };
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -49,9 +43,7 @@ Future<void> _generateModels() async {
     "-t",
     "$currentScriptDir/templates/generate_models/your_model_template.dart.md",
     "-r",
-    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
-    "-s",
-    subDirectories.join("&"),
+    folders.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}").join("&"),
   ]);
 }
 
@@ -62,8 +54,6 @@ Future<void> _generateExports() async {
     "-t",
     "$currentScriptDir/templates/generate_exports/your_exports_template.dart.md",
     "-r",
-    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
-    "-s",
-    subDirectories.join("&"),
+    folders.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}").join("&"),
   ]);
 }

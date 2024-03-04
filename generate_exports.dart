@@ -14,8 +14,8 @@ import 'package:xyz_gen/xyz_gen.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-// To-Do: Specify your apps/root folders to generate for.
-const targetApps = <String>{
+// To-Do: List the folders and their subfolders to generate exports for.
+const folders = <String>{
   "_data",
   "_service_interfaces",
   "_services",
@@ -26,33 +26,9 @@ const targetApps = <String>{
   "public_app",
 };
 
-// To-Do: Specify the directories in your apps/root folders to generate for.
-const subDirectories = <String>{
-  "",
-  "accessibility",
-  "app_services",
-  "app_state",
-  "app",
-  "brokers",
-  "components",
-  "configs",
-  "firebase_options",
-  "functions",
-  "generators",
-  "interfaces",
-  "makeups",
-  "managers",
-  "model_filters",
-  "models",
-  "routing",
-  "screens",
-  "service_brokers",
-  "services",
-  "src",
-  "theme",
-  "types",
-  "utils",
-  "widgets",
+const subfolders = <String>{
+  "lib/functions_src",
+  "lib/src",
 };
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -66,8 +42,8 @@ void main() async {
     "-t",
     "$currentScriptDir/templates/generate_exports/your_exports_template.dart.md",
     "-r",
-    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
+    folders.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}").join("&"),
     "-s",
-    subDirectories.join("&"),
+    subfolders.join("&"),
   ]);
 }

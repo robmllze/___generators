@@ -14,18 +14,15 @@ import 'package:xyz_gen/xyz_gen.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-// To-Do: Specify your apps/root folders to generate for.
-const targetApps = <String>{
-  "_view",
-  "example_app",
-  "admin_app",
-  "operations_app",
-  "public_app",
-};
-
-// To-Do: Specify the directories in your apps/root folders to generate for.
-const subDirectories = <String>{
-  "screens",
+// To-Do: List the folders that may hold your screen classes that you annotated
+// with @GenerateScreenBindings, in order to generate their respective screen
+// bindings.
+const folders = <String>{
+  "_view/lib/src/screens",
+  "example_app/lib/screens",
+  "admin_app/lib/screens",
+  "operations_app/lib/screens",
+  "public_app/lib/screens",
 };
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -35,14 +32,12 @@ const subDirectories = <String>{
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 void main() async {
-  for (final targetApp in targetApps) {
+  for (final folder in folders) {
     await generateScreenBindingsApp([
       "-t",
       "$currentScriptDir/templates/generate_screen_bindings/your_screen_bindings_template.dart.md",
       "-r",
-      "$currentScriptDir/../${targetApp.isNotEmpty ? "$targetApp/" : ""}lib",
-      "-s",
-      subDirectories.join("&"),
+      "$currentScriptDir/../${folder.isNotEmpty ? "$folder/" : ""}"
     ]);
   }
 }

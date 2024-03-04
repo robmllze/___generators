@@ -14,13 +14,15 @@ import 'package:xyz_gen/xyz_gen.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-// To-Do: Specify your apps/root folders to generate for.
-const targetApps = <String>{
-  "_view",
-  "example_app",
-  "admin_app",
-  "operations_app",
-  "public_app",
+// To-Do: List the folders that may hold your screen classes that you annotated
+// with @GenerateScreenBindings, to generate a screen access file for each
+// listed folder.
+const folders = <String>{
+  "_view/lib/src/screens",
+  "example_app/lib/screens",
+  "admin_app/lib/screens",
+  "operations_app/lib/screens",
+  "public_app/lib/screens",
 };
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -30,16 +32,14 @@ const targetApps = <String>{
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 void main() async {
-  for (final targetApp in targetApps) {
+  for (final folder in folders) {
     await generateScreenAccessApp([
       "-t",
       "$currentScriptDir/templates/generate_screen_access/your_screen_access_template.dart.md",
       "-r",
-      targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
-      "-s",
-      "screens",
+      folders.map((e) => "$currentScriptDir/../$e").join("&"),
       "--output",
-      "$currentScriptDir/../$targetApp/lib/screens/screen_access.g.dart",
+      "$currentScriptDir/../$folder/screen_access.g.dart",
     ]);
   }
 }

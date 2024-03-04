@@ -33,6 +33,11 @@
             "command": "cd ___generators && dart generate_preps.dart"
         },
         {
+            "label": "⚙️ Generate Screen",
+            "type": "shell",
+            "command": "cd ___generators && dart generate_screen.dart"
+        },
+        {
             "label": "⚙️ Generate Screen Access",
             "type": "shell",
             "command": "cd ___generators && dart generate_screen_access.dart"

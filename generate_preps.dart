@@ -14,8 +14,9 @@ import 'package:xyz_gen/xyz_gen.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-// To-Do: Specify your apps/root folders to generate exports for.
-const targetApps = <String>{
+// To-Do: List the folders that may contain files with prep instructions, to
+// produce the required prep responses within those files.
+const folders = <String>{
   "_data",
   "_service_interfaces",
   "_services",
@@ -35,6 +36,6 @@ const targetApps = <String>{
 void main() async {
   await generatePrepsApp([
     "-r",
-    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
+    folders.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}").join("&"),
   ]);
 }

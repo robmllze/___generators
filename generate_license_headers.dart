@@ -14,8 +14,8 @@ import 'package:xyz_gen/xyz_gen.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-// To-Do: Specify your apps/root folders to generate for.
-const targetApps = <String>{
+// To-Do: List the folders to generate license headers for.
+const folders = <String>{
   "_data",
   "_service_interfaces",
   "_services",
@@ -48,6 +48,6 @@ Future<void> _generateLicenseHeaders(String template) async {
     "-t",
     "$currentScriptDir/templates/generate_license_headers/$template",
     "-r",
-    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}").join("&"),
+    folders.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}").join("&"),
   ]);
 }

@@ -14,8 +14,9 @@ import 'package:xyz_gen/xyz_gen.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-// To-Do: Specify your apps/root folders to generate for.
-const targetApps = <String>{
+// To-Do: List the folders that may contain files with directive annotations,
+// to generate the required directives for those files.
+const folders = <String>{
   "_data",
   "_service_interfaces",
   "_services",
@@ -26,11 +27,6 @@ const targetApps = <String>{
   "public_app",
 };
 
-// To-Do: Specify the directories in your apps/root folders to generate for.
-const subDirectories = <String>{
-  "",
-};
-
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 //
 // DO NOT MODIFY BELOW
@@ -38,30 +34,8 @@ const subDirectories = <String>{
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 void main() async {
-  await _generateDirectives();
-  await _generateExports();
-}
-
-// -----------------------------------------------------------------------------
-
-Future<void> _generateDirectives() async {
-  generateDirectivesApp([
+  await generateDirectivesApp([
     "-r",
-    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
-    "-s",
-    subDirectories.join("&"),
-  ]);
-}
-
-// -----------------------------------------------------------------------------
-
-Future<void> _generateExports() async {
-  generateExportsApp([
-    "-t",
-    "$currentScriptDir/templates/generate_exports/your_exports_template.dart.md",
-    "-r",
-    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
-    "-s",
-    subDirectories.join("&"),
+    folders.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}").join("&"),
   ]);
 }

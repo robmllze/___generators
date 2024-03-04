@@ -52,13 +52,13 @@ class _View extends T___SCREEN_CLASS___View {
       divider: SizedBox(height: 20.sc),
       children: [
         PodBuilder(
-          pod: this.controller.pCounter,
+          pod: this.c.pCounter,
           builder: (context, child, counter) {
             return Text("Count: $counter");
           },
         ),
         TextButton(
-          onPressed: this.controller.incrementCounter,
+          onPressed: this.c.incrementCounter,
           child: const Text("INCREMENT COUNTER"),
         ),
       ],

@@ -22,8 +22,8 @@ const targetApps = <String>{
   "_view",
   "example_app",
   "admin_app",
-  "public_app",
   "operations_app",
+  "public_app",
 };
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -35,8 +35,6 @@ const targetApps = <String>{
 void main() async {
   await generatePrepsApp([
     "-r",
-    targetApps
-        .map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib")
-        .join("&"),
+    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
   ]);
 }

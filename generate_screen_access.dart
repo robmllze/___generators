@@ -19,8 +19,8 @@ const targetApps = <String>{
   "_view",
   "example_app",
   "admin_app",
-  "public_app",
   "operations_app",
+  "public_app",
 };
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -35,9 +35,7 @@ void main() async {
       "-t",
       "$currentScriptDir/templates/generate_screen_access/your_screen_access_template.dart.md",
       "-r",
-      targetApps
-          .map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib")
-          .join("&"),
+      targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
       "-s",
       "screens",
       "--output",

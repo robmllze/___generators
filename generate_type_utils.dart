@@ -22,8 +22,8 @@ const targetApps = <String>{
   "_view",
   "example_app",
   "admin_app",
-  "public_app",
   "operations_app",
+  "public_app",
 };
 
 // To-Do: Specify the directories in your apps/root folders to generate for.
@@ -49,9 +49,7 @@ Future<void> _generateTypeUtils() async {
     "-t",
     "$currentScriptDir/templates/generate_type_utils/your_type_utils_template.dart.md",
     "-r",
-    targetApps
-        .map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib")
-        .join("&"),
+    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
     "-s",
     subDirectories.join("&"),
   ]);
@@ -64,9 +62,7 @@ Future<void> _generateExports() async {
     "-t",
     "$currentScriptDir/templates/generate_exports/your_exports_template.dart.md",
     "-r",
-    targetApps
-        .map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib")
-        .join("&"),
+    targetApps.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}lib").join("&"),
     "-s",
     subDirectories.join("&"),
   ]);

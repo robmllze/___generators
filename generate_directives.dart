@@ -22,8 +22,8 @@ const targetApps = <String>{
   "_view",
   "example_app",
   "admin_app",
-  "public_app",
   "operations_app",
+  "public_app",
 };
 
 // To-Do: Specify the directories in your apps/root folders to generate for.

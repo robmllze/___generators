@@ -117,10 +117,10 @@ Future<void> _generateScreens(String screensDir) async {
       "--query-parameters": QUERY_PARAMETERS.join("&"),
       "--part-file-dirs": PART_FILE_DIRS.join("&"),
     }
-        .map((k, v) => MapEntry(k, v?.nullIfEmpty))
-        .nonNulls
+        .map((k, v) => MapEntry(k, v?.isNotEmpty == true ? v : null))
         .entries
-        .map((e) => [e.key, e.value])
+        .where((e) => e.value != null)
+        .map((e) => [e.key, e.value!])
         .reduce((a, b) => [...a, ...b]),
   );
 }

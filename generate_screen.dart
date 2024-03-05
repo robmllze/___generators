@@ -1,12 +1,12 @@
 //.title
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //
-// X|Y|Z & Dev 
+// X|Y|Z & Dev
 //
 // Copyright Ⓒ Robert Mollentze, xyzand.dev
-// 
+//
 // Licensing details can be found in the LICENSE file in the root directory.
-// 
+//
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //.title~
 
@@ -15,19 +15,19 @@ import 'package:xyz_gen/xyz_gen.dart';
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 // To-Do: Specify your target to generate the screen in.
-const TARGET = "admin_app";
+const TARGET = "example_app";
 
 // To-Do: Give the screen class a name.
-const CLASS_NAME = "HomeScreen";
+const CLASS_NAME = "ExampleScreen";
 
 // To-Do: Provide a title for the Screen.
-const DEFAULT_TITLE = "Home";
+const DEFAULT_TITLE = "Example";
 
 // To-Do: Specify the Screen's access settings:
 const bool? IS_ONLY_ACCESSIBLE_IF_LOGGED_IN_AND_VERIFIED = false;
 const bool? IS_ONLY_ACCESSIBLE_IF_LOGGED_IN = false;
-const bool? IS_ONLY_ACCESSIBLE_IF_LOGGED_OUT = false;
-const bool? IS_REDIRECTABLE = true;
+const bool? IS_ONLY_ACCESSIBLE_IF_LOGGED_OUT = true;
+const bool? IS_REDIRECTABLE = false;
 
 // To-Do: Provide a makeup class for the Screen, or leave empty:
 const String? MAKEUP = "";
@@ -100,25 +100,20 @@ Future<void> _generateScreens(String screensDir) async {
           "$currentScriptDir/templates/generate_screen_bindings/$bindingsTemplate.dart.md",
       "--controller-template":
           "$currentScriptDir/templates/generate_screen/$controllerTemplate.dart.md",
-      "--view-template":
-          "$currentScriptDir/templates/generate_screen/$viewTemplate.dart.md",
-      "--screen-template":
-          "$currentScriptDir/templates/generate_screen/$screenTemplate.dart.md",
+      "--view-template": "$currentScriptDir/templates/generate_screen/$viewTemplate.dart.md",
+      "--screen-template": "$currentScriptDir/templates/generate_screen/$screenTemplate.dart.md",
       "--output": screensDir,
       "--class-name": CLASS_NAME,
       "--default-title": DEFAULT_TITLE,
       "--is-only-accessible-if-logged-in-and-verified":
           IS_ONLY_ACCESSIBLE_IF_LOGGED_IN_AND_VERIFIED?.toString(),
-      "--is-only-accessible-if-logged-in":
-          IS_ONLY_ACCESSIBLE_IF_LOGGED_IN?.toString(),
-      "--is-only-accessible-if-logged-out":
-          IS_ONLY_ACCESSIBLE_IF_LOGGED_OUT?.toString(),
+      "--is-only-accessible-if-logged-in": IS_ONLY_ACCESSIBLE_IF_LOGGED_IN?.toString(),
+      "--is-only-accessible-if-logged-out": IS_ONLY_ACCESSIBLE_IF_LOGGED_OUT?.toString(),
       "--is-redirectable": IS_REDIRECTABLE?.toString(),
       "--makeup": MAKEUP,
       "--navigation-control-widget": NAVIGATION_CONTROL_WIDGET,
-      "--internal-parameters": INTERNAL_PARAMETERS.entries
-          .map((e) => "${e.key}:${e.value}")
-          .join("&&"),
+      "--internal-parameters":
+          INTERNAL_PARAMETERS.entries.map((e) => "${e.key}:${e.value}").join("&&"),
       "--query-parameters": QUERY_PARAMETERS.join("&"),
       "--part-file-dirs": PART_FILE_DIRS.join("&"),
     }

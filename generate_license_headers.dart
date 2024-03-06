@@ -35,10 +35,10 @@ const folders = <String>{
 
 void main() async {
   await _generateLicenseHeaders(
-    "your_license_header_template.dart.md",
+    "xyz_license_header_template.dart.md",
   );
   await _generateLicenseHeaders(
-    "your_license_header_template.yaml.md",
+    "xyz_license_header_template.yaml.md",
   );
 }
 
@@ -49,6 +49,8 @@ Future<void> _generateLicenseHeaders(String template) async {
     "-t",
     "$currentScriptDir/templates/generate_license_headers/$template",
     "-r",
-    folders.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}").join("&"),
+    folders
+        .map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}")
+        .join("&"),
   ]);
 }

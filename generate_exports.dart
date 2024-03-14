@@ -31,6 +31,11 @@ const folders = <String>{
 const subfolders = <String>{
   "lib/functions_src",
   "lib/src",
+  "lib/src/non_web",
+  "lib/src/web_friendly",
+  "lib/shared_src",
+  "lib/shared_src/non_web",
+  "lib/shared_src/web_friendly",
 };
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -44,9 +49,7 @@ void main() async {
     "-t",
     "$currentScriptDir/templates/generate_exports/your_exports_template.dart.md",
     "-r",
-    folders
-        .map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}")
-        .join("&"),
+    folders.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}").join("&"),
     "-s",
     subfolders.join("&"),
   ]);

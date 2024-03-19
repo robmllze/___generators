@@ -4,17 +4,28 @@
 
 ### 1. Clone the Generator Scripts:
 
-Navigate to your project directory by running `cd your/project/path` in your terminal. Then clone the generator scripts repository:
+Navigate to your project directory by running `cd your/project/path` in your terminal. To clone the generator scripts into your project directory, copy the following chunk of commands then paste it into your terminal and hit return:
 
 #### On macOS and Linux:
 
 ```bash
-rm -rf ___generators/ && git clone https://github.com/robmllze/___generators.git && cd ___generators && dart pub get && rm -rf .git/
+rm -rf ___generators/
+git clone https://github.com/robmllze/___generators.git
+cd ___generators
+dart pub get
+rm -rf .git/
+cd ..
 ```
+
 #### On Windows:
 
-```cmd
-git clone https://github.com/robmllze/___generators.git && rmdir /s /q ___generators/.git/
+```bash
+rm -rf ___generators/
+git clone https://github.com/robmllze/___generators.git
+cd ___generators
+dart pub get
+rmdir /s /q .git/
+cd ..
 ```
 
 This will clone the generator scripts into your project directory and remove the `.git` directory, effectively detaching it from version control so that you can modify it as needed.

@@ -24,7 +24,7 @@ environment:
 
 dependencies:
 
-  xyz_gen: ^0.51.0
+  xyz_gen: ^0.51.1
   xyz_utils: ^0.47.0
 
 # dependency_overrides:

@@ -8,11 +8,11 @@
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //.title~
 
-import '/_common.dart';
+import "/_common.dart";
 
-part '_bindings.g.dart';
-part '_controller.dart';
-part '_view.dart';
+part "_bindings.g.dart";
+part "_controller.dart";
+part "_view.dart";
 
 ___PARTS___
 

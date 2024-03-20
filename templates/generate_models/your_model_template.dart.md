@@ -16,7 +16,7 @@
 // ignore_for_file: unnecessary_null_comparison
 // ignore_for_file: unnecessary_this
 
-part of '___CLASS_FILE_NAME___';
+part of "___CLASS_FILE_NAME___";
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 

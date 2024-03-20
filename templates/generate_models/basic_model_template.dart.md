@@ -12,7 +12,7 @@
 // ignore_for_file: unnecessary_non_null_assertion
 // ignore_for_file: unnecessary_null_comparison
 
-part of '___CLASS_FILE_NAME___';
+part of "___CLASS_FILE_NAME___";
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 

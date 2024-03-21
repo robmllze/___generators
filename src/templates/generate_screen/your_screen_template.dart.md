@@ -10,9 +10,9 @@
 
 import '/_common.dart';
 
-part '_bindings.g.dart';
-part '_controller.dart';
-part '_view.dart';
+part '../../../templates/generate_screen/_bindings.g.dart';
+part '../../../templates/generate_screen/_controller.dart';
+part '../../../templates/generate_screen/_view.dart';
 
 ___PARTS___
 

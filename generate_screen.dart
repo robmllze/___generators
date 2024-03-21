@@ -37,17 +37,17 @@ const String NAVIGATION_CONTROL_WIDGET = '';
 
 // To-Do: Specify parameters for the Screen, or leave empty:
 const INTERNAL_PARAMETERS = <String, String>{
-  //"chatId": "String", // (example)
+  //'chatId': 'String', // (example)
 };
 
 // To-Do: Specify query parameters for the Screen, or leave empty:
 const QUERY_PARAMETERS = <String>{
-  // e.g. "chatId", // (example)
+  // e.g. 'chatId', // (example)
 };
 
 // To-Do: Specify part files to generate for the Screen, or leave empty:
 const PART_FILE_DIRS = <String>{
-  // "components/_header_widget.dart", // (example)
+  // 'components/_header_widget.dart', // (example)
 };
 
 final bindingsTemplate = {

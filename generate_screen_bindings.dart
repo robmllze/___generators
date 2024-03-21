@@ -41,7 +41,7 @@ void main() async {
       '-t',
       '$currentScriptDir/templates/generate_screen_bindings/your_screen_bindings_template.dart.md',
       '-r',
-      "$currentScriptDir/../${folder.isNotEmpty ? "$folder/" : ""}",
+      '$currentScriptDir/../${folder.isNotEmpty ? '$folder/' : ''}',
       '-s',
       subfolders.join('&'),
     ]);

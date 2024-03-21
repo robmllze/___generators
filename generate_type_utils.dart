@@ -10,7 +10,7 @@
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //.title~
 
-import "package:xyz_gen/xyz_gen.dart";
+import 'package:xyz_gen/xyz_gen.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
@@ -18,20 +18,20 @@ import "package:xyz_gen/xyz_gen.dart";
 // that you annotated with @GenerateTypeUtils, in order to generate their
 // respective type utils.
 const folders = <String>{
-  "",
-  "_data",
-  "_service_interfaces",
-  "_services",
-  "_view",
-  "example_app",
-  "admin_app",
-  "operations_app",
-  "public_app",
+  '',
+  '_data',
+  '_service_interfaces',
+  '_services',
+  '_view',
+  'example_app',
+  'admin_app',
+  'operations_app',
+  'public_app',
 };
 
 const subfolders = <String>{
-  "lib/src/types",
-  "lib/types",
+  'lib/src/types',
+  'lib/types',
 };
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -49,12 +49,12 @@ void main() async {
 
 Future<void> _generateTypeUtils() async {
   await generateTypeUtilsApp([
-    "-t",
-    "$currentScriptDir/templates/generate_type_utils/your_type_utils_template.dart.md",
-    "-r",
-    folders.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}").join("&"),
-    "-s",
-    subfolders.join("&"),
+    '-t',
+    '$currentScriptDir/templates/generate_type_utils/your_type_utils_template.dart.md',
+    '-r',
+    folders.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}").join('&'),
+    '-s',
+    subfolders.join('&'),
   ]);
 }
 
@@ -62,11 +62,11 @@ Future<void> _generateTypeUtils() async {
 
 Future<void> _generateExports() async {
   await generateExportsApp([
-    "-t",
-    "$currentScriptDir/templates/generate_exports/your_exports_template.dart.md",
-    "-r",
-    folders.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}").join("&"),
-    "-s",
-    subfolders.join("&"),
+    '-t',
+    '$currentScriptDir/templates/generate_exports/your_exports_template.dart.md',
+    '-r',
+    folders.map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}").join('&'),
+    '-s',
+    subfolders.join('&'),
   ]);
 }

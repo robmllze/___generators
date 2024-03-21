@@ -10,7 +10,7 @@
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //.title~
 
-import "package:xyz_gen/xyz_gen.dart";
+import 'package:xyz_gen/xyz_gen.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
@@ -18,20 +18,20 @@ import "package:xyz_gen/xyz_gen.dart";
 // that you annotated with @GenerateMakeup, in order to generate their
 // respective makeup classes.
 const folders = <String>{
-  "_view",
-  "example_app",
-  "admin_app",
-  "operations_app",
-  "public_app",
+  '_view',
+  'example_app',
+  'admin_app',
+  'operations_app',
+  'public_app',
 };
 
 const subfolders = <String>{
-  "lib/src/widgets",
-  "lib/src/components",
-  "lib/src/makeups",
-  "lib/widgets",
-  "lib/components",
-  "lib/makeups",
+  'lib/src/widgets',
+  'lib/src/components',
+  'lib/src/makeups',
+  'lib/widgets',
+  'lib/components',
+  'lib/makeups',
 };
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -50,20 +50,20 @@ void main() async {
 Future<void> _generateModels() async {
   for (final folder in folders) {
     await generateMakeupsApp([
-      "--builder-template",
-      "$currentScriptDir/templates/generate_makeups/your_makeup_builder_template.dart.md",
-      "--class-template",
-      "$currentScriptDir/templates/generate_makeups/your_makeup_class_template.dart.md",
-      "--theme-template",
-      "$currentScriptDir/templates/generate_makeups/your_generated_theme_template.dart.md",
-      "--generate-template",
-      "$currentScriptDir/templates/generate_makeups/your_makeup_generate_template.dart.md",
-      "-r",
-      "$currentScriptDir/../$folder",
-      "-s",
-      subfolders.join("&"),
-      "--output",
-      "$currentScriptDir/../$folder/makeups",
+      '--builder-template',
+      '$currentScriptDir/templates/generate_makeups/your_makeup_builder_template.dart.md',
+      '--class-template',
+      '$currentScriptDir/templates/generate_makeups/your_makeup_class_template.dart.md',
+      '--theme-template',
+      '$currentScriptDir/templates/generate_makeups/your_generated_theme_template.dart.md',
+      '--generate-template',
+      '$currentScriptDir/templates/generate_makeups/your_makeup_generate_template.dart.md',
+      '-r',
+      '$currentScriptDir/../$folder',
+      '-s',
+      subfolders.join('&'),
+      '--output',
+      '$currentScriptDir/../$folder/makeups',
     ]);
   }
 }
@@ -72,13 +72,13 @@ Future<void> _generateModels() async {
 
 Future<void> _generateExports() async {
   await generateExportsApp([
-    "-t",
-    "$currentScriptDir/templates/generate_exports/your_exports_template.dart.md",
-    "-r",
+    '-t',
+    '$currentScriptDir/templates/generate_exports/your_exports_template.dart.md',
+    '-r',
     folders
         .map((e) => "$currentScriptDir/../${e.isNotEmpty ? "$e/" : ""}")
-        .join("&"),
-    "-s",
-    subfolders.join("&"),
+        .join('&'),
+    '-s',
+    subfolders.join('&'),
   ]);
 }

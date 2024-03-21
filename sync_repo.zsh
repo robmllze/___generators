@@ -10,7 +10,8 @@
 ## ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 ##.title~
 
-# Sync this folder with https://github.com/robmllze/___generators.
+# Sync this folder with https://github.com/robmllze/___generators. You can
+# change 'main' to another branch if necessary.
 cd ___generators
 git init
 git add .

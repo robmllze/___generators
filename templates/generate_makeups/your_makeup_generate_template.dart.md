@@ -14,7 +14,7 @@ import '/_common.dart';
 
 @GenerateMakeups(
   variants: {
-    "default",
+    'default',
   },
   properties: k___CLASS___MakeupProperties,
 )

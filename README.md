@@ -52,4 +52,4 @@ Consider setting up keyboard shortcuts or single-click actions to quickly run th
 
 The `./additional_resources/` folder contains additional resources that may be useful for your project. The following resources are included:
 
-- `./additional_resources/for_vs-code/tasks.json`: A sample `tasks.json` file for Visual Studio Code that includes tasks to run the generator scripts. After copying the file to your project's `.vscode` directory, you can run the generators by pressing `Cmd + Shift + P` or `Ctrl + Shift + P` and typing "Tasks: Run Task" and selecting the task you want to run.
+- `./additional_resources/for_vs-code/tasks.json`: A sample `tasks.json` file for Visual Studio Code that includes tasks to run the generator scripts. After copying the file to your project's `.vscode` directory, you can run the generators by pressing `Cmd + Shift + P` or `Ctrl + Shift + P` and typing 'Tasks: Run Task' and selecting the task you want to run.

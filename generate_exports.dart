@@ -21,11 +21,9 @@ const folders = <String>{
   '_service_interfaces',
   '_services',
   '_view',
-  'example_app',
-  'admin_app',
-  'operations_app',
-  'public_app',
-  'genie_app',
+  'apps/admin_app',
+  'apps/operations_app',
+  'apps/public_app',
 };
 
 const subfolders = <String>{
@@ -49,9 +47,7 @@ void main() async {
     '-t',
     '$currentScriptDir/templates/generate_exports/your_exports_template.dart.md',
     '-r',
-    folders
-        .map((e) => '$currentScriptDir/../${e.isNotEmpty ? '$e/' : ''}')
-        .join('&'),
+    folders.map((e) => '$currentScriptDir/../${e.isNotEmpty ? '$e/' : ''}').join('&'),
     '-s',
     subfolders.join('&'),
   ]);

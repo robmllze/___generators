@@ -21,10 +21,9 @@ const folders = <String>{
   '_service_interfaces',
   '_services',
   '_view',
-  'example_app',
-  'admin_app',
-  'operations_app',
-  'public_app',
+  'apps/admin_app',
+  'apps/operations_app',
+  'apps/public_app',
 };
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -36,8 +35,6 @@ const folders = <String>{
 void main() async {
   await generateDirectivesApp([
     '-r',
-    folders
-        .map((e) => '$currentScriptDir/../${e.isNotEmpty ? '$e/' : ''}')
-        .join('&'),
+    folders.map((e) => '$currentScriptDir/../${e.isNotEmpty ? '$e/' : ''}').join('&'),
   ]);
 }

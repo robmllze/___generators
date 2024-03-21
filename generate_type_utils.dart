@@ -23,10 +23,9 @@ const folders = <String>{
   '_service_interfaces',
   '_services',
   '_view',
-  'example_app',
-  'admin_app',
-  'operations_app',
-  'public_app',
+  'apps/admin_app',
+  'apps/operations_app',
+  'apps/public_app',
 };
 
 const subfolders = <String>{
@@ -52,9 +51,7 @@ Future<void> _generateTypeUtils() async {
     '-t',
     '$currentScriptDir/templates/generate_type_utils/your_type_utils_template.dart.md',
     '-r',
-    folders
-        .map((e) => '$currentScriptDir/../${e.isNotEmpty ? '$e/' : ''}')
-        .join('&'),
+    folders.map((e) => '$currentScriptDir/../${e.isNotEmpty ? '$e/' : ''}').join('&'),
     '-s',
     subfolders.join('&'),
   ]);
@@ -67,9 +64,7 @@ Future<void> _generateExports() async {
     '-t',
     '$currentScriptDir/templates/generate_exports/your_exports_template.dart.md',
     '-r',
-    folders
-        .map((e) => '$currentScriptDir/../${e.isNotEmpty ? '$e/' : ''}')
-        .join('&'),
+    folders.map((e) => '$currentScriptDir/../${e.isNotEmpty ? '$e/' : ''}').join('&'),
     '-s',
     subfolders.join('&'),
   ]);

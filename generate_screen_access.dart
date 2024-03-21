@@ -19,10 +19,9 @@ import 'package:xyz_gen/xyz_gen.dart';
 // access file for each listed folder.
 const folders = <String>{
   '_view',
-  'example_app',
-  'admin_app',
-  'operations_app',
-  'public_app',
+  'apps/admin_app',
+  'apps/operations_app',
+  'apps/public_app',
 };
 
 const subfolders = <String>{

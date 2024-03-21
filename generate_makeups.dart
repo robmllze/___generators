@@ -19,10 +19,9 @@ import 'package:xyz_gen/xyz_gen.dart';
 // respective makeup classes.
 const folders = <String>{
   '_view',
-  'example_app',
-  'admin_app',
-  'operations_app',
-  'public_app',
+  'apps/admin_app',
+  'apps/operations_app',
+  'apps/public_app',
 };
 
 const subfolders = <String>{
@@ -75,9 +74,7 @@ Future<void> _generateExports() async {
     '-t',
     '$currentScriptDir/templates/generate_exports/your_exports_template.dart.md',
     '-r',
-    folders
-        .map((e) => '$currentScriptDir/../${e.isNotEmpty ? '$e/' : ''}')
-        .join('&'),
+    folders.map((e) => '$currentScriptDir/../${e.isNotEmpty ? '$e/' : ''}').join('&'),
     '-s',
     subfolders.join('&'),
   ]);

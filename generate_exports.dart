@@ -49,7 +49,9 @@ void main() async {
     '-t',
     '$currentScriptDir/templates/generate_exports/your_exports_template.dart.md',
     '-r',
-    folders.map((e) => '$currentScriptDir/../${e.isNotEmpty ? '$e/' : ''}').join('&'),
+    folders
+        .map((e) => '$currentScriptDir/../${e.isNotEmpty ? '$e/' : ''}')
+        .join('&'),
     '-s',
     subfolders.join('&'),
   ]);

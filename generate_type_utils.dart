@@ -52,7 +52,9 @@ Future<void> _generateTypeUtils() async {
     '-t',
     '$currentScriptDir/templates/generate_type_utils/your_type_utils_template.dart.md',
     '-r',
-    folders.map((e) => '$currentScriptDir/../${e.isNotEmpty ? '$e/' : ''}').join('&'),
+    folders
+        .map((e) => '$currentScriptDir/../${e.isNotEmpty ? '$e/' : ''}')
+        .join('&'),
     '-s',
     subfolders.join('&'),
   ]);
@@ -65,7 +67,9 @@ Future<void> _generateExports() async {
     '-t',
     '$currentScriptDir/templates/generate_exports/your_exports_template.dart.md',
     '-r',
-    folders.map((e) => '$currentScriptDir/../${e.isNotEmpty ? '$e/' : ''}').join('&'),
+    folders
+        .map((e) => '$currentScriptDir/../${e.isNotEmpty ? '$e/' : ''}')
+        .join('&'),
     '-s',
     subfolders.join('&'),
   ]);

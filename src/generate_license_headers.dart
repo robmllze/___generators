@@ -16,11 +16,6 @@ import 'package:xyz_gen/xyz_gen.dart';
 
 // To-Do: List the folders to generate license headers for.
 const folders = <String>{
-  '',
-  '_data',
-  '_service_interfaces',
-  '_services',
-  '_view',
   'apps/admin_app',
   'apps/operations_app',
   'apps/public_app',

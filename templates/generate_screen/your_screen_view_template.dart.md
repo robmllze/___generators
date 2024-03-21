@@ -8,7 +8,7 @@
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //.title~
 
-part of "___SCREEN_FILE___";
+part of '___SCREEN_FILE___';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
@@ -54,12 +54,12 @@ class _View extends T___SCREEN_CLASS___View {
         PodBuilder(
           pod: this.c.pCounter,
           builder: (context, child, counter) {
-            return Text("Count: $counter");
+            return Text('Count: $counter');
           },
         ),
         TextButton(
           onPressed: this.c.incrementCounter,
-          child: const Text("INCREMENT COUNTER"),
+          child: const Text('INCREMENT COUNTER'),
         ),
       ],
     );

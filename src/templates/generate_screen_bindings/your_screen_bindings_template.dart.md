@@ -27,8 +27,8 @@ const _TR_KEY = 'screens.___CLASS___';
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 extension _ScreenTr on String {
-  String screenTr([Map<dynamic, dynamic> args = const {}]) {
-    return ___CONFIGURATION_CLASS___.screenTr(this, args);
+  String screenTr({Map<dynamic, dynamic> args = const {}}) {
+    return ___CONFIGURATION_CLASS___.screenTr(this, args: args);
   }
 }
 
@@ -77,7 +77,7 @@ class ___CONFIGURATION_CLASS___ extends ModelScreenConfiguration {
   static const TITLE = '___DEFAULT_TITLE___||title';
   // ignore: prefer_const_declarations
   static final ScreenMakeup? screenMakeup = ___MAKEUP___;
-  static String screenTr(String key, [Map<dynamic, dynamic> args = const {}]) {
+  static String screenTr(String key, {Map<dynamic, dynamic> args = const {}}) {
     return key.splitByLastOccurrenceOf('||').join('||$_TR_KEY.').tr(args: args);
   }
   

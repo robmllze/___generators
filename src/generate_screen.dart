@@ -18,15 +18,15 @@ import 'package:xyz_gen/xyz_gen.dart';
 const TARGET = 'apps/public_app';
 
 // To-Do: Give the screen class a name.
-const CLASS_NAME = 'ExampleScreen';
+const CLASS_NAME = 'SignupScreen';
 
 // To-Do: Provide a title for the Screen.
-const DEFAULT_TITLE = 'Example';
+const DEFAULT_TITLE = 'Sign Up';
 
 // To-Do: Specify the Screen's access settings:
 const bool IS_ONLY_ACCESSIBLE_IF_LOGGED_IN_AND_VERIFIED = false;
 const bool IS_ONLY_ACCESSIBLE_IF_LOGGED_IN = false;
-const bool IS_ONLY_ACCESSIBLE_IF_LOGGED_OUT = false;
+const bool IS_ONLY_ACCESSIBLE_IF_LOGGED_OUT = true;
 const bool IS_REDIRECTABLE = true;
 
 // To-Do: Provide a makeup class for the Screen, or leave empty:

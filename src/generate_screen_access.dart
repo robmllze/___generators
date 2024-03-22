@@ -11,6 +11,7 @@
 //.title~
 
 import 'package:xyz_gen/xyz_gen.dart';
+import 'package:xyz_utils/xyz_utils.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
@@ -35,6 +36,7 @@ const subfolders = <String>{
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 void main() async {
+  DebugLog.debugOnly = false;
   for (final folder in folders) {
     await generateScreenAccessApp([
       '-t',

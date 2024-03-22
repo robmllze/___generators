@@ -11,6 +11,7 @@
 //.title~
 
 import 'package:xyz_gen/xyz_gen.dart';
+import 'package:xyz_utils/xyz_utils.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
@@ -82,6 +83,7 @@ final screenTemplate = {
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 void main() async {
+  DebugLog.debugOnly = false;
   final screensDir = '$currentScriptDir/../../$TARGET/lib/src/screens';
   await _generateScreens(screensDir);
   await _generateScreenAccess(screensDir);

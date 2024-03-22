@@ -43,17 +43,20 @@ Screen? maker___CLASS___(
   if ((_IS_ACCESSIBLE_ONLY_IF_LOGGED_IN_AND_VERIFIED && !isLoggedInAndVerified) || (_IS_ACCESSIBLE_ONLY_IF_LOGGED_IN && !isLoggedIn) || (_IS_ACCESSIBLE_ONLY_IF_LOGGED_OUT && !isLoggedOut)) {
     return null;
   }
-  if (configuration is ___CONFIGURATION_CLASS___ ||
-      RegExp(
-        r'^(' + _PATH + r')([?/].*)?$',
-      ).hasMatch(
-        Uri.decodeComponent(
-          configuration.path ?? '',
-        ),
-      )) {
+  if (configuration is ___CONFIGURATION_CLASS___) {
     return ___CLASS___(
       key: ValueKey<String?>(configuration.path),
       configuration: configuration,
+    );
+  }
+  if (RegExp(r'^(' + _PATH + r')([?/].*)?$')
+      .hasMatch(Uri.decodeComponent(configuration.path ?? ''))) {
+    final temp = ___CONFIGURATION_CLASS___(
+      $arguments: configuration.arguments,
+    );
+    return ___CLASS___(
+      key: ValueKey<String?>(temp.path),
+      configuration: temp,
     );
   }
   return null;

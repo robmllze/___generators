@@ -11,6 +11,7 @@
 //.title~
 
 import 'package:xyz_gen/xyz_gen.dart';
+import 'package:xyz_utils/xyz_utils.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
@@ -42,6 +43,7 @@ void main() async {
 // -----------------------------------------------------------------------------
 
 Future<void> _generateModels() async {
+  DebugLog.debugOnly = false;
   await generateModelsApp([
     '-t',
     '$currentScriptDir/templates/generate_models/your_model_template.dart.md',

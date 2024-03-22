@@ -11,6 +11,7 @@
 //.title~
 
 import 'package:xyz_gen/xyz_gen.dart';
+import 'package:xyz_utils/xyz_utils.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
@@ -28,6 +29,7 @@ const folders = <String>{
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 void main() async {
+  DebugLog.debugOnly = false;
   await _generateLicenseHeaders(
     'xyz_license_header_template.dart.md',
   );

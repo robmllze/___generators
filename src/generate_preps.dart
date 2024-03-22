@@ -11,6 +11,7 @@
 //.title~
 
 import 'package:xyz_gen/xyz_gen.dart';
+import 'package:xyz_utils/xyz_utils.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
@@ -33,6 +34,7 @@ const folders = <String>{
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 void main() async {
+  DebugLog.debugOnly = false;
   await generatePrepsApp([
     '-r',
     folders.map((e) => '$currentScriptDir/../../${e.isNotEmpty ? '$e/' : ''}').join('&'),

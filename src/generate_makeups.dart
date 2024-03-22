@@ -11,6 +11,7 @@
 //.title~
 
 import 'package:xyz_gen/xyz_gen.dart';
+import 'package:xyz_utils/xyz_utils.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
@@ -47,6 +48,7 @@ void main() async {
 // -----------------------------------------------------------------------------
 
 Future<void> _generateModels() async {
+  DebugLog.debugOnly = false;
   for (final folder in folders) {
     await generateMakeupsApp([
       '--builder-template',

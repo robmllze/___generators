@@ -19,6 +19,7 @@ import 'package:xyz_utils/xyz_utils.dart';
 // classes that you annotated with @GenerateScreenBindings, to generate a screen
 // bindings for each screen class in each listed folder.
 const folders = <String>{
+  '',
   '_view',
   'apps/admin_app',
   'apps/operations_app',

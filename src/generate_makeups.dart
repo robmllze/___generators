@@ -19,6 +19,7 @@ import 'package:xyz_utils/xyz_utils.dart';
 // that you annotated with @GenerateMakeup, in order to generate their
 // respective makeup classes.
 const folders = <String>{
+  '',
   '_view',
   'apps/admin_app',
   'apps/operations_app',

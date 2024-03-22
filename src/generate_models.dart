@@ -19,6 +19,7 @@ import 'package:xyz_utils/xyz_utils.dart';
 // template classes that you annotated with @GenerateModel, in order to generate
 // their respective model classes.
 const folders = <String>{
+  '',
   '_data',
   'apps/admin_app',
   'apps/operations_app',

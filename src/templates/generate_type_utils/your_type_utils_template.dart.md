@@ -24,7 +24,7 @@ extension ___ENUM___Utils on ___ENUM___ {
   }
 
   String get translated {
-    return '${this.name}||types.$this'.tr();
+    return '${this.name}||types.${this.name}'.tr();
   }
 
   String get friendlyName {

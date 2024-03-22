@@ -23,7 +23,7 @@ extension ___ENUM___Utils on ___ENUM___ {
     return ___ENUM___.values[index];
   }
 
-  String translate(String section) {
+  String trFromSection(String section) {
     return '${this.friendlyName}||$section.${this.name}'.tr();
   }
 

@@ -15,18 +15,19 @@ import 'package:xyz_utils/xyz_utils.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-// To-Do: List the folders and their subfolders that may hold your screen
-// classes that you annotated with @GenerateScreenBindings, to generate a screen
-// access file for each listed folder.
+// To-Do: List the folders that hold the screen classes that you annotated with
+// @GenerateScreenBindings, to generate a screen access file for each listed
+// folder.
 const folders = <String>{
-  '_view',
-  'apps/admin_app',
-  'apps/operations_app',
-  'apps/public_app',
+  'apps/admin_app/lib/src/screens',
+  'apps/operations_app/lib/src/screens',
+  'apps/public_app/lib/src/screens',
 };
 
-const subfolders = <String>{
-  'lib/src/screens',
+// To-Do: If you have more screen classes in other folders, and want to include
+// them in the screen access files for the folders above, list them here.
+const moreFolders = <String>{
+  '_view/lib/src/screens',
 };
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -42,9 +43,7 @@ void main() async {
       '-t',
       '$currentScriptDir/templates/generate_screen_access/your_screen_access_template.dart.md',
       '-r',
-      folders.map((e) => '$currentScriptDir/../../$e').join('&'),
-      '-s',
-      subfolders.join('&'),
+      {folder, ...moreFolders}.map((e) => '$currentScriptDir/../../$e').join('&'),
       '--output',
       '$currentScriptDir/../../$folder/screen_access.g.dart',
     ]);

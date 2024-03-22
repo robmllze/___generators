@@ -20,6 +20,7 @@ const SCREEN_MAKERS = [
   ___SCREEN_MAKERS___,
 ];
 
+/// Finds the screen corresponding to [configuration] and the auth state.
 Screen? findScreenFromConfiguration({
   required ModelScreenConfiguration configuration,
   required bool? isLoggedInAndVerified,
@@ -40,6 +41,7 @@ Screen? findScreenFromConfiguration({
   return null;
 }
 
+/// Finds the screen corresponding to [configuration] and the [authServiceBroker] state.
 Screen? findScreenFromConfigurationAndAuthService({
   required ModelScreenConfiguration configuration,
   required AuthServiceInterface? authServiceBroker,
@@ -50,5 +52,22 @@ Screen? findScreenFromConfigurationAndAuthService({
     isLoggedIn: authServiceBroker?.loggedIn ?? false,
     isLoggedOut: authServiceBroker?.loggedOut ?? true,
   );
+}
+
+/// Gets the current configuration from the app's current url and matches it
+/// to an existing configuration. If it does not match any of the existing
+/// configurations, it returns null. This is useful to get the requested
+/// screen configuration when the user logs in for the first time. On
+/// platforms other than web, this method will always return null.
+ModelScreenConfiguration? currentUrlToConfiguration({
+  required AuthServiceInterface authService,
+}) {
+  return findScreenFromConfigurationAndAuthService(
+    configuration: ModelScreenConfiguration(
+      arguments: Uri.base.queryParameters,
+      path: Uri.base.path,
+    ),
+    authServiceBroker: authService,
+  )?.configuration;
 }
 ````

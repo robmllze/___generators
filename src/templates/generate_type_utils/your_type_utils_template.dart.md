@@ -23,8 +23,8 @@ extension ___ENUM___Utils on ___ENUM___ {
     return ___ENUM___.values[index];
   }
 
-  String trFromSection(String section) {
-    return '${this.friendlyName}||$section.${this.name}'.tr();
+  String trFromSection(String section, [Map args = const {}]) {
+    return '${this.friendlyName}||$section.${this.name}'.tr(args: args);
   }
 
   String get friendlyName {

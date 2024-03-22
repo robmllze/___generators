@@ -23,8 +23,8 @@ extension ___ENUM___Utils on ___ENUM___ {
     return ___ENUM___.values[index];
   }
 
-  String get translated {
-    return '${this.name}||types.${this.name}'.tr();
+  String translate(String section) {
+    return '${this.friendlyName}||$section.${this.name}'.tr();
   }
 
   String get friendlyName {

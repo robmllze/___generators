@@ -82,7 +82,7 @@ final screenTemplate = {
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 void main() async {
-  final screensDir = '$currentScriptDir/../$TARGET/lib/src/screens';
+  final screensDir = '$currentScriptDir/../../$TARGET/lib/src/screens';
   await _generateScreens(screensDir);
   await _generateScreenAccess(screensDir);
   if (PART_FILE_DIRS.isNotEmpty) {

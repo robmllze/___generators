@@ -40,11 +40,11 @@ void main() async {
       '-t',
       '$currentScriptDir/templates/generate_screen_access/your_screen_access_template.dart.md',
       '-r',
-      folders.map((e) => '$currentScriptDir/../$e').join('&'),
+      folders.map((e) => '$currentScriptDir/../../$e').join('&'),
       '-s',
       subfolders.join('&'),
       '--output',
-      '$currentScriptDir/../$folder/screen_access.g.dart',
+      '$currentScriptDir/../../$folder/screen_access.g.dart',
     ]);
   }
 }

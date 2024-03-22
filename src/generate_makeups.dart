@@ -58,11 +58,11 @@ Future<void> _generateModels() async {
       '--generate-template',
       '$currentScriptDir/templates/generate_makeups/your_makeup_generate_template.dart.md',
       '-r',
-      '$currentScriptDir/../$folder',
+      '$currentScriptDir/../../$folder',
       '-s',
       subfolders.join('&'),
       '--output',
-      '$currentScriptDir/../$folder/makeups',
+      '$currentScriptDir/../../$folder/makeups',
     ]);
   }
 }
@@ -74,7 +74,7 @@ Future<void> _generateExports() async {
     '-t',
     '$currentScriptDir/templates/generate_exports/your_exports_template.dart.md',
     '-r',
-    folders.map((e) => '$currentScriptDir/../${e.isNotEmpty ? '$e/' : ''}').join('&'),
+    folders.map((e) => '$currentScriptDir/../../${e.isNotEmpty ? '$e/' : ''}').join('&'),
     '-s',
     subfolders.join('&'),
   ]);

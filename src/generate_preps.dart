@@ -35,6 +35,6 @@ const folders = <String>{
 void main() async {
   await generatePrepsApp([
     '-r',
-    folders.map((e) => '$currentScriptDir/../${e.isNotEmpty ? '$e/' : ''}').join('&'),
+    folders.map((e) => '$currentScriptDir/../../${e.isNotEmpty ? '$e/' : ''}').join('&'),
   ]);
 }

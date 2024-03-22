@@ -43,6 +43,6 @@ Future<void> _generateLicenseHeaders(String template) async {
     '-t',
     '$currentScriptDir/templates/generate_license_headers/$template',
     '-r',
-    folders.map((e) => '$currentScriptDir/../${e.isNotEmpty ? '$e/' : ''}').join('&'),
+    folders.map((e) => '$currentScriptDir/../../${e.isNotEmpty ? '$e/' : ''}').join('&'),
   ]);
 }

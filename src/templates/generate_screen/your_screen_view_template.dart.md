@@ -1,4 +1,4 @@
-````dart
+```dart
 //.title
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //
@@ -18,8 +18,9 @@ class _View extends T___SCREEN_CLASS___View {
   //
 
   @override
-  Widget layout(Widget body) {
+  Widget layout(BuildContext context, Widget body) {
     return super.layout(
+      context,
       Column(
         children: [
           MyHeader(
@@ -71,4 +72,4 @@ class _View extends T___SCREEN_CLASS___View {
 extension _Labels on ___SCREEN_CLASS___Controller {
   // Tip: You can add functions to your controller here.
 }
-````
+```

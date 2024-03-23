@@ -8,8 +8,6 @@
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //.title~
 
-// ignore_for_file: prefer_single_quotes
-
 part of '___CLASS_FILE___';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -74,7 +72,7 @@ class ___CONFIGURATION_CLASS___ extends ModelScreenConfiguration {
   static const IS_ACCESSIBLE_ONLY_IF_LOGGED_OUT = _IS_ACCESSIBLE_ONLY_IF_LOGGED_OUT;
   static const IS_REDIRECTABLE = _IS_REDIRECTABLE;
   static const NAVIGATION_CONTROLS_WIDGET = ___NAVIGATION_CONTROLS_WIDGET___;
-  static const TITLE = '___DEFAULT_TITLE___||title';
+  static String get translatedTitle => screenTr('___DEFAULT_TITLE___||title');
   // ignore: prefer_const_declarations
   static final ScreenMakeup? screenMakeup = ___MAKEUP___;
   static String screenTr(String key, {Map<dynamic, dynamic> args = const {}}) {
@@ -104,7 +102,7 @@ class ___CONFIGURATION_CLASS___ extends ModelScreenConfiguration {
     isRedirectable: _IS_REDIRECTABLE,
   ) {
     super.navigationControlsWidget = NAVIGATION_CONTROLS_WIDGET;
-    super.title = TITLE.screenTr();
+    super.title =translatedTitle;
     super.makeup = screenMakeup;
   }
 
@@ -118,7 +116,7 @@ class ___CONFIGURATION_CLASS___ extends ModelScreenConfiguration {
           isRedirectable: _IS_REDIRECTABLE,
         ) {
     super.navigationControlsWidget = NAVIGATION_CONTROLS_WIDGET;
-    super.title = TITLE.screenTr();
+    super.title = translatedTitle;
     super.makeup = screenMakeup;
   }
 }
@@ -151,7 +149,7 @@ final generated___CLASS___Route = GoRoute(
       isRedirectable: ___CONFIGURATION_CLASS___.IS_REDIRECTABLE,
       makeup: ___CONFIGURATION_CLASS___.screenMakeup,
       navigationControlsWidget: ___CONFIGURATION_CLASS___.NAVIGATION_CONTROLS_WIDGET,
-      title: ___CONFIGURATION_CLASS___.TITLE.screenTr(),
+      title: ___CONFIGURATION_CLASS___.translatedTitle,
     );
     final configuration = extraConfiguration ?? urlConfiguration;
     return NoTransitionPage(

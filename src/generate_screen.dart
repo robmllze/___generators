@@ -17,16 +17,16 @@ import 'package:xyz_utils/xyz_utils.dart';
 const TARGET = 'apps/public_app';
 
 // To-Do: Give the screen class a name.
-const CLASS_NAME = 'SendConnectionRequestScreen';
+const CLASS_NAME = 'MyOrganizationDetailsScreen';
 
 // To-Do: Provide a title for the Screen.
-const DEFAULT_TITLE = 'Send Connection Request';
+const DEFAULT_TITLE = 'Organization Details';
 
 // To-Do: Specify the Screen's access settings:
 const bool IS_ONLY_ACCESSIBLE_IF_LOGGED_IN_AND_VERIFIED = false;
 const bool IS_ONLY_ACCESSIBLE_IF_LOGGED_IN = true;
 const bool IS_ONLY_ACCESSIBLE_IF_LOGGED_OUT = false;
-const bool IS_REDIRECTABLE = false;
+const bool IS_REDIRECTABLE = true;
 
 // To-Do: Provide a makeup class for the Screen, or leave empty:
 const String MAKEUP = '';
@@ -36,7 +36,7 @@ final navigationControlWidget = <int, String>{
   1: 'MyActiveBottomNavigationControls(key: DEFAULT_KEY)',
 }
 // To-Do: Choose a number from the map above, or leave empty:
-    [0]!;
+    [1]!;
 
 // To-Do: Specify parameters for the Screen, or leave empty:
 const INTERNAL_PARAMETERS = <String, String>{

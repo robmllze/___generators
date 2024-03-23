@@ -17,22 +17,26 @@ import 'package:xyz_utils/xyz_utils.dart';
 const TARGET = 'apps/public_app';
 
 // To-Do: Give the screen class a name.
-const CLASS_NAME = 'ChatScreen';
+const CLASS_NAME = 'SendConnectionRequestScreen';
 
 // To-Do: Provide a title for the Screen.
-const DEFAULT_TITLE = 'Chat';
+const DEFAULT_TITLE = 'Send Connection Request';
 
 // To-Do: Specify the Screen's access settings:
 const bool IS_ONLY_ACCESSIBLE_IF_LOGGED_IN_AND_VERIFIED = false;
 const bool IS_ONLY_ACCESSIBLE_IF_LOGGED_IN = true;
 const bool IS_ONLY_ACCESSIBLE_IF_LOGGED_OUT = false;
-const bool IS_REDIRECTABLE = true;
+const bool IS_REDIRECTABLE = false;
 
 // To-Do: Provide a makeup class for the Screen, or leave empty:
 const String MAKEUP = '';
 
-// To-Do: Provide a navigation control widget for the Screen, or leave empty:
-const String NAVIGATION_CONTROL_WIDGET = 'MyActiveBottomNavigationControls(key: DEFAULT_KEY)';
+final navigationControlWidget = <int, String>{
+  0: '',
+  1: 'MyActiveBottomNavigationControls(key: DEFAULT_KEY)',
+}
+// To-Do: Choose a number from the map above, or leave empty:
+    [0]!;
 
 // To-Do: Specify parameters for the Screen, or leave empty:
 const INTERNAL_PARAMETERS = <String, String>{
@@ -49,30 +53,30 @@ const PART_FILE_DIRS = <String>{
   // 'components/_header_widget.dart', // (example)
 };
 
-final bindingsTemplate = {
+final bindingsTemplate = <int, String>{
   0: 'your_screen_bindings_template',
 }
 // To-Do: Choose a number from the map above, or leave empty:
-    [0];
+    [0]!;
 
-final controllerTemplate = {
+final controllerTemplate = <int, String>{
   0: 'your_screen_controller_template',
   1: 'empty_screen_controller_template',
 }
 // To-Do: Choose a number from the map above, or leave empty:
-    [0];
+    [0]!;
 
-final viewTemplate = {
+final viewTemplate = <int, String>{
   0: 'your_screen_view_template',
   1: 'empty_screen_view_template',
 }
 // To-Do: Choose a number from the map above, or leave empty:
-    [0];
+    [0]!;
 
-final screenTemplate = {
+final screenTemplate = <int, String>{
   0: 'your_screen_template',
 } // To-Do: Choose a number from the map above, or leave empty:
-    [0];
+    [0]!;
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 //
@@ -111,7 +115,7 @@ Future<void> _generateScreens(String screensDir) async {
       '--is-only-accessible-if-logged-out': IS_ONLY_ACCESSIBLE_IF_LOGGED_OUT.toString(),
       '--is-redirectable': IS_REDIRECTABLE.toString(),
       '--makeup': MAKEUP,
-      '--navigation-control-widget': NAVIGATION_CONTROL_WIDGET,
+      '--navigation-control-widget': navigationControlWidget,
       '--internal-parameters':
           INTERNAL_PARAMETERS.entries.map((e) => '${e.key}:${e.value}').join('&&'),
       '--query-parameters': QUERY_PARAMETERS.join('&'),

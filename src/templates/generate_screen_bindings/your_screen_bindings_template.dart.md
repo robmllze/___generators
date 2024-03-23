@@ -25,6 +25,7 @@ const _TR_KEY = 'screens.___CLASS___';
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 extension _ScreenTr on String {
+  // ignore: unused_element
   String screenTr({Map<dynamic, dynamic> args = const {}}) {
     return ___CONFIGURATION_CLASS___.screenTr(this, args: args);
   }

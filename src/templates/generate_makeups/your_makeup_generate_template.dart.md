@@ -1,4 +1,4 @@
-````dart
+```dart
 //.title
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //
@@ -20,4 +20,4 @@ import '/_common.dart';
 )
 // ignore: unused_element
 abstract final class ____CLASS___ {}
-````
+```

@@ -1,4 +1,4 @@
-````dart
+```dart
 //.title
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //
@@ -31,4 +31,4 @@ extension ___ENUM___Utils on ___ENUM___ {
     return this.name.toSnakeCase().split('_').map((e) => e.capitalize()).join(' ');
   }
 }
-````
+```

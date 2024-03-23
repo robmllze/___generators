@@ -1,4 +1,4 @@
-````dart
+```dart
 //.title
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //
@@ -80,7 +80,7 @@ class ___CONFIGURATION_CLASS___ extends ModelScreenConfiguration {
   static String screenTr(String key, {Map<dynamic, dynamic> args = const {}}) {
     return key.splitByLastOccurrenceOf('||').join('||$_TR_KEY.').tr(args: args);
   }
-  
+
   ___IP0___
   ___QP0___
   ___PS0___
@@ -133,7 +133,7 @@ abstract class _ControllerBroker<T1 extends ___CLASS___, T2 extends _View>
   late final configuration = ___CONFIGURATION_CLASS___.fromArgs(
     screen.configuration?.arguments ?? {},
   );
-  
+
   _ControllerBroker(super.superScreen, super.superState);
 }
 
@@ -171,4 +171,4 @@ typedef T___CLASS___Controller =  _ControllerBroker<___CLASS___, _View>;
 typedef T___CLASS___View = ScreenView<___CLASS___, ___CONFIGURATION_CLASS___, ___CLASS___Controller>;
 
 typedef T___CLASS___PageView<T extends ScreenPage> = ScreenPageView<T, ___CONFIGURATION_CLASS___, ___CLASS___Controller>;
-````
+```

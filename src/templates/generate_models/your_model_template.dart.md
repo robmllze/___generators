@@ -1,4 +1,4 @@
-````dart
+```dart
 //.title
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //
@@ -28,11 +28,11 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   static const CLASS = '___CLASS___';
   static const MODEL_ID = '___MODEL_ID___';
 
-  
+
   ___P0___
 
   ___P1___
-  
+
   //
   //
   //
@@ -97,7 +97,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
   //
   //
-  
+
   factory ___CLASS___.fromJson(
     Map<String, dynamic>? otherData,
   ) {
@@ -163,4 +163,4 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
     }
   }
 }
-````
+```

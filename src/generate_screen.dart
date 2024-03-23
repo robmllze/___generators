@@ -19,14 +19,14 @@ import 'package:xyz_utils/xyz_utils.dart';
 const TARGET = 'apps/public_app';
 
 // To-Do: Give the screen class a name.
-const CLASS_NAME = 'SignupScreen';
+const CLASS_NAME = 'RelationshipListScreen';
 
 // To-Do: Provide a title for the Screen.
-const DEFAULT_TITLE = 'Sign Up';
+const DEFAULT_TITLE = 'Relationship List';
 
 // To-Do: Specify the Screen's access settings:
 const bool IS_ONLY_ACCESSIBLE_IF_LOGGED_IN_AND_VERIFIED = false;
-const bool IS_ONLY_ACCESSIBLE_IF_LOGGED_IN = false;
+const bool IS_ONLY_ACCESSIBLE_IF_LOGGED_IN = true;
 const bool IS_ONLY_ACCESSIBLE_IF_LOGGED_OUT = true;
 const bool IS_REDIRECTABLE = true;
 

@@ -1,4 +1,4 @@
-````dart
+```dart
 //.title
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //
@@ -18,4 +18,4 @@ class _View extends T___SCREEN_CLASS___View {
     return const SizedBox();
   }
 }
-````
+```

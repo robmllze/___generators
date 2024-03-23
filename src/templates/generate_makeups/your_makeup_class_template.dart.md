@@ -1,4 +1,4 @@
-````dart
+```dart
 //.title
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //
@@ -23,7 +23,7 @@ class ___MAKEUP_CLASS___  {
   //
   //
   //
-  
+
   ___MAKEUP_CLASS___(___P1___);
 
   //
@@ -44,4 +44,4 @@ typedef F___MAKEUP_CLASS___ = ___MAKEUP_CLASS___ Function();
 const k___CLASS___MakeupProperties = <String, String>{
   ___PROPERTIES___
 };
-````
+```

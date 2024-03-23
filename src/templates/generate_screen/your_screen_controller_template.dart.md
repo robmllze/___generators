@@ -1,5 +1,4 @@
-
-````dart
+```dart
 //.title
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //
@@ -61,4 +60,4 @@ class ___SCREEN_CLASS___Controller extends T___SCREEN_CLASS___Controller {
 extension ___SCREEN_CLASS___ControllerExtension on ___SCREEN_CLASS___Controller {
   // Tip: You can break up your controller into multiple files using extensions.
 }
-````
+```

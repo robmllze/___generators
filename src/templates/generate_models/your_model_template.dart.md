@@ -61,7 +61,11 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   factory ___CLASS___.from(
     Model? other,
   ) {
-    return ___CLASS___.unsafe()..updateWith(other);
+    if (other is DataModel) {
+      return ___CLASS___.fromDataModel(other);
+    } else {
+      return ___CLASS___.unsafe()..updateWith(other);
+    }
   }
 
   //
@@ -109,6 +113,16 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
       assert(false, e);
       rethrow;
     }
+  }
+
+  //
+  //
+  //
+
+  factory ___CLASS___.fromDataModel(
+    DataModel? other,
+  ) {
+    return ___CLASS___.fromJson(other?.data ?? {});
   }
 
   //

@@ -70,4 +70,28 @@ ModelScreenConfiguration? currentUrlToConfiguration({
     authServiceBroker: authServiceBroker,
   )?.configuration;
 }
+
+ModelScreenConfiguration? currentUrlToLoginConfiguration() {
+  return findScreenFromConfiguration(
+    configuration: ModelScreenConfiguration(
+      arguments: Uri.base.queryParameters,
+      path: Uri.base.path,
+    ),
+    isLoggedInAndVerified: true,
+    isLoggedIn: true,
+    isLoggedOut: false,
+  )?.configuration;
+}
+
+ModelScreenConfiguration? currentUrlToLogoutConfiguration() {
+  return findScreenFromConfiguration(
+    configuration: ModelScreenConfiguration(
+      arguments: Uri.base.queryParameters,
+      path: Uri.base.path,
+    ),
+    isLoggedInAndVerified: false,
+    isLoggedIn: false,
+    isLoggedOut: true,
+  )?.configuration;
+}
 ```

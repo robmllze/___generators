@@ -60,14 +60,14 @@ Screen? findScreenFromConfigurationAndAuthService({
 /// screen configuration when the user logs in for the first time. On
 /// platforms other than web, this method will always return null.
 ModelScreenConfiguration? currentUrlToConfiguration({
-  required AuthServiceInterface authService,
+  required AuthServiceInterface? authServiceBroker,
 }) {
   return findScreenFromConfigurationAndAuthService(
     configuration: ModelScreenConfiguration(
       arguments: Uri.base.queryParameters,
       path: Uri.base.path,
     ),
-    authServiceBroker: authService,
+    authServiceBroker: authServiceBroker,
   )?.configuration;
 }
 ```

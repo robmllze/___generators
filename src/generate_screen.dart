@@ -17,10 +17,10 @@ import 'package:xyz_utils/xyz_utils.dart';
 const TARGET = 'apps/public_app';
 
 // To-Do: Give the screen class a name.
-const CLASS_NAME = 'MyOrganizationDetailsScreen';
+const CLASS_NAME = 'InvitesScreen';
 
 // To-Do: Provide a title for the Screen.
-const DEFAULT_TITLE = 'Organization Details';
+const DEFAULT_TITLE = 'Invites';
 
 // To-Do: Specify the Screen's access settings:
 const bool IS_ONLY_ACCESSIBLE_IF_LOGGED_IN_AND_VERIFIED = false;
@@ -36,7 +36,7 @@ final navigationControlWidget = <int, String>{
   1: 'MyActiveBottomNavigationControls(key: DEFAULT_KEY)',
 }
 // To-Do: Choose a number from the map above, or leave empty:
-    [1]!;
+    [0]!;
 
 // To-Do: Specify parameters for the Screen, or leave empty:
 const INTERNAL_PARAMETERS = <String, String>{

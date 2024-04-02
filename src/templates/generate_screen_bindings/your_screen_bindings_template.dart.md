@@ -103,7 +103,7 @@ class ___CONFIGURATION_CLASS___ extends ModelScreenConfiguration {
     isRedirectable: _IS_REDIRECTABLE,
   ) {
     super.navigationControlsWidget = NAVIGATION_CONTROLS_WIDGET;
-    super.title =translatedTitle;
+    super.title = translatedTitle;
     super.makeup = screenMakeup;
   }
 

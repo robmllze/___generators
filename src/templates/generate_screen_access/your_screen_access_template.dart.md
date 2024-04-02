@@ -12,15 +12,21 @@ import '/_common.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
+/// A list of all screen routes in the app.
 final generatedScreenRoutes = [
   ___GENERATED_SCREEN_ROUTES___,
 ];
 
+/// A list of function references. Each returns a corresponding screen for a
+/// given configuration or `null` if the given configuration does not match or
+/// access is denied to the screen.
 const SCREEN_MAKERS = [
   ___SCREEN_MAKERS___,
 ];
 
-/// Finds the screen corresponding to [configuration] and the auth state.
+/// Finds the screen that corresponds to [configuration]. Returns the
+/// corresponding screen or `null` if none are found or access is denied to
+/// the screen.
 Screen? findScreenFromConfiguration({
   required ModelScreenConfiguration configuration,
   required bool? isLoggedInAndVerified,
@@ -41,7 +47,9 @@ Screen? findScreenFromConfiguration({
   return null;
 }
 
-/// Finds the screen corresponding to [configuration] and the [authServiceBroker] state.
+/// Finds the screen that corresponds to [configuration]. Returns the
+/// corresponding screen or `null` if none are found or access is denied to
+/// the screen.
 Screen? findScreenFromConfigurationAndAuthService({
   required ModelScreenConfiguration configuration,
   required AuthServiceInterface? authServiceBroker,
@@ -54,11 +62,9 @@ Screen? findScreenFromConfigurationAndAuthService({
   );
 }
 
-/// Gets the current configuration from the app's current url and matches it
-/// to an existing configuration. If it does not match any of the existing
-/// configurations, it returns null. This is useful to get the requested
-/// screen configuration when the user logs in for the first time. On
-/// platforms other than web, this method will always return null.
+/// Translates the current URL into a [ModelScreenConfiguration], considering
+/// the user's authentication state via [authServiceBroker]. Returns the
+/// matching screen configuration if accessible; otherwise, `null`.
 ModelScreenConfiguration? currentUrlToConfiguration({
   required AuthServiceInterface? authServiceBroker,
 }) {
@@ -71,6 +77,10 @@ ModelScreenConfiguration? currentUrlToConfiguration({
   )?.configuration;
 }
 
+/// Translates the current URL into a [ModelScreenConfiguration] under the
+/// assumption that the user is **logged in and email verified**. If a
+/// corresponding screen is accessible, returns its configuration; otherwise,
+/// returns `null`.
 ModelScreenConfiguration? currentUrlToLoginConfiguration() {
   return findScreenFromConfiguration(
     configuration: ModelScreenConfiguration(
@@ -83,6 +93,9 @@ ModelScreenConfiguration? currentUrlToLoginConfiguration() {
   )?.configuration;
 }
 
+/// Translates the current URL into a [ModelScreenConfiguration] under the
+/// assumption that the user is **logged out**. If a corresponding screen is
+/// accessible, returns its configuration; otherwise, returns `null`.
 ModelScreenConfiguration? currentUrlToLogoutConfiguration() {
   return findScreenFromConfiguration(
     configuration: ModelScreenConfiguration(

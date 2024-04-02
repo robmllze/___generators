@@ -17,10 +17,10 @@ import 'package:xyz_utils/xyz_utils.dart';
 const TARGET = 'apps/public_app';
 
 // To-Do: Give the screen class a name.
-const CLASS_NAME = 'InvitesScreen';
+const CLASS_NAME = 'AddConnectionScreen';
 
 // To-Do: Provide a title for the Screen.
-const DEFAULT_TITLE = 'Invites';
+const DEFAULT_TITLE = 'Add Connection';
 
 // To-Do: Specify the Screen's access settings:
 const bool IS_ONLY_ACCESSIBLE_IF_LOGGED_IN_AND_VERIFIED = false;

@@ -61,11 +61,9 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   factory ___CLASS___.from(
     Model? other,
   ) {
-    if (other is GenericModel) {
-      return ___CLASS___.fromGenericModel(other);
-    } else {
-      return ___CLASS___.unsafe()..updateWith(other);
-    }
+    return ___CLASS___.fromJson(
+      other is GenericModel ? other.data : other?.toJson(),
+    );
   }
 
   //
@@ -75,7 +73,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   factory ___CLASS___.of(
     ___CLASS___? other,
   ) {
-    return ___CLASS___.unsafe()..updateWith(other);
+    return ___CLASS___.fromJson(other?.toJson());
   }
 
   //
@@ -113,16 +111,6 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
       assert(false, e);
       rethrow;
     }
-  }
-
-  //
-  //
-  //
-
-  factory ___CLASS___.fromGenericModel(
-    GenericModel? other,
-  ) {
-    return ___CLASS___.fromJson(other?.data ?? {});
   }
 
   //

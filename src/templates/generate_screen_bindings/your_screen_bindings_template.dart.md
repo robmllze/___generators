@@ -12,27 +12,9 @@ part of '___CLASS_FILE___';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
+/// Serves as the blueprint for the [___CLASS___] screen.
+/// It outlines the screen's properties and behaviors prior to routing.
 class ___CONFIGURATION_CLASS___ extends ModelScreenConfiguration {
-  //
-  //
-  //
-
-  static const CLASS = _CLASS;
-  static const SEGMENT = _SEGMENT;
-  static const PATH = _PATH;
-  static const TR_KEY = _TR_KEY;
-  static const IS_ACCESSIBLE_ONLY_IF_LOGGED_IN = _IS_ACCESSIBLE_ONLY_IF_LOGGED_IN;
-    static const IS_ACCESSIBLE_ONLY_IF_LOGGED_IN_AND_VERIFIED = _IS_ACCESSIBLE_ONLY_IF_LOGGED_IN_AND_VERIFIED;
-  static const IS_ACCESSIBLE_ONLY_IF_LOGGED_OUT = _IS_ACCESSIBLE_ONLY_IF_LOGGED_OUT;
-  static const IS_REDIRECTABLE = _IS_REDIRECTABLE;
-  static const NAVIGATION_CONTROLS_WIDGET = ___NAVIGATION_CONTROLS_WIDGET___;
-  static String get translatedTitle => screenTr('$_DEFAULT_TITLE||title');
-  // ignore: prefer_const_declarations
-  static final ScreenMakeup? screenMakeup = ___MAKEUP___;
-  static String screenTr(String key, {Map<dynamic, dynamic> args = const {}}) {
-    return key.splitByLastOccurrenceOf('||').join('||$_TR_KEY.').tr(args: args);
-  }
-
   //
   //
   //
@@ -41,23 +23,31 @@ class ___CONFIGURATION_CLASS___ extends ModelScreenConfiguration {
   ___QP0___
   ___PS0___
 
-  //
-  //
-  //
-
-  ___CONFIGURATION_CLASS___({
+  factory ___CONFIGURATION_CLASS___({
     ___IP1___
     ___QP1___
     ___PS1___
     Map<dynamic, dynamic>? $arguments,
+  }) {
+    return ___CONFIGURATION_CLASS___.unsafe(
+      arguments: {
+         ___IP2___
+         ___QP2___
+         ___PS2___
+        ...?$arguments,
+      },
+    );
+  }
+
+  //
+  //
+  //
+
+  ___CONFIGURATION_CLASS___.unsafe({
+    Map<dynamic, dynamic>? arguments,
   }): super(
     path: _PATH,
-    arguments: {
-      ___IP2___
-      ___QP2___
-      ___PS2___
-      ...?$arguments,
-    },
+    arguments: arguments ?? {},
     isAccessibleOnlyIfLoggedInAndVerified: _IS_ACCESSIBLE_ONLY_IF_LOGGED_IN_AND_VERIFIED,
     isAccessibleOnlyIfLoggedIn: _IS_ACCESSIBLE_ONLY_IF_LOGGED_IN,
     isAccessibleOnlyIfLoggedOut: _IS_ACCESSIBLE_ONLY_IF_LOGGED_OUT,
@@ -72,26 +62,51 @@ class ___CONFIGURATION_CLASS___ extends ModelScreenConfiguration {
   //
   //
 
-  ___CONFIGURATION_CLASS___.fromArgs(Map<dynamic, dynamic>? args)
-      : super(
-          path: _PATH,
-          arguments: args,
-          isAccessibleOnlyIfLoggedInAndVerified: _IS_ACCESSIBLE_ONLY_IF_LOGGED_IN_AND_VERIFIED,
-          isAccessibleOnlyIfLoggedIn: _IS_ACCESSIBLE_ONLY_IF_LOGGED_IN,
-          isAccessibleOnlyIfLoggedOut: _IS_ACCESSIBLE_ONLY_IF_LOGGED_OUT,
-          isRedirectable: _IS_REDIRECTABLE,
-        ) {
-    super.navigationControlsWidget = NAVIGATION_CONTROLS_WIDGET;
-    super.title = translatedTitle;
-    super.makeup = screenMakeup;
-  }
-
-  //
-  //
-  //
-
   @override
   String get title => translatedTitle;
+
+  //
+  //
+  //
+
+  /// The name of the corresponding [Screen] class.
+  static const CLASS = _CLASS;
+
+  /// The path of the corresponding [Screen].
+  static const PATH = _PATH;
+
+  /// The segment of the corresponding [Screen] path.
+  static const SEGMENT = _SEGMENT;
+
+  /// The translation key for the corresponding [Screen].
+  static const TR_KEY = _TR_KEY;
+
+  /// Whether the corresponding [Screen] is only accessible if the user is logged in and verified.
+  static const IS_ACCESSIBLE_ONLY_IF_LOGGED_IN = _IS_ACCESSIBLE_ONLY_IF_LOGGED_IN;
+
+  /// Whether the corresponding [Screen] is only accessible if the user is logged in.
+  static const IS_ACCESSIBLE_ONLY_IF_LOGGED_IN_AND_VERIFIED = _IS_ACCESSIBLE_ONLY_IF_LOGGED_IN_AND_VERIFIED;
+
+  /// Whether the corresponding [Screen] is only accessible if the user is logged out.
+  static const IS_ACCESSIBLE_ONLY_IF_LOGGED_OUT = _IS_ACCESSIBLE_ONLY_IF_LOGGED_OUT;
+
+  /// Whether the corresponding [Screen] is redirectable, i.e., if it can be requested from the browser URL.
+  static const IS_REDIRECTABLE = _IS_REDIRECTABLE;
+
+  /// The default navigation controls widget of the corresponding [Screen].
+  static const NAVIGATION_CONTROLS_WIDGET = ___NAVIGATION_CONTROLS_WIDGET___;
+
+  /// The title of the corresponding [Screen].
+  static String get translatedTitle => screenTr('$_DEFAULT_TITLE||title');
+
+  /// The defailt makeup of the corresponding [Screen].
+  // ignore: prefer_const_declarations
+  static final ScreenMakeup? screenMakeup = ___MAKEUP___;
+
+  /// Translates the provided [key] using the screen's translation key.
+  static String screenTr(String key, {Map<dynamic, dynamic> args = const {}}) {
+    return key.splitByLastOccurrenceOf('||').join('||$_TR_KEY.').tr(args: args);
+  }
 }
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -107,8 +122,8 @@ abstract class _ControllerBroker<T1 extends ___CLASS___, T2 extends _View>
   late final state = super.superState as T2;
 
   /// The [ModelScreenConfiguration] that corresponds to `this` controller.
-  late final configuration = ___CONFIGURATION_CLASS___.fromArgs(
-    screen.configuration?.arguments ?? {},
+  late final configuration = ___CONFIGURATION_CLASS___.unsafe(
+    arguments: screen.configuration?.arguments,
   );
 
   _ControllerBroker(super.superScreen, super.superState);
@@ -135,7 +150,7 @@ final generated___CLASS___Route = GoRoute(
     return NoTransitionPage(
       key: state.pageKey,
       child: ___CLASS___(
-        key: ValueKey<String?>(configuration.toString()),
+        key: ValueKey(configuration.toUrl()),
         configuration: configuration,
       ),
     );
@@ -145,10 +160,10 @@ final generated___CLASS___Route = GoRoute(
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 extension _ScreenTr on String {
-  // ignore: unused_element
   /// Translates this [String] using the translation key '_TR_KEY'. Optionally,
   /// pass [args] to replace placeholders in this String denoted by `{key}` in
   /// the translation.
+  // ignore: unused_element
   String screenTr({Map<dynamic, dynamic> args = const {}}) {
     return ___CONFIGURATION_CLASS___.screenTr(this, args: args);
   }
@@ -176,11 +191,11 @@ Screen? maker___CLASS___(
   }
   if (RegExp(r'^(' + _PATH + r')([?/].*)?$')
       .hasMatch(Uri.decodeComponent(configuration.path ?? ''))) {
-    final temp = ___CONFIGURATION_CLASS___(
-      $arguments: configuration.arguments,
+    final temp = ___CONFIGURATION_CLASS___.unsafe(
+      arguments: configuration.arguments,
     );
     return ___CLASS___(
-      key: ValueKey<String?>(temp.path),
+      key: ValueKey(temp.toUrl()),
       configuration: temp,
     );
   }

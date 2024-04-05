@@ -117,6 +117,25 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
   //
 
+  factory ___CLASS___.fromUri(
+    Uri? uri,
+  ) {
+    try {
+      if (uri != null && uri.path == MODEL_ID) {
+        return ___CLASS___.fromJson(uri.queryParameters);
+      } else {
+        return ___CLASS___.unsafe();
+      }
+    } catch (e) {
+      assert(false, e);
+      rethrow;
+    }
+  }
+
+  //
+  //
+  //
+
   @override
   Map<String, dynamic> toJson({
     dynamic defaultValue,
@@ -164,5 +183,11 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
       ___P8___
     }
   }
+
+  //
+  //
+  //
+
+  String get modelId => MODEL_ID;
 }
 ```

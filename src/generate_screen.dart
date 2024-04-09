@@ -17,10 +17,10 @@ import 'package:xyz_utils/xyz_utils.dart';
 const TARGET = 'apps/public_app';
 
 // To-Do: Give the screen class a name.
-const CLASS_NAME = 'AddConnectionScreen';
+const CLASS_NAME = 'MyMemberListScreen';
 
 // To-Do: Provide a title for the Screen.
-const DEFAULT_TITLE = 'Add Connection';
+const DEFAULT_TITLE = 'Members';
 
 // To-Do: Specify the Screen's access settings:
 const bool IS_ONLY_ACCESSIBLE_IF_LOGGED_IN_AND_VERIFIED = false;
@@ -33,10 +33,10 @@ const String MAKEUP = '';
 
 final navigationControlWidget = <int, String>{
   0: '',
-  1: 'MyActiveBottomNavigationControls(key: DEFAULT_KEY)',
+  1: "'kMyActiveBottomNavigationControls'",
 }
 // To-Do: Choose a number from the map above, or leave empty:
-    [0]!;
+    [1]!;
 
 // To-Do: Specify parameters for the Screen, or leave empty:
 const INTERNAL_PARAMETERS = <String, String>{
@@ -64,14 +64,14 @@ final controllerTemplate = <int, String>{
   1: 'empty_screen_controller_template',
 }
 // To-Do: Choose a number from the map above, or leave empty:
-    [0]!;
+    [1]!;
 
 final viewTemplate = <int, String>{
   0: 'your_screen_view_template',
   1: 'empty_screen_view_template',
 }
 // To-Do: Choose a number from the map above, or leave empty:
-    [0]!;
+    [1]!;
 
 final screenTemplate = <int, String>{
   0: 'your_screen_template',

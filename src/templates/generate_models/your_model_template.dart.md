@@ -136,6 +136,19 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
   //
 
+  static ___CLASS___? fromPool({
+    required Iterable<___CLASS___>? pool,
+    required String? id,
+  }) {
+    return id != null
+        ? pool?.firstWhereOrNull((e) => e.id == id)
+        : null;
+  }
+
+  //
+  //
+  //
+
   @override
   Map<String, dynamic> toJson({
     dynamic defaultValue,

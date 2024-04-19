@@ -30,11 +30,11 @@ class _View extends T___SCREEN_CLASS___View {
           Expanded(
             child: SingleChildScrollView(
               child: Padding(
-                padding: EdgeInsets.all(20.sc),
-                child: SizedBox(
-                  width: double.infinity,
-                  child: body,
+                padding: EdgeInsets.symmetric(
+                  horizontal: 24.sc,
+                  vertical: 48.sc,
                 ),
+                child: body,
               ),
             ),
           ),

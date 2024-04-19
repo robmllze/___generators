@@ -17,7 +17,7 @@ import 'package:xyz_utils/xyz_utils.dart';
 const TARGET = 'apps/public_app';
 
 // To-Do: Give the screen class a name.
-const CLASS_NAME = 'InviteConnectionsScreen';
+const CLASS_NAME = 'EmailInvitationsScreen';
 
 // To-Do: Provide a title for the Screen.
 const DEFAULT_TITLE = 'Invite Connections';

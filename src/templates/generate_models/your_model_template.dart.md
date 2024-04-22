@@ -136,6 +136,17 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
   //
 
+
+  static ___CLASS___? convert(
+    Model? other,
+  ) {
+    return other != null ? ___CLASS___.from(other): null;
+  }
+
+  //
+  //
+  //
+
   static ___CLASS___? fromPool({
     required Iterable<___CLASS___>? pool,
     required String? id,

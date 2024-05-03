@@ -37,10 +37,19 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
   //
 
-  ___CLASS___({
+  ModeTest.empty();
+
+
+  //
+  //
+  //
+
+  factory ___CLASS___({
     ___P2___
   }) ___SUPER_CONSTRUCTOR___ {
-    ___P3___
+    return ___CLASS___.unsafe(
+      ___P11___
+    );
   }
 
   //
@@ -104,9 +113,8 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
     Map<String, dynamic>? otherData,
   ) {
     try {
-      return ___CLASS___.unsafe(
-        ___P6___
-      );
+      return ___CLASS___.empty()
+      ___P6___
     } catch (e) {
       assert(false, e);
       rethrow;
@@ -213,5 +221,17 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
 
   String get modelId => MODEL_ID;
+
+  //
+  //
+  //
+
+  ___P9___
+
+  //
+  //
+  //
+
+  ___P10___
 }
 ```

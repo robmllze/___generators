@@ -18,6 +18,7 @@ import 'package:xyz_utils/xyz_utils.dart';
 // their respective model classes.
 const folders = <String>{
   '',
+  'example',
   '_data',
   'apps/admin_app',
   'apps/operations_app',

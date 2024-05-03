@@ -26,8 +26,9 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
 
   static const CLASS = '___CLASS___';
-  static const MODEL_ID = '___MODEL_ID___';
 
+  @override
+  String get $class => CLASS;
 
   ___P0___
 
@@ -37,7 +38,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
   //
 
-  ModeTest.empty();
+  ___CLASS___.empty();
 
 
   //
@@ -47,8 +48,8 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   factory ___CLASS___({
     ___P2___
   }) ___SUPER_CONSTRUCTOR___ {
-    return ___CLASS___.unsafe(
-      ___P11___
+    return ___CLASS___.b(
+      ___P3___
     );
   }
 
@@ -56,11 +57,13 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
   //
 
-  ___CLASS___.unsafe({
+  ___CLASS___.b({
+
     ___P4___
   }) ___SUPER_CONSTRUCTOR___ {
     ___P5___
-    ___P3___
+    ___P6___
+
   }
 
   //
@@ -71,7 +74,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
     Model? other,
   ) {
     return ___CLASS___.fromJson(
-      other is GenericModel ? other.data : other?.toJson(),
+      letAs<GenericModel>(other)?.data ?? other?.toJson(),
     );
   }
 
@@ -97,7 +100,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
         final decoded = jsonDecode(source);
         return ___CLASS___.fromJson(decoded);
       } else {
-        return ___CLASS___.unsafe();
+        return ___CLASS___.empty();
       }
     } catch (e) {
       assert(false, e);
@@ -114,7 +117,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   ) {
     try {
       return ___CLASS___.empty()
-      ___P6___
+      ___P7___
     } catch (e) {
       assert(false, e);
       rethrow;
@@ -129,10 +132,10 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
     Uri? uri,
   ) {
     try {
-      if (uri != null && uri.path == MODEL_ID) {
+      if (uri != null && uri.path == CLASS) {
         return ___CLASS___.fromJson(uri.queryParameters);
       } else {
-        return ___CLASS___.unsafe();
+        return ___CLASS___.b();
       }
     } catch (e) {
       assert(false, e);
@@ -175,7 +178,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   }) {
     try {
       final withNulls = <String, dynamic>{
-        ___P7___
+        ___P8___
       }.mapWithDefault(defaultValue);
       return includeNulls ? withNulls : withNulls.nonNulls;
     } catch (e) {
@@ -190,7 +193,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
 
   @override
   T empty<T extends Model>() {
-    return ___CLASS___.unsafe() as T;
+    return ___CLASS___.b() as T;
   }
 
   //
@@ -199,7 +202,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
 
   @override
   T copy<T extends Model>() {
-    return (___CLASS___.unsafe()..updateWith(this)) as T;
+    return (___CLASS___.b()..updateWith(this)) as T;
   }
 
   //
@@ -212,21 +215,9 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   ) {
     if (otherData != null && otherData.isNotEmpty) {
       final other = ___CLASS___.fromJson(otherData);
-      ___P8___
+      ___P9___
     }
   }
-
-  //
-  //
-  //
-
-  String get modelId => MODEL_ID;
-
-  //
-  //
-  //
-
-  ___P9___
 
   //
   //

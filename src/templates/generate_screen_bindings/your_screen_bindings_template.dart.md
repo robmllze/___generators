@@ -45,7 +45,7 @@ class ___CONFIGURATION_CLASS___ extends ModelScreenConfiguration {
 
   ___CONFIGURATION_CLASS___.unsafe({
     Map<dynamic, dynamic>? arguments,
-  }): super(
+  }): super.b(
     path: _PATH,
     arguments: arguments ?? {},
     isAccessibleOnlyIfLoggedInAndVerified: _IS_ACCESSIBLE_ONLY_IF_LOGGED_IN_AND_VERIFIED,

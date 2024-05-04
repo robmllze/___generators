@@ -25,12 +25,12 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
   //
 
+  ___P0___
+
   static const CLASS = '___CLASS___';
 
   @override
   String get $class => CLASS;
-
-  ___P0___
 
   ___P1___
 

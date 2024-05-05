@@ -83,7 +83,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
 
 
-  static ___CLASS___? fromOr(
+  static ___CLASS___? fromOrNull(
     Model? other,
   ) {
     return other != null ? ___CLASS___.from(other): null;

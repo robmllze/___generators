@@ -78,6 +78,17 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
     );
   }
 
+   //
+  //
+  //
+
+
+  static ___CLASS___? fromOr(
+    Model? other,
+  ) {
+    return other != null ? ___CLASS___.from(other): null;
+  }
+
   //
   //
   //
@@ -141,30 +152,6 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
       assert(false, e);
       rethrow;
     }
-  }
-
-  //
-  //
-  //
-
-
-  static ___CLASS___? convert(
-    Model? other,
-  ) {
-    return other != null ? ___CLASS___.from(other): null;
-  }
-
-  //
-  //
-  //
-
-  static ___CLASS___? fromPool({
-    required Iterable<___CLASS___>? pool,
-    required String? id,
-  }) {
-    return id != null
-        ? pool?.firstWhereOrNull((e) => e.id == id)
-        : null;
   }
 
   //

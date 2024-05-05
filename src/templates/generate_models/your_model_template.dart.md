@@ -58,12 +58,9 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
 
   ___CLASS___.b({
-
     ___P4___
   }) ___SUPER_CONSTRUCTOR___ {
     ___P5___
-    ___P6___
-
   }
 
   //
@@ -128,7 +125,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   ) {
     try {
       return ___CLASS___.empty()
-      ___P7___
+      ___P6___
     } catch (e) {
       assert(false, e);
       rethrow;
@@ -165,7 +162,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   }) {
     try {
       final withNulls = <String, dynamic>{
-        ___P8___
+        ___P7___
       }.mapWithDefault(defaultValue);
       return includeNulls ? withNulls : withNulls.nonNulls;
     } catch (e) {
@@ -202,7 +199,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   ) {
     if (otherData != null && otherData.isNotEmpty) {
       final other = ___CLASS___.fromJson(otherData);
-      ___P9___
+      ___P8___
     }
   }
 
@@ -210,6 +207,6 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
   //
 
-  ___P10___
+  ___P9___
 }
 ```

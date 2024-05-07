@@ -17,8 +17,8 @@ import 'package:xyz_utils/xyz_utils.dart';
 // @GenerateScreenBindings, to generate a screen access file for each listed
 // folder.
 const folders = <String>{
-  'apps/admin_app/lib/src/screens',
-  'apps/operations_app/lib/src/screens',
+  // 'apps/admin_app/lib/src/screens',
+  // 'apps/operations_app/lib/src/screens',
   'apps/public_app/lib/src/screens',
 };
 

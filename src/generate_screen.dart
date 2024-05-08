@@ -17,10 +17,10 @@ import 'package:xyz_utils/xyz_utils.dart';
 const TARGET = 'apps/public_app';
 
 // To-Do: Give the screen class a name.
-const CLASS_NAME = 'TimeTrackerScreen';
+const CLASS_NAME = 'FilesScreen';
 
 // To-Do: Provide a title for the Screen.
-const DEFAULT_TITLE = 'Time Tracker';
+const DEFAULT_TITLE = 'Files';
 
 // To-Do: Specify the Screen's access settings:
 const bool IS_ONLY_ACCESSIBLE_IF_LOGGED_IN_AND_VERIFIED = false;
@@ -46,7 +46,6 @@ const INTERNAL_PARAMETERS = <String, String>{
 // To-Do: Specify query parameters for the Screen, or leave empty:
 const QUERY_PARAMETERS = <String>{
   // e.g. 'chatId', // (example)
-  'relationshipId',
 };
 
 // To-Do: Specify part files to generate for the Screen, or leave empty:

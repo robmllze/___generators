@@ -33,7 +33,7 @@ const String MAKEUP = '';
 
 final navigationControlWidget = <int, String>{
   0: '',
-  1: 'kMyActiveBottomNavigationControls',
+  1: 'kMyBottomNavigationControls',
 }
 // To-Do: Choose a number from the map above, or leave empty:
     [0]!;

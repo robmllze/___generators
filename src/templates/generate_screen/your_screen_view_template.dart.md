@@ -69,6 +69,7 @@ class _View extends T___SCREEN_CLASS___View {
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
+// TODO: Delete this if you don't need it.
 extension _Labels on ___SCREEN_CLASS___Controller {
   // Tip: You can add functions to your controller here.
 }

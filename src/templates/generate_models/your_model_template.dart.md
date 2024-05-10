@@ -70,20 +70,20 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   factory ___CLASS___.from(
     Model? other,
   ) {
-    return ___CLASS___.fromJson(
-      letAs<GenericModel>(other)?.data ?? other?.toJson(),
-    );
+    try {
+      return fromOrNull(other)!;
+    } catch (e) {
+      assert(false, e);
+      rethrow;
+    }
   }
-
-   //
-  //
-  //
-
 
   static ___CLASS___? fromOrNull(
     Model? other,
   ) {
-    return other != null ? ___CLASS___.from(other): null;
+      return fromJsonOrNull(
+        letAs<GenericModel>(other)?.data ?? other?.toJson(),
+      )!;
   }
 
   //
@@ -91,28 +91,51 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
 
   factory ___CLASS___.of(
+    ___CLASS___ other,
+  ) {
+    try {
+      return ofOrNull(other)!;
+    } catch (e) {
+      assert(false, e);
+      rethrow;
+    }
+  }
+
+  static ___CLASS___? ofOrNull(
     ___CLASS___? other,
   ) {
-    return ___CLASS___.fromJson(other?.toJson());
+    return fromJsonOrNull(other?.toJson());
   }
+
+
 
   //
   //
   //
 
   factory ___CLASS___.fromJsonString(
+    String source,
+  ) {
+    try {
+      return fromJsonStringOrNull(source)!;
+    } catch (e) {
+      assert(false, e);
+      rethrow;
+    }
+  }
+
+  static ___CLASS___? fromJsonStringOrNull(
     String? source,
   ) {
     try {
-      if (source != null && source.isNotEmpty) {
+      if (source!.isNotEmpty) {
         final decoded = jsonDecode(source);
         return ___CLASS___.fromJson(decoded);
       } else {
         return ___CLASS___.empty();
       }
-    } catch (e) {
-      assert(false, e);
-      rethrow;
+    } catch (_) {
+      return null;
     }
   }
 
@@ -124,11 +147,21 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
     Map<String, dynamic>? otherData,
   ) {
     try {
-      return ___CLASS___.empty()
-      ___P6___
+      return fromJsonOrNull(otherData)!;
     } catch (e) {
       assert(false, e);
       rethrow;
+    }
+  }
+
+  static ___CLASS___? fromJsonOrNull(
+    Map<String, dynamic>? otherData,
+  ) {
+    try {
+      return ___CLASS___.empty()
+      ___P6___
+    } catch (e) {
+      return null;
     }
   }
 
@@ -140,14 +173,24 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
     Uri? uri,
   ) {
     try {
+      return fromUriOrNull(uri)!;
+    } catch (e) {
+      assert(false, e);
+      rethrow;
+    }
+  }
+
+  static ___CLASS___? fromUriOrNull(
+    Uri? uri,
+  ) {
+    try {
       if (uri != null && uri.path == CLASS) {
         return ___CLASS___.fromJson(uri.queryParameters);
       } else {
         return ___CLASS___.b();
       }
-    } catch (e) {
-      assert(false, e);
-      rethrow;
+    } catch (_) {
+      return null;
     }
   }
 

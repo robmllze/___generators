@@ -35,7 +35,7 @@ class ___CLASS___ {
   //
   //
 
-  factory ___CLASS___.fromJson(
+  static ___CLASS___ fromJson(
     Map<String, dynamic>? data,
   ) {
       return ___CLASS___(

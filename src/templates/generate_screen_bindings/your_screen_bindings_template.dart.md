@@ -122,11 +122,15 @@ abstract class _ControllerBroker<T1 extends ___CLASS___, T2 extends _View>
   late final state = super.superState as T2;
 
   /// The [ModelScreenConfiguration] that corresponds to `this` controller.
-  late final configuration = ___CONFIGURATION_CLASS___.unsafe(
+  late final configuration = super.internalConfiguration ?? ___CONFIGURATION_CLASS___.unsafe(
     arguments: screen.configuration?.arguments,
   );
 
-  _ControllerBroker(super.superScreen, super.superState);
+  _ControllerBroker(
+    super.superScreen,
+    super.superState, [
+    super.internalConfiguration,
+  ]);
 }
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -212,6 +216,7 @@ typedef T___CLASS___View = ScreenView<___CLASS___, ___CONFIGURATION_CLASS___, __
 
 /// The [ScreenPageView] [Type] corresponding to [___CLASS___].
 typedef T___CLASS___PageView<T extends ScreenPage> = ScreenPageView<T, ___CONFIGURATION_CLASS___, ___CLASS___Controller>;
+
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 

@@ -15,7 +15,7 @@ part of '___SCREEN_FILE___';
 class _View extends T___SCREEN_CLASS___View {
   @override
   Widget body(BuildContext context) {
-    return const SizedBox();
+    return const SizedBox.shrink();
   }
 }
 ```

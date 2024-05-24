@@ -18,28 +18,13 @@ class _View extends T___SCREEN_CLASS___View {
   //
 
   @override
-  Widget layout(BuildContext context, Widget body) {
-    return super.layout(
-      context,
-      Column(
-        children: [
-          MyHeader(
-            title: this.widget.configuration?.title,
-            onBackButtonPressed: g.app.routeManager.goBack,
-          ),
-          Expanded(
-            child: SingleChildScrollView(
-              child: Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: 24.sc,
-                  vertical: 48.sc,
-                ),
-                child: body,
-              ),
-            ),
-          ),
-        ],
+  Widget top(BuildContext context) {
+    return MyHeader(
+      breadCrumbBar: MyBreadCrumbBar(
+        routeManager: g.app.routeManager,
       ),
+      title: this.widget.configuration?.title,
+      onBackButtonPressed: g.app.routeManager.goBack,
     );
   }
 
@@ -63,6 +48,15 @@ class _View extends T___SCREEN_CLASS___View {
         ),
       ],
     );
+  }
+
+  //
+  //
+  //
+
+  @override
+  Widget bottom(BuildContext context) {
+    return MyBottomNavigationControls(key: myBottomNavigationControlsGlobalKey);
   }
 }
 

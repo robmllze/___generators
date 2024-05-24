@@ -53,7 +53,6 @@ class ___CONFIGURATION_CLASS___ extends ModelScreenConfiguration {
     isAccessibleOnlyIfLoggedOut: _IS_ACCESSIBLE_ONLY_IF_LOGGED_OUT,
     isRedirectable: _IS_REDIRECTABLE,
   ) {
-    super.navigationControlsWidget = NAVIGATION_CONTROLS_WIDGET;
     super.title = translatedTitle;
     super.makeup = screenMakeup;
   }
@@ -92,9 +91,6 @@ class ___CONFIGURATION_CLASS___ extends ModelScreenConfiguration {
 
   /// Whether the corresponding [Screen] is redirectable, i.e., if it can be requested from the browser URL.
   static const IS_REDIRECTABLE = _IS_REDIRECTABLE;
-
-  /// The default navigation controls widget of the corresponding [Screen].
-  static const NAVIGATION_CONTROLS_WIDGET = ___NAVIGATION_CONTROLS_WIDGET___;
 
   /// The title of the corresponding [Screen].
   static String get translatedTitle => screenTr('$_DEFAULT_TITLE||title');
@@ -147,7 +143,6 @@ final generated___CLASS___Route = GoRoute(
       isAccessibleOnlyIfLoggedOut: ___CONFIGURATION_CLASS___.IS_ACCESSIBLE_ONLY_IF_LOGGED_OUT,
       isRedirectable: ___CONFIGURATION_CLASS___.IS_REDIRECTABLE,
       makeup: ___CONFIGURATION_CLASS___.screenMakeup,
-      navigationControlsWidget: ___CONFIGURATION_CLASS___.NAVIGATION_CONTROLS_WIDGET,
       title: ___CONFIGURATION_CLASS___.translatedTitle,
     );
     final configuration = extraConfiguration ?? urlConfiguration;

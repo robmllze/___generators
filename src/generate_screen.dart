@@ -31,13 +31,6 @@ const bool IS_REDIRECTABLE = true;
 // To-Do: Provide a makeup class for the Screen, or leave empty:
 const String MAKEUP = '';
 
-final navigationControlWidget = <int, String>{
-  0: '',
-  1: 'kMyBottomNavigationControls',
-}
-// To-Do: Choose a number from the map above, or leave empty:
-    [0]!;
-
 // To-Do: Specify parameters for the Screen, or leave empty:
 const INTERNAL_PARAMETERS = <String, String>{
   //'chatId': 'String', // (example)
@@ -116,7 +109,7 @@ Future<void> _generateScreens(String screensDir) async {
       '--is-only-accessible-if-logged-out': IS_ONLY_ACCESSIBLE_IF_LOGGED_OUT.toString(),
       '--is-redirectable': IS_REDIRECTABLE.toString(),
       '--makeup': MAKEUP,
-      '--navigation-control-widget': navigationControlWidget,
+      '--navigation-control-widget': '',
       '--internal-parameters':
           INTERNAL_PARAMETERS.entries.map((e) => '${e.key}:${e.value}').join('&&'),
       '--query-parameters': QUERY_PARAMETERS.join('&'),

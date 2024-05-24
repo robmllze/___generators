@@ -82,7 +82,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
     Model? other,
   ) {
       return fromJsonOrNull(
-        letAs<GenericModel>(other)?.data ?? other?.toJson(),
+        letAs<DataModel>(other)?.data ?? other?.toJson(),
       )!;
   }
 

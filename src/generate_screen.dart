@@ -17,19 +17,16 @@ import 'package:xyz_utils/xyz_utils.dart';
 const TARGET = 'apps/public_app';
 
 // To-Do: Give the screen class a name.
-const CLASS_NAME = 'PublicFilesScreen';
+const CLASS_NAME = 'ExampleScreen';
 
 // To-Do: Provide a title for the Screen.
-const DEFAULT_TITLE = 'Public Files';
+const DEFAULT_TITLE = 'Example';
 
 // To-Do: Specify the Screen's access settings:
 const bool IS_ONLY_ACCESSIBLE_IF_LOGGED_IN_AND_VERIFIED = false;
-const bool IS_ONLY_ACCESSIBLE_IF_LOGGED_IN = true;
+const bool IS_ONLY_ACCESSIBLE_IF_LOGGED_IN = false;
 const bool IS_ONLY_ACCESSIBLE_IF_LOGGED_OUT = false;
 const bool IS_REDIRECTABLE = true;
-
-// To-Do: Provide a makeup class for the Screen, or leave empty:
-const String MAKEUP = '';
 
 // To-Do: Specify parameters for the Screen, or leave empty:
 const INTERNAL_PARAMETERS = <String, String>{
@@ -39,7 +36,6 @@ const INTERNAL_PARAMETERS = <String, String>{
 // To-Do: Specify query parameters for the Screen, or leave empty:
 const QUERY_PARAMETERS = <String>{
   // e.g. 'chatId', // (example)
-  'pid',
 };
 
 // To-Do: Specify part files to generate for the Screen, or leave empty:
@@ -108,7 +104,7 @@ Future<void> _generateScreens(String screensDir) async {
       '--is-only-accessible-if-logged-in': IS_ONLY_ACCESSIBLE_IF_LOGGED_IN.toString(),
       '--is-only-accessible-if-logged-out': IS_ONLY_ACCESSIBLE_IF_LOGGED_OUT.toString(),
       '--is-redirectable': IS_REDIRECTABLE.toString(),
-      '--makeup': MAKEUP,
+      '--makeup': '',
       '--navigation-control-widget': '',
       '--internal-parameters':
           INTERNAL_PARAMETERS.entries.map((e) => '${e.key}:${e.value}').join('&&'),

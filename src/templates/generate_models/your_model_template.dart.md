@@ -81,9 +81,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   static ___CLASS___? fromOrNull(
     Model? other,
   ) {
-      return fromJsonOrNull(
-        letAs<DataModel>(other)?.data ?? other?.toJson(),
-      )!;
+    return fromJsonOrNull(other?.toJson())!;
   }
 
   //

@@ -12,6 +12,8 @@ part of '___CLASS_FILE___';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
+final _globalKey = GlobalKey<_View>();
+
 /// Serves as the blueprint for the [___CLASS___] screen.
 /// It outlines the screen's properties and behaviors prior to routing.
 class ___CONFIGURATION_CLASS___ extends ModelScreenConfiguration {
@@ -149,7 +151,7 @@ final generated___CLASS___Route = GoRoute(
     return NoTransitionPage(
       key: state.pageKey,
       child: ___CLASS___(
-        key: ValueKey(configuration.toUrl()),
+        key: _globalKey,
         configuration: configuration,
       ),
     );
@@ -184,7 +186,7 @@ Screen? maker___CLASS___(
   }
   if (configuration is ___CONFIGURATION_CLASS___) {
     return ___CLASS___(
-      key: ValueKey<String?>(configuration.path),
+      key: _globalKey,
       configuration: configuration,
     );
   }
@@ -194,7 +196,7 @@ Screen? maker___CLASS___(
       arguments: configuration.arguments,
     );
     return ___CLASS___(
-      key: ValueKey(temp.toUrl()),
+      key: _globalKey,
       configuration: temp,
     );
   }

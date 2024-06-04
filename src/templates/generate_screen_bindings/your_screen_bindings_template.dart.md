@@ -53,7 +53,6 @@ class ___CONFIGURATION_CLASS___ extends ModelScreenConfiguration {
     isRedirectable: _IS_REDIRECTABLE,
   ) {
     super.title = translatedTitle;
-    super.makeup = screenMakeup;
   }
 
   //
@@ -93,10 +92,6 @@ class ___CONFIGURATION_CLASS___ extends ModelScreenConfiguration {
 
   /// The title of the corresponding [Screen].
   static String get translatedTitle => screenTr('$_DEFAULT_TITLE||title');
-
-  /// The defailt makeup of the corresponding [Screen].
-  // ignore: prefer_const_declarations
-  static final ScreenMakeup? screenMakeup = ___MAKEUP___;
 
   /// Translates the provided [key] using the screen's translation key.
   static String screenTr(String key, {Map<dynamic, dynamic> args = const {}}) {
@@ -141,7 +136,6 @@ final generated___CLASS___Route = GoRoute(
       isAccessibleOnlyIfLoggedInAndVerified: ___CONFIGURATION_CLASS___.IS_ACCESSIBLE_ONLY_IF_LOGGED_IN_AND_VERIFIED,
       isAccessibleOnlyIfLoggedOut: ___CONFIGURATION_CLASS___.IS_ACCESSIBLE_ONLY_IF_LOGGED_OUT,
       isRedirectable: ___CONFIGURATION_CLASS___.IS_REDIRECTABLE,
-      makeup: ___CONFIGURATION_CLASS___.screenMakeup,
       title: ___CONFIGURATION_CLASS___.translatedTitle,
     );
     final configuration = extraConfiguration ?? urlConfiguration;

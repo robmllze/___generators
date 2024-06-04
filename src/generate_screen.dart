@@ -30,12 +30,12 @@ const bool IS_REDIRECTABLE = true;
 
 // To-Do: Specify parameters for the Screen, or leave empty:
 const INTERNAL_PARAMETERS = <String, String>{
-  //'chatId': 'String', // (example)
+  // 'chat_no': 'int', // (example)
 };
 
 // To-Do: Specify query parameters for the Screen, or leave empty:
 const QUERY_PARAMETERS = <String>{
-  // e.g. 'chatId', // (example)
+  // 'chat_id', // (example)
 };
 
 // To-Do: Specify part files to generate for the Screen, or leave empty:

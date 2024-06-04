@@ -23,19 +23,16 @@ class ___CONFIGURATION_CLASS___ extends ModelScreenConfiguration {
 
   ___IP0___
   ___QP0___
-  ___PS0___
 
   factory ___CONFIGURATION_CLASS___({
     ___IP1___
     ___QP1___
-    ___PS1___
     Map<dynamic, dynamic>? $arguments,
   }) {
     return ___CONFIGURATION_CLASS___.unsafe(
       arguments: {
          ___IP2___
          ___QP2___
-         ___PS2___
         ...?$arguments,
       }.nonNulls,
     );

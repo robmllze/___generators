@@ -37,7 +37,7 @@ class ___CONFIGURATION_CLASS___ extends ModelScreenConfiguration {
          ___QP2___
          ___PS2___
         ...?$arguments,
-      },
+      }.nonNulls,
     );
   }
 

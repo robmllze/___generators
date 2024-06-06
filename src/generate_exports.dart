@@ -15,6 +15,7 @@ import 'package:xyz_utils/xyz_utils.dart';
 
 // To-Do: List the folders and their subfolders to generate exports for.
 const folders = <String>{
+  'xyz_device_info',
   '',
   '_data',
   '_service_interfaces',

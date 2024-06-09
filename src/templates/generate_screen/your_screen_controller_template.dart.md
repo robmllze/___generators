@@ -30,7 +30,6 @@ class ___SCREEN_CLASS___Controller extends T___SCREEN_CLASS___Controller {
 
   ___Q1___
   ___I1___
-  ___P1___
   final pCounter = Pod<int>(-1);
 
   //

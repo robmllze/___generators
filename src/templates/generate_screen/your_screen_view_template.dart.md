@@ -56,7 +56,7 @@ class _View extends T___SCREEN_CLASS___View {
 
   @override
   Widget bottom(BuildContext context) {
-    return MyBottomNavigationControls(key: myBottomNavigationControlsGlobalKey);
+    return const MyBottomNavigationControls();
   }
 }
 

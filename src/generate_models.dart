@@ -46,7 +46,10 @@ Future<void> _generateModels() async {
   DebugLog.debugOnly = false;
   await generateModelsApp([
     '-t',
-    '$currentScriptDir/templates/generate_models/your_model_template.dart.md',
+    [
+      '$currentScriptDir/templates/generate_models/your_model_template.dart.md',
+      '$currentScriptDir/templates/generate_models/basic_model_template.ts.md',
+    ].join('&'),
     '-r',
     folders.map((e) => '$currentScriptDir/../../${e.isNotEmpty ? '$e/' : ''}').join('&'),
     '-s',

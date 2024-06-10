@@ -27,13 +27,13 @@ class ___CONFIGURATION_CLASS___ extends ModelScreenConfiguration {
   factory ___CONFIGURATION_CLASS___({
     ___IP1___
     ___QP1___
-    Map<dynamic, dynamic>? $arguments,
+    Map<dynamic, dynamic>? $args,
   }) {
     return ___CONFIGURATION_CLASS___.unsafe(
-      arguments: {
+      args: {
          ___IP2___
          ___QP2___
-        ...?$arguments,
+        ...?$args,
       }.nonNulls,
     );
   }
@@ -43,10 +43,10 @@ class ___CONFIGURATION_CLASS___ extends ModelScreenConfiguration {
   //
 
   ___CONFIGURATION_CLASS___.unsafe({
-    Map<dynamic, dynamic>? arguments,
+    Map<dynamic, dynamic>? args,
   }): super.b(
     path: _PATH,
-    arguments: arguments ?? {},
+    args: args ?? {},
     isAccessibleOnlyIfLoggedInAndVerified: _IS_ACCESSIBLE_ONLY_IF_LOGGED_IN_AND_VERIFIED,
     isAccessibleOnlyIfLoggedIn: _IS_ACCESSIBLE_ONLY_IF_LOGGED_IN,
     isAccessibleOnlyIfLoggedOut: _IS_ACCESSIBLE_ONLY_IF_LOGGED_OUT,
@@ -113,7 +113,7 @@ abstract class _ControllerBroker<T1 extends ___CLASS___, T2 extends _View>
 
   /// The [ModelScreenConfiguration] that corresponds to `this` controller.
   late final configuration = super.internalConfiguration ?? ___CONFIGURATION_CLASS___.unsafe(
-    arguments: screen.configuration?.arguments,
+    args: screen.configuration?.args,
   );
 
   _ControllerBroker(
@@ -184,7 +184,7 @@ Screen? maker___CLASS___(
   if (RegExp(r'^(' + _PATH + r')([?/].*)?$')
       .hasMatch(Uri.decodeComponent(configuration.path ?? ''))) {
     final temp = ___CONFIGURATION_CLASS___.unsafe(
-      arguments: configuration.arguments,
+      args: configuration.args,
     );
     return ___CLASS___(
       key: _globalKey,

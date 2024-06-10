@@ -37,7 +37,6 @@ const subfolders = <String>{
 
 void main() async {
   await _generateModels();
-  await _generateExports();
 }
 
 // -----------------------------------------------------------------------------
@@ -47,24 +46,13 @@ Future<void> _generateModels() async {
   await generateModelsApp([
     '-t',
     [
-      '$currentScriptDir/templates/generate_models/your_model_template.dart.md',
+      '$currentScriptDir/templates/generate_models/basic_model_template.ts.md',
     ].join('&'),
     '-r',
     folders.map((e) => '$currentScriptDir/../../${e.isNotEmpty ? '$e/' : ''}').join('&'),
     '-s',
     subfolders.join('&'),
-  ]);
-}
-
-// -----------------------------------------------------------------------------
-
-Future<void> _generateExports() async {
-  await generateExportsApp([
-    '-t',
-    '$currentScriptDir/templates/generate_exports/your_exports_template.dart.md',
-    '-r',
-    folders.map((e) => '$currentScriptDir/../../${e.isNotEmpty ? '$e/' : ''}').join('&'),
-    '-s',
-    subfolders.join('&'),
+    '-o',
+    './apps/functions/src/models',
   ]);
 }

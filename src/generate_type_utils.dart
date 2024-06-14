@@ -28,8 +28,8 @@ const folders = <String>{
 };
 
 const subfolders = <String>{
-  'lib/src/types',
-  'lib/types',
+  'lib/src/data_types',
+  'lib/data_types',
 };
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░

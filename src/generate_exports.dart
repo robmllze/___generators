@@ -26,10 +26,6 @@ const folders = <String>{
 };
 
 const subfolders = <String>{
-  'lib/@app/src',
-  'lib/@external_apis/src',
-  'lib/@functions/src',
-  'lib/@interfaces/src',
   'lib/src',
   'lib/src/non_web',
   'lib/src/web_friendly',

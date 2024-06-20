@@ -27,11 +27,6 @@ const folders = <String>{
 
 const subfolders = <String>{
   'lib/src',
-  'lib/src/non_web',
-  'lib/src/web_friendly',
-  'lib/shared_src',
-  'lib/shared_src/non_web',
-  'lib/shared_src/web_friendly',
 };
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░

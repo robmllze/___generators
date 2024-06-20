@@ -19,7 +19,7 @@ ___PARTS___
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 @GenerateScreenBindings(___GENERATE_SCREEN_BINDINGS_ARGS___)
-class ___SCREEN_CLASS___ extends Screen {
+final class ___SCREEN_CLASS___ extends Screen {
   //
   //
   //

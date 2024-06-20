@@ -102,7 +102,7 @@ class ___CONFIGURATION_CLASS___ extends ModelScreenConfiguration {
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
 /// Extend this class to create a controller for the [___CLASS___] screen.
-abstract class _ControllerBroker<T1 extends ___CLASS___, T2 extends _View>
+abstract base class _ControllerBroker<T1 extends ___CLASS___, T2 extends _View>
     extends ScreenController<___CONFIGURATION_CLASS___> {
 
   /// The [Screen] that corresponds to `this` controller.

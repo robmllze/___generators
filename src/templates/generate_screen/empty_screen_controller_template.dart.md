@@ -12,7 +12,7 @@ part of '___SCREEN_FILE___';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-class ___SCREEN_CLASS___Controller extends T___SCREEN_CLASS___Controller {
+final class ___SCREEN_CLASS___Controller extends T___SCREEN_CLASS___Controller {
   ___SCREEN_CLASS___Controller(super.screen, super.state);
 }
 ```

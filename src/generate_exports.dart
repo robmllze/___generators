@@ -26,13 +26,19 @@ const folders = <String>{
 };
 
 const subfolders = <String>{
-  'lib/functions_src',
   'lib/src',
-  'lib/src/non_web',
-  'lib/src/web_friendly',
-  'lib/shared_src',
-  'lib/shared_src/non_web',
-  'lib/shared_src/web_friendly',
+  'lib/src/generators/generate_directives',
+  'lib/src/generators/generate_exports',
+  'lib/src/generators/generate_for_annotation_TEST',
+  'lib/src/generators/generate_for_files_TEST',
+  'lib/src/generators/generate_license_headers',
+  'lib/src/generators/generate_makeups',
+  'lib/src/generators/generate_models',
+  'lib/src/generators/generate_preps',
+  'lib/src/generators/generate_screen_access',
+  'lib/src/generators/generate_screen_bindings',
+  'lib/src/generators/generate_screen',
+  'lib/src/generators/generate_type_utils',
 };
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░

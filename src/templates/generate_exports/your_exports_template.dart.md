@@ -8,4 +8,12 @@
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //.title~
 
+// --- PUBLIC FILES ---
+___PUBLIC_EXPORTS___
+
+// --- PRIVATE FILES ---
+___PRIVATE_EXPORTS___
+
+// --- GENERATED FILES ---
+___GENERATED_EXPORTS___
 ```

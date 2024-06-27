@@ -9,13 +9,10 @@
 //.title~
 
 import 'package:xyz_gen/xyz_gen.dart';
-import 'package:xyz_utils/xyz_utils.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-// To-Do: List the folders and their subfolders that may hold your enums
-// that you annotated with @GenerateTypeUtils, in order to generate their
-// respective type utils.
+// To-Do: List the folders and their subfolders to generate exports for.
 const folders = <String>{
   '',
   '_data',
@@ -28,8 +25,11 @@ const folders = <String>{
 };
 
 const subfolders = <String>{
-  'lib/src/data_types',
-  'lib/data_types',
+  'lib/src/',
+  'lib/src/xyz',
+  'lib/src/generators/generate_dart_models/src',
+  'lib/src/generators/generate_dart_exports/src',
+  'lib/src/generators/generate_dart_directives/src',
 };
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -38,34 +38,15 @@ const subfolders = <String>{
 //
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-void main() async {
+void main(List<String> args) async {
   DebugLog.debugOnly = false;
-  await _generateTypeUtils();
-  await _generateExports();
-}
-
-// -----------------------------------------------------------------------------
-
-Future<void> _generateTypeUtils() async {
-  await generateTypeUtilsApp([
-    '-t',
-    '$currentScriptDir/templates/generate_type_utils/your_type_utils_template.dart.md',
-    '-r',
-    folders.map((e) => '$currentScriptDir/../../${e.isNotEmpty ? '$e/' : ''}').join('&'),
-    '-s',
-    subfolders.join('&'),
-  ]);
-}
-
-// -----------------------------------------------------------------------------
-
-Future<void> _generateExports() async {
-  await generateExportsApp([
+  await runGenerateExportsForDartApp([
     '-t',
     '$currentScriptDir/templates/generate_exports/your_exports_template.dart.md',
     '-r',
     folders.map((e) => '$currentScriptDir/../../${e.isNotEmpty ? '$e/' : ''}').join('&'),
     '-s',
     subfolders.join('&'),
+    ...args,
   ]);
 }

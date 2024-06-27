@@ -9,12 +9,17 @@
 //.title~
 
 import 'package:xyz_gen/xyz_gen.dart';
-import 'package:xyz_utils/xyz_utils.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-// To-Do: List the folders to generate license headers for.
+// To-Do: List the folders that may contain files with directive annotations,
+// to generate the required directives for those files.
 const folders = <String>{
+  'lib/src_test',
+  '_data',
+  '_service_interfaces',
+  '_services',
+  '_view',
   'apps/admin_app',
   'apps/operations_app',
   'apps/public_app',
@@ -26,23 +31,11 @@ const folders = <String>{
 //
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-void main() async {
+void main(List<String> args) async {
   DebugLog.debugOnly = false;
-  await _generateLicenseHeaders(
-    'xyz_license_header_template.dart.md',
-  );
-  await _generateLicenseHeaders(
-    'xyz_license_header_template.yaml.md',
-  );
-}
-
-// -----------------------------------------------------------------------------
-
-Future<void> _generateLicenseHeaders(String template) async {
-  await generateLicenseHeadersApp([
-    '-t',
-    '$currentScriptDir/templates/generate_license_headers/$template',
+  await runGenerateMissingDirectivesForDartApp([
     '-r',
     folders.map((e) => '$currentScriptDir/../../${e.isNotEmpty ? '$e/' : ''}').join('&'),
+    ...args,
   ]);
 }

@@ -27,7 +27,7 @@ const folders = <String>{
 const subfolders = <String>{
   //'lib/',
   // 'lib/src/',
-  'lib/src',
+  'lib/src_test',
   // 'lib/src/generators/generate_dart_models/src',
   // 'lib/src/generators/generate_dart_exports/src',
   // 'lib/src/generators/generate_dart_directives/src',

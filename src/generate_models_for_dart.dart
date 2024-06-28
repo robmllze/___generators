@@ -35,36 +35,15 @@ const subfolders = <String>{
 //
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-void main() async {
+void main(List<String> args) async {
   DebugLog.debugOnly = false;
-  await _generateDartModels();
-  await _generateExports();
-}
-
-// -----------------------------------------------------------------------------
-
-Future<void> _generateDartModels() async {
   await runGenerateModelsForDartApp([
     '-t',
-    [
-      '$currentScriptDir/templates/generate_models/your_model_template.dart.md',
-    ].join('&'),
+    '$currentScriptDir/templates/generate_models/',
     '-r',
     folders.map((e) => '$currentScriptDir/../../${e.isNotEmpty ? '$e/' : ''}').join('&'),
     '-s',
     subfolders.join('&'),
-  ]);
-}
-
-// -----------------------------------------------------------------------------
-
-Future<void> _generateExports() async {
-  await runGenerateExportsForDartApp([
-    '-t',
-    '$currentScriptDir/templates/generate_exports/your_exports_template.dart.md',
-    '-r',
-    folders.map((e) => '$currentScriptDir/../../${e.isNotEmpty ? '$e/' : ''}').join('&'),
-    '-s',
-    subfolders.join('&'),
+    ...args,
   ]);
 }

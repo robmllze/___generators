@@ -25,11 +25,12 @@ const folders = <String>{
 };
 
 const subfolders = <String>{
-  'lib/src/',
-  'lib/src/xyz',
-  'lib/src/generators/generate_dart_models/src',
-  'lib/src/generators/generate_dart_exports/src',
-  'lib/src/generators/generate_dart_directives/src',
+  //'lib/',
+  // 'lib/src/',
+  'lib/src',
+  // 'lib/src/generators/generate_dart_models/src',
+  // 'lib/src/generators/generate_dart_exports/src',
+  // 'lib/src/generators/generate_dart_directives/src',
 };
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -42,7 +43,7 @@ void main(List<String> args) async {
   DebugLog.debugOnly = false;
   await runGenerateExportsForDartApp([
     '-t',
-    '$currentScriptDir/templates/generate_exports/your_exports_template.dart.md',
+    '$currentScriptDir/templates/generate_exports/',
     '-r',
     folders.map((e) => '$currentScriptDir/../../${e.isNotEmpty ? '$e/' : ''}').join('&'),
     '-s',

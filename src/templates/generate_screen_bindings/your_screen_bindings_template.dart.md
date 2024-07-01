@@ -12,8 +12,7 @@ part of '___CLASS_FILE___';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-//final _globalKey = GlobalKey<_View>();
-const _globalKey = Key('___CONFIGURATION_CLASS___');
+final _globalKey = GlobalKey<_View>();
 
 /// Serves as the blueprint for the [___CLASS___] screen.
 /// It outlines the screen's properties and behaviors prior to routing.

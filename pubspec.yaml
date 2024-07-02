@@ -21,6 +21,8 @@ environment:
 dependencies:
   xyz_gen:
     path: ../
+  xyz_gen_annotations:
+    path: ../../xyz_gen_annotations
   xyz_utils:
     path: ../../xyz_utils
 

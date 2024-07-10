@@ -25,7 +25,8 @@ const folders = <String>{
 };
 
 const subfolders = <String>{
-  'lib/src/data_models',
+  //'lib/src/data_models',
+  'lib/@screen/',
 };
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░

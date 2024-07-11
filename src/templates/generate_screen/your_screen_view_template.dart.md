@@ -18,7 +18,7 @@ final class _View extends T___SCREEN_CLASS___View {
   //
 
   @override
-  Widget top(BuildContext context) {
+  Widget topSide(BuildContext context) {
     return MyHeader(
       breadCrumbBar: MyBreadCrumbBar(
         routeManager: g.app.routeManager,
@@ -55,7 +55,7 @@ final class _View extends T___SCREEN_CLASS___View {
   //
 
   @override
-  Widget bottom(BuildContext context) {
+  Widget bottomSide(BuildContext context) {
     return const MyBottomNavigationControls();
   }
 }

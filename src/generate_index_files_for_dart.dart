@@ -16,7 +16,8 @@ import 'package:xyz_gen/xyz_gen.dart';
 const folders = <String>{
   // 'tests/test1',
   // 'tests/test2',
-  'xyz_gen_annotations',
+  //'xyz_gen_annotations',
+  'xyz_gen',
   // '_data',
   // '_service_interfaces',
   // '_services',
@@ -29,8 +30,8 @@ const folders = <String>{
 const subfolders = <String>{
   //'lib/',
   'lib/src/',
-  'lib/annotations_src/',
-  'lib/utils_src/',
+  // 'lib/annotations_src/',
+  // 'lib/utils_src/',
   //'lib/src/models/',
   // 'lib/src/generators/generate_dart_models/src',
   // 'lib/src/generators/generate_dart_exports/src',

@@ -20,9 +20,9 @@ const folders = <String>{
   '_service_interfaces',
   '_services',
   '_view',
-  'apps/admin_app',
-  'apps/operations_app',
-  'apps/public_app',
+  'projects/admin_app',
+  'projects/operations_app',
+  'projects/public_app',
 };
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░

@@ -14,19 +14,24 @@ import 'package:xyz_gen/xyz_gen.dart';
 
 // To-Do: List the folders and their subfolders to generate exports for.
 const folders = <String>{
-  '',
-  '_data',
-  '_service_interfaces',
-  '_services',
-  '_view',
-  'apps/admin_app',
-  'apps/operations_app',
-  'apps/public_app',
+  // 'tests/test1',
+  // 'tests/test2',
+  'xyz_gen_annotations',
+  // '_data',
+  // '_service_interfaces',
+  // '_services',
+  // '_view',
+  // 'projects/admin_app',
+  // 'projects/operations_app',
+  // 'projects/public_app',
 };
 
 const subfolders = <String>{
-  'lib/',
+  //'lib/',
   'lib/src/',
+  'lib/annotations_src/',
+  'lib/utils_src/',
+  //'lib/src/models/',
   // 'lib/src/generators/generate_dart_models/src',
   // 'lib/src/generators/generate_dart_exports/src',
   // 'lib/src/generators/generate_dart_directives/src',

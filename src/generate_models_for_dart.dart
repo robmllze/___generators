@@ -19,9 +19,9 @@ const folders = <String>{
   '',
   'example',
   '_data',
-  'apps/admin_app',
-  'apps/operations_app',
-  'apps/public_app',
+  'projects/admin_app',
+  'projects/operations_app',
+  'projects/public_app',
 };
 
 const subfolders = <String>{

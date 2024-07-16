@@ -38,13 +38,6 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
   //
 
-  ___CLASS___.empty();
-
-
-  //
-  //
-  //
-
   factory ___CLASS___({
     ___P2___
   }) ___SUPER_CONSTRUCTOR___ {
@@ -130,7 +123,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
         final decoded = jsonDecode(source);
         return ___CLASS___.fromJson(decoded);
       } else {
-        return ___CLASS___.empty();
+        return ___CLASS___.b();
       }
     } catch (_) {
       return null;
@@ -156,7 +149,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
     Map<String, dynamic>? otherData,
   ) {
     try {
-      return ___CLASS___.empty()
+      return ___CLASS___.b()
       ___P6___
     } catch (e) {
       return null;
@@ -185,7 +178,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
       if (uri != null && uri.path == CLASS) {
         return ___CLASS___.fromJson(uri.queryParameters);
       } else {
-        return ___CLASS___.empty();
+        return ___CLASS___.b();
       }
     } catch (_) {
       return null;

@@ -225,4 +225,26 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
 
   ___GETTERS_A___
 }
+
+// ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
+enum ___CLASS___Fields {
+  //
+  //
+  //
+
+  ___FIELDS___;
+
+  //
+  //
+  //
+
+  final Field field;
+
+  //
+  //
+  //
+
+  const ___CLASS___Fields(this.field);
+}
 ```

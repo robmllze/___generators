@@ -60,7 +60,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
 
   factory ___CLASS___.from(
-    Model? other,
+    BaseModel? other,
   ) {
     try {
       return fromOrNull(other)!;
@@ -71,7 +71,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   }
 
   static ___CLASS___? fromOrNull(
-    Model? other,
+    BaseModel? other,
   ) {
     return fromJsonOrNull(other?.toJson())!;
   }
@@ -212,7 +212,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
 
   @override
-  ___CLASS___ copyWith(Model? other) {
+  ___CLASS___ copyWith(BaseModel? other) {
     final a = this.toJson();
     final b = other?.toJson();
     final c = {...a, ...?b};

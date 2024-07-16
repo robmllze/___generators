@@ -18,6 +18,7 @@ import 'package:xyz_gen/xyz_gen.dart';
 // their respective model classes.
 const folders = <String>{
   'tests',
+  'xyz_gen_annotations',
   // 'example',
   // '_data',
   // 'projects/admin_app',
@@ -26,7 +27,7 @@ const folders = <String>{
 };
 
 const subfolders = <String>{
-  //'lib/src/data_models',
+  'lib/src/data_models',
   //'lib/@screen/',
 };
 

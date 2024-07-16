@@ -25,7 +25,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
   //
 
-  ___STATIC_KEY_NAMES_A___
+  ___STATIC_KEY_NAMES___
 
   static const CLASS = '___CLASS___';
 
@@ -38,21 +38,22 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
   //
 
-  factory ___CLASS___({
+  const ___CLASS___({
     ___PARAMS_A1___
-  }) ___SUPER_CONSTRUCTOR___ {
-    return ___CLASS___.k(
+  }) ___SUPER_CONSTRUCTOR___;
+
+  //
+  //
+  //
+
+  factory ___CLASS___.b({
+    ___PARAMS_A2___
+  }) {
+    ___FIELD_ASSERTIONS___
+    return ___CLASS___(
       ___ARGS_A___
     );
   }
-
-  //
-  //
-  //
-
-  const ___CLASS___.k({
-    ___PARAMS_A2___
-  }) ___SUPER_CONSTRUCTOR___;
 
   //
   //
@@ -121,7 +122,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
         final decoded = jsonDecode(source);
         return ___CLASS___.fromJson(decoded);
       } else {
-        return const ___CLASS___.k();
+        return ___CLASS___.b();
       }
     } catch (_) {
       return null;
@@ -148,7 +149,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   ) {
     try {
       ___FROM_JSON_A1___
-      return ___CLASS___.k(
+      return ___CLASS___(
         ___FROM_JSON_A2___
       );
     } catch (e) {
@@ -178,7 +179,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
       if (uri != null && uri.path == CLASS) {
         return ___CLASS___.fromJson(uri.queryParameters);
       } else {
-        return const ___CLASS___.k();
+        return ___CLASS___.b();
       }
     } catch (_) {
       return null;
@@ -205,5 +206,23 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
       rethrow;
     }
   }
+
+  //
+  //
+  //
+
+  @override
+  ___CLASS___ copyWith(Model? other) {
+    final a = this.toJson();
+    final b = other?.toJson();
+    final c = {...a, ...?b};
+    return ___CLASS___.fromJson(c);
+  }
+
+  //
+  //
+  //
+
+  ___GETTERS_A___
 }
 ```

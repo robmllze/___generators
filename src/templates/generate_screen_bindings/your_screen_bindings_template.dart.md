@@ -29,7 +29,7 @@ class ___CONFIGURATION_CLASS___ extends ModelScreenConfiguration {
     ___QP1___
     Map<dynamic, dynamic>? $args,
   }) {
-    return ___CONFIGURATION_CLASS___.unsafe(
+    return ___CONFIGURATION_CLASS___.c2(
       args: {
          ___IP2___
          ___QP2___
@@ -42,18 +42,17 @@ class ___CONFIGURATION_CLASS___ extends ModelScreenConfiguration {
   //
   //
 
-  ___CONFIGURATION_CLASS___.unsafe({
+  ___CONFIGURATION_CLASS___.c2({
     Map<dynamic, dynamic>? args,
-  }): super.b(
+  }): super.c2(
+    title: translatedTitle,
     path: _PATH,
     args: args ?? {},
     isAccessibleOnlyIfLoggedInAndVerified: _IS_ACCESSIBLE_ONLY_IF_LOGGED_IN_AND_VERIFIED,
     isAccessibleOnlyIfLoggedIn: _IS_ACCESSIBLE_ONLY_IF_LOGGED_IN,
     isAccessibleOnlyIfLoggedOut: _IS_ACCESSIBLE_ONLY_IF_LOGGED_OUT,
     isRedirectable: _IS_REDIRECTABLE,
-  ) {
-    super.title = translatedTitle;
-  }
+  );
 
   //
   //
@@ -112,7 +111,7 @@ abstract base class _ControllerBroker<T1 extends ___CLASS___, T2 extends _View>
   late final state = super.superState as T2;
 
   /// The [ModelScreenConfiguration] that corresponds to `this` controller.
-  late final configuration = super.internalConfiguration ?? ___CONFIGURATION_CLASS___.unsafe(
+  late final configuration = super.internalConfiguration ?? ___CONFIGURATION_CLASS___.c2(
     args: screen.configuration?.args,
   );
 
@@ -183,7 +182,7 @@ Screen? maker___CLASS___(
   }
   if (RegExp(r'^(' + _PATH + r')([?/].*)?$')
       .hasMatch(Uri.decodeComponent(configuration.path ?? ''))) {
-    final temp = ___CONFIGURATION_CLASS___.unsafe(
+    final temp = ___CONFIGURATION_CLASS___.c2(
       args: configuration.args,
     );
     return ___CLASS___(

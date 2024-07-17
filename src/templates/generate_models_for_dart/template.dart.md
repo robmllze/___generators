@@ -228,6 +228,6 @@ enum ___CLASS_NAME___Fields {
   //
   //
 
-  String get name => this.field.fieldName!;
+  String get fieldName => this.field.fieldName!;
 }
 ```

@@ -20,7 +20,7 @@ const folders = <String>{
   //'tests',
   'xyz_gen_annotations',
   // 'example',
-  // '_data',
+  '_data',
   // 'projects/admin_app',
   // 'projects/operations_app',
   // 'projects/public_app',

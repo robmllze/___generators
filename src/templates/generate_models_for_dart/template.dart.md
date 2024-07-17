@@ -205,29 +205,17 @@ class ___CLASS_NAME___ extends ___SUPER_CLASS_NAME___ {
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-enum ___CLASS_NAME___Fields {
+final class ___CLASS_NAME___FieldNames {
   //
   //
   //
 
-  ___FIELDS___;
-
-  //
-  //
-  //
-
-  final Field field;
+  ___FIELD_NAMES___
 
   //
   //
   //
 
-  const ___CLASS_NAME___Fields(this.field);
-
-  //
-  //
-  //
-
-  String get fieldName => this.field.fieldName!;
+  const ___CLASS_NAME___FieldNames._();
 }
 ```

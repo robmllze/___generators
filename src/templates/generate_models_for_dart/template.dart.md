@@ -40,22 +40,19 @@ class ___CLASS_NAME___ extends ___SUPER_CLASS_NAME___ {
     ___PARAMS_A1___
   }) ___SUPER_CONSTRUCTOR___;
 
-  //
-  //
-  //
-
-  factory ___CLASS_NAME___.b({
+  const ___CLASS_NAME___.c2({
     ___PARAMS_A2___
+  }) ___SUPER_CONSTRUCTOR___;
+
+
+  factory ___CLASS_NAME___.c3({
+    ___PARAMS_A3___
   }) {
     ___FIELD_ASSERTIONS___
     return ___CLASS_NAME___(
       ___ARGS_A___
     );
   }
-
-  //
-  //
-  //
 
   factory ___CLASS_NAME___.from(
     BaseModel? other,
@@ -74,10 +71,6 @@ class ___CLASS_NAME___ extends ___SUPER_CLASS_NAME___ {
     return fromJsonOrNull(other?.toJson())!;
   }
 
-  //
-  //
-  //
-
   factory ___CLASS_NAME___.of(
     ___CLASS_NAME___ other,
   ) {
@@ -94,12 +87,6 @@ class ___CLASS_NAME___ extends ___SUPER_CLASS_NAME___ {
   ) {
     return fromJsonOrNull(other?.toJson());
   }
-
-
-
-  //
-  //
-  //
 
   factory ___CLASS_NAME___.fromJsonString(
     String source,
@@ -120,16 +107,12 @@ class ___CLASS_NAME___ extends ___SUPER_CLASS_NAME___ {
         final decoded = jsonDecode(source);
         return ___CLASS_NAME___.fromJson(decoded);
       } else {
-        return ___CLASS_NAME___.b();
+        return const ___CLASS_NAME___.c2();
       }
     } catch (_) {
       return null;
     }
   }
-
-  //
-  //
-  //
 
   factory ___CLASS_NAME___.fromJson(
     Map<String, dynamic>? otherData,
@@ -155,10 +138,6 @@ class ___CLASS_NAME___ extends ___SUPER_CLASS_NAME___ {
     }
   }
 
-  //
-  //
-  //
-
   factory ___CLASS_NAME___.fromUri(
     Uri? uri,
   ) {
@@ -177,7 +156,7 @@ class ___CLASS_NAME___ extends ___SUPER_CLASS_NAME___ {
       if (uri != null && uri.path == CLASS_NAME) {
         return ___CLASS_NAME___.fromJson(uri.queryParameters);
       } else {
-        return ___CLASS_NAME___.b();
+        return const ___CLASS_NAME___.c2();
       }
     } catch (_) {
       return null;

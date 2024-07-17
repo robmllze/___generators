@@ -18,9 +18,9 @@ import 'package:xyz_gen/xyz_gen.dart';
 const folders = <String>{
   '',
   '_view',
-  'apps/admin_app',
-  'apps/operations_app',
-  'apps/public_app',
+  'projects/admin_app',
+  'projects/operations_app',
+  'projects/public_app',
 };
 
 const subfolders = <String>{

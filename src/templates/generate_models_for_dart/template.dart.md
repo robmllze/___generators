@@ -20,17 +20,15 @@ part of '___CLASS_FILE_NAME___';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-class ___CLASS___ extends ___SUPER_CLASS___ {
+class ___CLASS_NAME___ extends ___SUPER_CLASS_NAME___ {
   //
   //
   //
 
-  ___STATIC_KEY_NAMES___
-
-  static const CLASS = '___CLASS___';
+  static const CLASS_NAME = '___CLASS_NAME___';
 
   @override
-  String get $class => CLASS;
+  String get $className => CLASS_NAME;
 
   ___FIELD_DECLARATIONS_A___
 
@@ -38,7 +36,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
   //
 
-  const ___CLASS___({
+  const ___CLASS_NAME___({
     ___PARAMS_A1___
   }) ___SUPER_CONSTRUCTOR___;
 
@@ -46,11 +44,11 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
   //
 
-  factory ___CLASS___.b({
+  factory ___CLASS_NAME___.b({
     ___PARAMS_A2___
   }) {
     ___FIELD_ASSERTIONS___
-    return ___CLASS___(
+    return ___CLASS_NAME___(
       ___ARGS_A___
     );
   }
@@ -59,18 +57,18 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
   //
 
-  factory ___CLASS___.from(
+  factory ___CLASS_NAME___.from(
     BaseModel? other,
   ) {
     try {
       return fromOrNull(other)!;
     } catch (e) {
-      assert(false, '___CLASS___.from: $e');
+      assert(false, '___CLASS_NAME___.from: $e');
       rethrow;
     }
   }
 
-  static ___CLASS___? fromOrNull(
+  static ___CLASS_NAME___? fromOrNull(
     BaseModel? other,
   ) {
     return fromJsonOrNull(other?.toJson())!;
@@ -80,19 +78,19 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
   //
 
-  factory ___CLASS___.of(
-    ___CLASS___ other,
+  factory ___CLASS_NAME___.of(
+    ___CLASS_NAME___ other,
   ) {
     try {
       return ofOrNull(other)!;
     } catch (e) {
-      assert(false, '___CLASS___.of: $e');
+      assert(false, '___CLASS_NAME___.of: $e');
       rethrow;
     }
   }
 
-  static ___CLASS___? ofOrNull(
-    ___CLASS___? other,
+  static ___CLASS_NAME___? ofOrNull(
+    ___CLASS_NAME___? other,
   ) {
     return fromJsonOrNull(other?.toJson());
   }
@@ -103,26 +101,26 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
   //
 
-  factory ___CLASS___.fromJsonString(
+  factory ___CLASS_NAME___.fromJsonString(
     String source,
   ) {
     try {
       return fromJsonStringOrNull(source)!;
     } catch (e) {
-     assert(false, '___CLASS___.fromJsonString: $e');
+     assert(false, '___CLASS_NAME___.fromJsonString: $e');
       rethrow;
     }
   }
 
-  static ___CLASS___? fromJsonStringOrNull(
+  static ___CLASS_NAME___? fromJsonStringOrNull(
     String? source,
   ) {
     try {
       if (source!.isNotEmpty) {
         final decoded = jsonDecode(source);
-        return ___CLASS___.fromJson(decoded);
+        return ___CLASS_NAME___.fromJson(decoded);
       } else {
-        return ___CLASS___.b();
+        return ___CLASS_NAME___.b();
       }
     } catch (_) {
       return null;
@@ -133,23 +131,23 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
   //
 
-  factory ___CLASS___.fromJson(
+  factory ___CLASS_NAME___.fromJson(
     Map<String, dynamic>? otherData,
   ) {
     try {
       return fromJsonOrNull(otherData)!;
     } catch (e) {
-      assert(false, '___CLASS___.fromJson: $e');
+      assert(false, '___CLASS_NAME___.fromJson: $e');
       rethrow;
     }
   }
 
-  static ___CLASS___? fromJsonOrNull(
+  static ___CLASS_NAME___? fromJsonOrNull(
     Map<String, dynamic>? otherData,
   ) {
     try {
       ___FROM_JSON_A1___
-      return ___CLASS___(
+      return ___CLASS_NAME___(
         ___FROM_JSON_A2___
       );
     } catch (e) {
@@ -161,25 +159,25 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
   //
 
-  factory ___CLASS___.fromUri(
+  factory ___CLASS_NAME___.fromUri(
     Uri? uri,
   ) {
     try {
       return fromUriOrNull(uri)!;
     } catch (e) {
-      assert(false, '___CLASS___.fromUri: $e');
+      assert(false, '___CLASS_NAME___.fromUri: $e');
       rethrow;
     }
   }
 
-  static ___CLASS___? fromUriOrNull(
+  static ___CLASS_NAME___? fromUriOrNull(
     Uri? uri,
   ) {
     try {
-      if (uri != null && uri.path == CLASS) {
-        return ___CLASS___.fromJson(uri.queryParameters);
+      if (uri != null && uri.path == CLASS_NAME) {
+        return ___CLASS_NAME___.fromJson(uri.queryParameters);
       } else {
-        return ___CLASS___.b();
+        return ___CLASS_NAME___.b();
       }
     } catch (_) {
       return null;
@@ -202,7 +200,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
       }.mapWithDefault(defaultValue);
       return includeNulls ? withNulls : withNulls.nonNulls;
     } catch (e) {
-      assert(false, '___CLASS___.toJson: $e');
+      assert(false, '___CLASS_NAME___.toJson: $e');
       rethrow;
     }
   }
@@ -212,11 +210,11 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
   //
 
   @override
-  ___CLASS___ copyWith(BaseModel? other) {
+  ___CLASS_NAME___ copyWith(BaseModel? other) {
     final a = this.toJson();
     final b = other?.toJson();
     final c = {...a, ...?b};
-    return ___CLASS___.fromJson(c);
+    return ___CLASS_NAME___.fromJson(c);
   }
 
   //
@@ -228,7 +226,7 @@ class ___CLASS___ extends ___SUPER_CLASS___ {
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
-enum ___CLASS___Fields {
+enum ___CLASS_NAME___Fields {
   //
   //
   //
@@ -245,6 +243,12 @@ enum ___CLASS___Fields {
   //
   //
 
-  const ___CLASS___Fields(this.field);
+  const ___CLASS_NAME___Fields(this.field);
+
+  //
+  //
+  //
+
+  String get name => this.field.fieldName!;
 }
 ```

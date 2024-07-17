@@ -17,7 +17,7 @@ import 'package:xyz_gen/xyz_gen.dart';
 // template classes that you annotated with @GenerateModel, in order to generate
 // their respective model classes.
 const folders = <String>{
-  'tests',
+  //'tests',
   'xyz_gen_annotations',
   // 'example',
   // '_data',

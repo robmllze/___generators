@@ -25,7 +25,7 @@ dependencies:
 
 dependency_overrides:
   xyz_gen:
-    path: ../xyz_gen
+    path: ../../xyz_gen/xyz_gen
 
 ## -----------------------------------------------------------------------------
 

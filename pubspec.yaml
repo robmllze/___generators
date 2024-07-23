@@ -24,6 +24,9 @@ dependencies:
 ## -----------------------------------------------------------------------------
 
 dependency_overrides:
+  # TODO: Comment out these lines if you don't have these packages at their
+  # respective paths. They are included for development purposes to allow
+  # simultaneous work on this package and its dependencies.
   xyz_gen:
     path: ../../xyz_gen/xyz_gen
 

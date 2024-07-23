@@ -174,9 +174,9 @@ class ___CLASS_NAME___ extends ___SUPER_CLASS_NAME___ {
   }) {
     try {
       ___TO_JSON_A1___
-      final withNulls = <String, dynamic>{
+      final withNulls = mergeMapsDeep([
         ___TO_JSON_A2___
-      }.mapWithDefault(defaultValue);
+      ]).mapWithDefault(defaultValue);
       return includeNulls ? withNulls : withNulls.nonNulls;
     } catch (e) {
       assert(false, '___CLASS_NAME___.toJson: $e');

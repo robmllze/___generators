@@ -55,8 +55,8 @@ final class _View extends T___SCREEN_CLASS___View {
   //
 
   @override
-  Widget bottom(BuildContext context) {
-    return const MyBottomNavigationControls();
+  Widget bottomSide(BuildContext context, double bottomInsets) {
+    return bottomInsets == 0 ? const DcBottomNavigationControls() : const SizedBox();
   }
 }
 

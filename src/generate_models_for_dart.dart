@@ -28,7 +28,7 @@ const folders = <String>{
 };
 
 const subfolders = <String>{
-  'lib/src/data_models/google_place_details/',
+  'lib/src/data_models/public_models_etc/model_relationship',
   //'lib/@screen/src/model_screen_configuration',
 };
 

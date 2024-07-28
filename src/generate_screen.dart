@@ -16,10 +16,10 @@ import 'package:xyz_gen/xyz_gen.dart';
 const TARGET = 'projects/public_app';
 
 // To-Do: Give the screen class a name.
-const CLASS_NAME = 'CrewDetails';
+const CLASS_NAME = 'IndividualJobHoursScreen';
 
 // To-Do: Provide a title for the Screen.
-const DEFAULT_TITLE = 'Crew Details';
+const DEFAULT_TITLE = 'Job Hours';
 
 // To-Do: Specify the Screen's access settings:
 const bool IS_ONLY_ACCESSIBLE_IF_LOGGED_IN_AND_VERIFIED = false;
@@ -34,7 +34,7 @@ const INTERNAL_PARAMETERS = <String, String>{
 
 // To-Do: Specify query parameters for the Screen, or leave empty:
 const QUERY_PARAMETERS = <String>{
-  // 'chat_id', // (example)
+  'job_pid', // (example)
 };
 
 // To-Do: Specify part files to generate for the Screen, or leave empty:

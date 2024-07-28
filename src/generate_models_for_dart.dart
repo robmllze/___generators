@@ -19,7 +19,7 @@ import 'package:xyz_gen/xyz_gen.dart';
 const folders = <String>{
   '',
   //'tests',
-  'xyz_gen_annotations',
+  '_data',
   // 'example',
   //'_data',
   // 'projects/admin_app',
@@ -28,7 +28,7 @@ const folders = <String>{
 };
 
 const subfolders = <String>{
-  'lib/src/data_models',
+  'lib/src/data_models/google_place_details/',
   //'lib/@screen/src/model_screen_configuration',
 };
 

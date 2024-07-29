@@ -20,7 +20,9 @@ environment:
 
 dependencies:
   xyz_gen:
-    path: ../../xyz_gen/xyz_gen
+    git:
+      url: https://github.com/robmllze/xyz_gen.git
+      ref: localdev
 
 ## -----------------------------------------------------------------------------
 

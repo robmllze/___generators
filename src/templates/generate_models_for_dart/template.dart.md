@@ -169,14 +169,13 @@ class ___CLASS_NAME___ extends ___SUPER_CLASS_NAME___ {
 
   @override
   Map<String, dynamic> toJson({
-    dynamic defaultValue,
     bool includeNulls = false,
   }) {
     try {
       ___TO_JSON_A1___
-      final withNulls = mergeMapsDeep([
+      final withNulls = {
         ___TO_JSON_A2___
-      ]).mapWithDefault(defaultValue);
+      };
       return includeNulls ? withNulls : withNulls.nonNulls;
     } catch (e) {
       assert(false, '___CLASS_NAME___.toJson: $e');

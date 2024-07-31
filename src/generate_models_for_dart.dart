@@ -28,7 +28,7 @@ const folders = <String>{
 };
 
 const subfolders = <String>{
-  'lib/src/data_models/public_models_etc/model_relationship',
+  'lib/src/data_models/',
   //'lib/@screen/src/model_screen_configuration',
 };
 

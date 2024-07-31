@@ -17,11 +17,11 @@ import 'package:xyz_gen/xyz_gen.dart';
 // template classes that you annotated with @GenerateModel, in order to generate
 // their respective model classes.
 const folders = <String>{
-  'tests',
+  '_data',
 };
 
 const subfolders = <String>{
-  'test_dart_models',
+  '',
 };
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -42,3 +42,5 @@ void main(List<String> args) async {
     ...args,
   ]);
 }
+
+

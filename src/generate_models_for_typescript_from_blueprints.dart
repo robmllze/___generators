@@ -8,7 +8,7 @@
 // ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 //.title~
 
-import 'package:xyz_gen/generators/generate_models_for_dart/lib/src/run_generate_models_for_dart_from_blueprints_app.dart';
+import 'package:xyz_gen/generators/generate_models_for_dart/lib/src/run_generate_models_for_typescript_from_blueprints_app.dart';
 import 'package:xyz_gen/xyz_gen.dart';
 
 // ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -32,7 +32,7 @@ const subfolders = <String>{
 
 void main(List<String> args) async {
   DebugLog.debugOnly = false;
-  await runGenerateModelsForDartFromBlueprintsApp([
+  await runGenerateModelsForTypeScriptFromBlueprintsApp([
     '-t',
     '$currentScriptDir/templates/generate_models_for_typescript_from_blueprints/',
     '-r',
